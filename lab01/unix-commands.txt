@@ -6,6 +6,8 @@ Enter your chosen Unix environment.  For the word ‘command’ assume it is a o
 *******************************************************************************
 
 1. What unix-based OS you are using (Ubuntu, Fedora, OSX, etc...)?
+$ uname -a
+Linux shiloh 4.19.0-9-amd64 #1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07) x86_64 GNU/Linux
 
 
 2. What are command line options (also called parameters)?
@@ -41,16 +43,13 @@ Enter your chosen Unix environment.  For the word ‘command’ assume it is a o
 12. What is the difference between * and ? in filename wildcards?
 
 
-13. What command would you type in order to determine the number of lines in somefile.txt that do NOT contain HI hi Hi or hI?  Hint, grep is your friend.
+13. What 1 line command would you type to generate a file names.txt that contains a list of users currently on the system sorted lexicographically (default order of sort) (hint: who is on the system)?
 
 
-14. What 1 line command would you type to generate a file names.txt that contains a list of users currently on the system sorted lexicographically (default order of sort) (hint: who is on the system)?
+14. What does the -r option do for the rm command?  How about -f?  Hint: use man.
 
 
-15. What does the –r option do for the rm command?  How about –f?  Hint: use man.
-
-
-16. Is executing the command “rm –r *” from your home directory a good idea?  Why/why not (what would it do)?
+15. Is executing the command 'rm -r *' from your home directory a good idea?  Why/why not (what would it do)?
 
 
 Turn in: Please edit this document and submit via github as a .pdf or .txt.
