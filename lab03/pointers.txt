@@ -73,7 +73,7 @@ Problems:
 
 
 
-16) (2 points) Describe the difference between statically (stack) and dynamically(heap) allocated memory. Why does C++ support both types?
+16) (2 points) Describe the difference between function (stack) and dynamic (heap) allocated memory. Why does C++ support both types?
 
 
 
