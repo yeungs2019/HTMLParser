@@ -17,6 +17,9 @@ A: /home/steven/.bashrc
    /home/steven/.bash_logout
 Command used was find ~ -name '?bash*'
 
+DPW: For command just type:
+$ find ~ -name '?bash*'
+
 4. Create a new directory in your home and call it lab01.
 A: Command used was mkdir lab01.  ls was used to see if it was in home directory
 
