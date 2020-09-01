@@ -13,16 +13,16 @@ int* p1 = &x;
 int* p2 = arr;
 
 4) Change the first item in arr to 7 without using arr. 
-p2[0] = 7;
+*arr = 7;
 
 5) Change the 3rd value (the 20) in arr to 15 using [ ] and without using arr. 
-p2[2] = 15;
+
 
 6) Change the 4th value (the 30) in arr to 35 without using [ ] and without using arr. 
 *(p2 + 3) = 35;
 
 7) Change p2 to point to the third item in arr without using arr. 
-p2 = &p2[2]
+
 
 8) Change the item pointed at by p2 to 77 without using arr. 
 *p2 = 77;
@@ -35,16 +35,16 @@ if(*p1 == *p2);
 if(p1 == p2);
  
 11) Make p1 point to a dynamically allocated integer (make sure to create that integer!) 
-int* p1 = new int;
+
 
 12) Free the memory at p1. 
 delete p1;
 
 13) Make p1 point to a dynamically allocated array of x integers (again, create that array!) 
-int* p1 = new int[];
+
 
 14) Free the memory at p1.
-delete[] p1;
+
 
 15) Describe what is wrong with the following code segment, assuming it is all part of main(). Indicate if something is a compile time or runtime error or just bad programming. Also indicate how you would fix it. Line numbers have been added in ( ) for ease of reference.  There are several things with the code and for full credit you must find all of them.
 
