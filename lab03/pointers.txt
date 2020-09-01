@@ -83,6 +83,7 @@ Problems:
 
 16) (2 points) Describe the difference between function (stack) and dynamic (heap) allocated memory. Why does C++ support both types?
 
+A main difference in these two is that stack allocates and deallocates memory as the program is running or terminating.  Heap has to be cleared manually by the user.  C++ supports both because it gives the user the option to "garbage" collect the data they don't need. C++ is not a memory hog in a sense, so it supports both types.
 
 
 
