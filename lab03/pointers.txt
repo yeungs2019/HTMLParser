@@ -22,7 +22,8 @@ p2[2] = 15;
 *(p2 + 3) = 35;
 
 7) Change p2 to point to the third item in arr without using arr. 
-p2 = &p2[2]
+(p2 + 2) += 2;
+p2 += 2;
 
 8) Change the item pointed at by p2 to 77 without using arr. 
 *p2 = 77;
