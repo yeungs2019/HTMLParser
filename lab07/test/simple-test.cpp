@@ -1,4 +1,5 @@
 #include "unity.h"
+#include "array.hpp"
 
 void setUp(void) {
     // set stuff up here
@@ -9,8 +10,13 @@ void tearDown(void) {
 }
 
 void test_simple(void) {
-    TEST_ASSERT_EQUAL_INT(10, 1);
-    TEST_ASSERT(10 == 0);
+    int ary[] = {1, 2, 3, 4};
+
+    Array<int> a(ary, 4);
+    Array<int> a2(a);
+
+    TEST_ASSERT(a.getLength() == 4);
+    TEST_ASSERT(a2.getLength() == 4);
 }
 
 int main(void) {
