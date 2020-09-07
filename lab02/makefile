@@ -13,6 +13,7 @@ node.o: src/node.cpp obj
 obj:  
 	mkdir -p obj
 
+#DPW: I think you forgot the space, did you test? (-25)
 run:
 	valgrind ./all
 	
