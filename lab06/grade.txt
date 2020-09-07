@@ -1,26 +1,20 @@
 ******************* Count Negatives Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 25.000 pts of 25.000
-Total grade so far: 25.000
+makefile:8: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* Find Min Odd Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 4
-MAKE_ERROR = 
-+ 0 pts of 25.000
-Total grade so far: 25.000
+makefile:8: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* Remove Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 2
-MAKE_ERROR = 
-+ 12.500 pts of 25.000
-Total grade so far: 37.500
+makefile:8: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* Search Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
-+ 6.250 pts of 25.000
-Total grade so far: 43.750
-Auto-grader grade: 43.750
-*****************Finished lab06****************
+makefile:8: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
