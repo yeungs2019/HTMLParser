@@ -1,0 +1,14 @@
+1. a) Output is 32.
+   b) y's value i 32.
+   c) x, y, z are in stack
+
+2. a) Output is 200.
+   b) x. y, z are in stack
+   c) In int *x
+
+3. a) Memory address of x.
+   b) x and z are in heap
+   c) x and z
+   d) Z is just assigned to a value in x.
+
+4. a) 

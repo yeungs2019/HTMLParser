@@ -1,6 +1,11 @@
 int countNegatives(const int array[], int size) {
-
-    return 0;
+	int negNum = 0;
+	for (int i = 0; i < size; i++){
+		if (array[i] < 0){
+			negNum++;
+		}
+	}
+    return negNum;
 }
 
 int findMinOdd(const int array[], int size) {

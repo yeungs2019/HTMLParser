@@ -14,7 +14,7 @@ obj:
 	mkdir -p obj
 
 run:
-	valgrind./all
+	valgrind ./all
 	
 clean: 
 	rm -rf *.o obj
