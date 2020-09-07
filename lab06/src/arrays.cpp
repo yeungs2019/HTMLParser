@@ -15,11 +15,8 @@ int findMinOdd(const int array[], int size) {
 			minOdd = array[i];
 		}
 		return minOdd;
-		else{
-			return -1;
-		}
 	}
-    return 1;
+    return -1;
 }
 
 int search(const int array[], int size, int value) {
