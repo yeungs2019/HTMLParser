@@ -1,0 +1,9 @@
+problem1. O(n)
+
+problem2. O(1)
+
+problem3. O(n^2)
+
+problem4. O(log2n)
+
+problem5. O(n*log2n)
