@@ -9,6 +9,16 @@ int countNegatives(const int array[], int size) {
 }
 
 int findMinOdd(const int array[], int size) {
+	int minOdd = 0;
+	for (int i = 0; i < size; i++){
+		if(minOdd > array[i]){
+			minOdd = array[i];
+		}
+		return minOdd;
+		else{
+			return -1;
+		}
+	}
     return 1;
 }
 
