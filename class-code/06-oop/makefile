@@ -11,14 +11,14 @@ all: $(SRCS) $(EXEC)
 $(EXEC): obj $(OBJS) $(MAIN)
 	g++ $(CFLAGS) $(OBJS) $(MAIN) -o $@
 
-obj/%.o: src/%.cpp src/%.hpp obj
+obj/%.o: src/%.cpp  obj
 	g++ -c $(CFLAGS) $< -o $@
 
 obj:
 	mkdir -p obj
 
 %test:
-	g++ -I ../src/ ${CFLAGS} ${SRCS} ${UNITY} test/$@.cpp -o test-runner
+	gcc -I ../src/ ${CFLAGS} ${SRCS} ${UNITY} test/$@.cpp -o test-runner
 	./test-runner
 
 clean:
