@@ -1,4 +1,5 @@
 #include "unity.h"
+#include "arrays.hpp"
 
 void setUp(void) {
     // set stuff up here
