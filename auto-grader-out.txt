@@ -1,4 +1,4 @@
-I am run number 000046.
+I am run number 000048.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab06
@@ -12,21 +12,21 @@ MAKE_ERROR =
 Total grade so far: 25.000
 ******************* Find Min Odd Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 3
+Failures = 1
 MAKE_ERROR = 
-+ 6.250 pts of 25.000
-Total grade so far: 31.250
++ 18.750 pts of 25.000
+Total grade so far: 43.750
 ******************* Remove Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
 Failures = 2
 MAKE_ERROR = 
 + 12.500 pts of 25.000
-Total grade so far: 43.750
+Total grade so far: 56.250
 ******************* Search Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
 Failures = 2
 MAKE_ERROR = 
 + 12.500 pts of 25.000
-Total grade so far: 56.250
-Auto-grader grade: 56.250
+Total grade so far: 68.750
+Auto-grader grade: 68.750
 *****************Finished lab06****************
