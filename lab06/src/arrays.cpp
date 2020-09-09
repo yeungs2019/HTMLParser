@@ -29,8 +29,9 @@ int search(const int array[], int size, int value) {
 }
 
 bool remove(int array[], int size, int index) {
-	for (int i = 0; i < size; i++) {
-		if (array[i] == value) {
+	int i;
+	for (i = 0; i < size; i++) {
+		if (array[i] == index) {
 			break;
 		}
 	}
@@ -40,6 +41,6 @@ bool remove(int array[], int size, int index) {
 			array[j] = array[j-1];
 		}
 	}
-    return n;
+    return size;
 }
 
