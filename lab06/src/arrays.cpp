@@ -11,12 +11,12 @@ int countNegatives(const int array[], int size) {
 int findMinOdd(const int array[], int size) {
 	int minOdd = 0;
 	for (int i = 0; i < size; i++){
-		if(minOdd > array[i]){
+		if (array[i] % 2 != 0 && array[i] < minOdd){
 			minOdd = array[i];
+			return minOdd;
 		}
-		return minOdd;
 	}
-    return -1;
+	return -1;
 }
 
 int search(const int array[], int size, int value) {
