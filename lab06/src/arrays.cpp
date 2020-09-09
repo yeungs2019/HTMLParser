@@ -39,8 +39,7 @@ bool remove(int array[], int size, int index) {
 		for (int j = i; j < size; j++) {
 			array[i] = array[j-1];
 		}
-		return true;
 	}
-    return false;
+    return n;
 }
 
