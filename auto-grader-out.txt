@@ -1,11 +1,8 @@
-I am run number 000052.
+I am run number 000054.
 Pulling source code...
 ------------------------------------------------
-Changes found in create
 Changes found in lab06
 ------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
 *****************Examining lab06****************
 ******************* Count Negatives Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
