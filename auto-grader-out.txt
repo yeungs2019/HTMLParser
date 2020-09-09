@@ -1,2 +1,35 @@
 I am run number 000050.
 Pulling source code...
+------------------------------------------------
+Changes found in create
+Changes found in lab06
+------------------------------------------------
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab06****************
+******************* Count Negatives Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 25.000
+******************* Find Min Odd Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 18.750 pts of 25.000
+Total grade so far: 43.750
+******************* Remove Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 2
+MAKE_ERROR = 
++ 12.500 pts of 25.000
+Total grade so far: 56.250
+******************* Search Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 81.250
+Auto-grader grade: 81.250
+*****************Finished lab06****************
