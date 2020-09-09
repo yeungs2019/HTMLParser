@@ -27,11 +27,16 @@ void test_evens(void) {
 	int ary[] = {2, 4, -2, 6};
 	TEST_ASSERT(findMinOdd(ary, 4) == -1);
 }
+void test_low(void){
+	int ary[] = {1, -3, 5};
+	TEST_ASSERT(findMinOdd(ary, 3) == -3);
+}
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_empty);
     RUN_TEST(test_simple);
     RUN_TEST(test_positives);
     RUN_TEST(test_evens);
+    RUN_TEST(test_low);
     return UNITY_END();
 }
