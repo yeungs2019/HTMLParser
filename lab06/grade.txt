@@ -18,3 +18,4 @@ g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
 makefile:8: recipe for target 'all' failed
 *************COMPILATION ERROR*******************
 Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab06****************
