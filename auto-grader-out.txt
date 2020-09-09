@@ -1,27 +1,2 @@
-I am run number 000054.
+I am run number 000055.
 Pulling source code...
-------------------------------------------------
-Changes found in lab06
-------------------------------------------------
-*****************Examining lab06****************
-******************* Count Negatives Test *********************
-g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-makefile:8: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* Find Min Odd Test *********************
-g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-makefile:8: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* Remove Test *********************
-g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-makefile:8: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* Search Test *********************
-g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-makefile:8: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab06****************
