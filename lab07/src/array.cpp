@@ -18,6 +18,11 @@ template <class T>
 Array<T>::Array(const Array<T> &list){
 }
 
+template <class T>
+int Array<T>::getLength() const {
+    return 0;
+}
+
 /* Retrieves the element at position pos */
 template <class T>
 T& Array<T>::operator[](const int pos){

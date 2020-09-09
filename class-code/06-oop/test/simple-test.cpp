@@ -1,5 +1,5 @@
 #include "unity.h"
-#include "array.hpp"
+#include "testme.hpp"
 
 void setUp(void) {
     // set stuff up here
@@ -10,17 +10,17 @@ void tearDown(void) {
 }
 
 void test_simple(void) {
-    int ary[] = {1, 2, 3, 4};
+    TEST_ASSERT_EQUAL_INT(10, 10);
+    TEST_ASSERT(10 == 10);
+}
 
-    Array<int> a(ary, 4);
-    Array<int> a2(a);
-
-    TEST_ASSERT(a.getLength() == 4);
-    TEST_ASSERT(a2.getLength() == 4);
+void test_p1p() {
+    TEST_ASSERT_EQUAL_INT(2, test1p1());
 }
 
 int main(void) {
     UNITY_BEGIN();
-    RUN_TEST(test_simple);
+    //RUN_TEST(test_simple);
+    RUN_TEST(test_p1p);
     return UNITY_END();
 }
