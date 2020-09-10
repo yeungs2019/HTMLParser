@@ -32,11 +32,10 @@ bool remove(int array[], int size, int index) {
 	// Searches for the index
 	for (int i = 0; i < size; i++) {
 		if (array[i] == index){
-			size = size -1;
-			for (int i = index; i < size - 1; i++){
+			for (int i = index - 1; i < size; i++){
 				array[index] = array[index + 1];
 			}
-			array[size]--;
+			size--;
 		}
 	}
 	if (0 <= index && index < size){
