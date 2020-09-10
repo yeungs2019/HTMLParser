@@ -18,7 +18,7 @@ obj:
 	mkdir -p obj
 
 %test:
-	g++ -I ../src/ ${CFLAGS} ${SRCS} ${UNITY} test/$@.cpp -o test-runner
+	gcc -I ../src/ ${CFLAGS} ${SRCS} ${UNITY} test/$@.cpp -o test-runner
 	./test-runner
 
 clean:
