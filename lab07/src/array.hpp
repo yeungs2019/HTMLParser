@@ -4,12 +4,12 @@
 template <class T>
 class Array {
     private:
-    /* You fill out the private contents. */
-
+	 T* ptr;
+	 int fit;
     public:
-    /* Do a deep copy of the array into the list.
-     * Note: This one uses a pointer!
-     */
+    	Array(T arr[], int s);
+	void print();
+
     Array(const T *array, const int size);
     /* Do a deep copy of the array into the list
      * Note: This one uses a reference to a List!

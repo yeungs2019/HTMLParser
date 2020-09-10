@@ -9,6 +9,11 @@
  */
 template <class T>
 Array<T>::Array(const T *array, const int size){
+	ptr = new T[size];
+	fit = size;
+	for (int i = 0; i < size; i++) {
+		ptr[i] = *array[i];
+	}
 }
 
 /* Do a deep copy of the array into the list
