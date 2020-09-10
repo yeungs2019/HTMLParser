@@ -1,16 +1,28 @@
 1. a) Output is 32.
-   b) y's value i 32.
+   b) y's value is the memory address of x.
    c) x, y, z are in static
 
 2. a) Output is 200.
    b) x. y, z are in stack
-   c) In int *x
+   c) In int *x, making double pointers in the same line seems consuming.
 
 3. a) Memory address of x.
    b) x and z are in heap
    c) x and z
-   d) Z is just assigned to a value in x.
+   d) Z is just assigned to a value in x. And the memory of z is not deleted
 
-4. a) 
+4. a) The output is 20 because it is known that x is incrementing by 1 each time
    b) delete x;
    c) delete y;
+
+5. a) The value of x is 10 and value of y is 90.
+   b) The memory addresses of x and y.
+   c) (*z)[10] dereferencing z at index 10 in the array.
+   d) They are different because z was assigned two different memory addresses.
+   e) delete x; delete y;
+
+6. a) Undefined
+   b) GPAs of Students
+   c) GPAs of students were being sorted
+   d) int take less bytes, while strings take more bytes. Ints just take up less memory than strings, which makes running the program faster.
+   e) delete students; delete studentsPtr;
