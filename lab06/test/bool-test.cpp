@@ -10,12 +10,12 @@ void tearDown(void) {
 }
 void test_first(void) {
 	int ary[] = {2,4,5,3,1,50};
-	int n = TEST_ASSERT(remove(array))/remove(array[0];
-	int x = 6;
+	TEST_ASSERT(remove(ary, 3));
 }
 
 int main(void) {
     UNITY_BEGIN();
+    RUN_TEST(test_first);
     return UNITY_END();
 }
               
