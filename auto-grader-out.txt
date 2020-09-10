@@ -1,8 +1,14 @@
-I am run number 000068.
+I am run number 000076.
 Pulling source code...
 ------------------------------------------------
+Changes found in Removing
+Changes found in delete
 Changes found in lab06
 ------------------------------------------------
+*****************Examining Removing****************
+Auto-grader grade: *****************Finished Removing****************
+*****************Examining delete****************
+Auto-grader grade: *****************Finished delete****************
 *****************Examining lab06****************
 ******************* Count Negatives Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
