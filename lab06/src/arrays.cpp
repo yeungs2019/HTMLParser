@@ -35,7 +35,7 @@ bool remove(int array[], int size, int index) {
 			for (int i = index; i < size - 1; i++){
 				array[index] = array[index + 1];
 			}
-			array[size -1] = 0;
+			array[size]--;
 		}
 	}
 	if (0 <= index && index < size){
