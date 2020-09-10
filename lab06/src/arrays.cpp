@@ -37,7 +37,9 @@ bool remove(int array[], int size, int index) {
 			}
 			array[size -1] = 0;
 		}
-	return true;
+	}
+	if (0 <= index && index < size){
+		return true;
 	}
     return false;
 }
