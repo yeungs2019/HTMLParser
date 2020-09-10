@@ -1,2 +1,38 @@
 I am run number 000076.
 Pulling source code...
+------------------------------------------------
+Changes found in Removing
+Changes found in delete
+Changes found in lab06
+------------------------------------------------
+*****************Examining Removing****************
+Auto-grader grade: *****************Finished Removing****************
+*****************Examining delete****************
+Auto-grader grade: *****************Finished delete****************
+*****************Examining lab06****************
+******************* Count Negatives Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 25.000
+******************* Find Min Odd Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 18.750 pts of 25.000
+Total grade so far: 43.750
+******************* Remove Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 3
+MAKE_ERROR = 
++ 6.250 pts of 25.000
+Total grade so far: 50.000
+******************* Search Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 75.000
+Auto-grader grade: 75.000
+*****************Finished lab06****************
