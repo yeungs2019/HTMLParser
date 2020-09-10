@@ -6,7 +6,7 @@ int countNegatives(const int array[], int size) {
 		}
 	}
     return negNum;
-}
+} // from https://www.geeksforgeeks.org/c-program-to-count-positive-and-negative-numbers-in-an-array
 
 int findMinOdd(const int array[], int size) {
 	int minOdd;
@@ -17,7 +17,8 @@ int findMinOdd(const int array[], int size) {
 		}
 	}
 	return -1;
-}
+}// from https://www.geeksforgeeks.org/c-program-for-find-the-number-occurring-odd-number-of-times
+
 
 int search(const int array[], int size, int value) {
 	for (int i = 0; i < size; i++){
@@ -42,5 +43,5 @@ bool remove(int array[], int size, int index) {
 		return true;
 	}
     return false;
-}
+} //from www.cprogrammingcode.com/2012/05/write-program-to-delete-element-from.html
 
