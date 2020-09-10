@@ -32,17 +32,13 @@ bool remove(int array[], int size, int index) {
 	// Searches for the index
 	for (int i = 0; i < size; i++) {
 		if (array[i] == index){
-			if (array[i] == index) {
-				size = size - 1;
-					for (int j = i; j < size; j++){
-						array[j] = array[j + 1];
-							if (0 <= index && index < size) {
-								return true;
-				}
+			for (int i = index; i < size; i++){
+				array[index] = array[index + 1];
+				array[size - 1] = 0;
 			}
 		}
+	return true;
 	}
-}
     return false;
 }
 
