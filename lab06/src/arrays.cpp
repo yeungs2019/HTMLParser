@@ -37,11 +37,14 @@ bool remove(int array[], int size, int index) {
 	
 		if (array[i] == index) {
 			size = size - 1;
-			if (0 <= index && index < size){
-				return true;
+			for (int j = i; j < size; j++){
+				array[j] = array[j + 1];
+				if (0 <= index && index < size) {
+					return true;
 			}
 		}
 	}
+}
     return false;
 }
 
