@@ -1,37 +1,3 @@
-I am run number 000100.
-Pulling source code...
-------------------------------------------------
-Changes found in course-materials
-Changes found in create
-Changes found in lab07
-Changes found in lab08
-------------------------------------------------
-*****************Examining course-materials****************
-Auto-grader grade: *****************Finished course-materials****************
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab07****************
-******************* Equal Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 33.333
-Total grade so far: 0
-******************* Index Of Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 33.333
-Total grade so far: 0
-******************* Remove Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 33.334
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab07****************
-*****************Examining lab08****************
 ******************* Append Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 Failures = 1
@@ -61,5 +27,3 @@ MAKE_ERROR =
 Total grade so far: 0
 WARNING: this lab requires an inspection from the Professor.
 The given grade is not final.
-Auto-grader grade: 0
-*****************Finished lab08****************
