@@ -25,7 +25,12 @@ Array<T>::Array(const Array<T> &list){
 
 template <class T>
 int Array<T>::getLength() const {
-    return 0;
+	for (int i = 0; i < fit; i++) {
+		if (arr[i] == fit) {
+			return fit;
+		}
+	}
+	return 0;
 }
 
 /* Retrieves the element at position pos */
