@@ -6,9 +6,11 @@ class Array {
     private:
 	 T* ptr;
 	 int fit;
+	 int list;
     public:
     	Array(T arr[], int s);
 	void print();
+	T arr[];
 
     Array(const T *array, const int size);
     /* Do a deep copy of the array into the list
