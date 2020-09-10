@@ -29,18 +29,19 @@ int search(const int array[], int size, int value) {
 }
 
 bool remove(int array[], int size, int index) {
-	int i;
-	for (i = 0; i < size; i++) {
+	// Searches for the index
+	for (int i = 0; i < size; i++) {
+		if (array[i] == index){
+			return true;
+		}
+	
 		if (array[i] == index) {
-			break;
+			size = size - 1;
+			if (0 <= index && index < size){
+				return true;
+			}
 		}
 	}
-	if (i < size) {
-		size = size -1;
-		for (int j = i; j < size; j++) {
-			array[j] = array[j-1];
-		}
-	}
-    return size;
+    return false;
 }
 
