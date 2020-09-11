@@ -72,9 +72,11 @@ bool Array<T>::operator==(Array<T> &list) const {
 		if (ptrArr[i] == list[i]) {
 			noEquality = true;
 		}
-		else{
+		if (!ptrArr[i] == list[i]) {
+
 			noEquality = false;
-		}	
+		}
+	
 	}
 	return noEquality;
 }
