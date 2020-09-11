@@ -47,10 +47,12 @@ void test_same(void){
 	Array<int> a2(ary2, 3);
 	TEST_ASSERT(a == a2);
 }
-void test_pos(void){
+void test_dif(void){
 	int ary[] = {1, 2, 3, 4, 5, 6};
+	int ary2[] = {1, 2, 4, 5, 6, 7};
 	Array<int> a(ary, 6);
-	TEST_ASSERT(a[3] == 3);
+	Array<int> a2(ary2, 6);
+	TEST_ASSERT(a == a2);
 }
 int main(void) {
     UNITY_BEGIN();
@@ -60,6 +62,6 @@ int main(void) {
     RUN_TEST(test_remove);
     RUN_TEST(test_remove2);
     RUN_TEST(test_same);
-    RUN_TEST(test_pos);
+    RUN_TEST(test_dif);
     return UNITY_END();
 }
