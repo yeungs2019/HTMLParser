@@ -40,18 +40,6 @@ void test_remove2(void){
 	Array<int> a(ary, 1);
 	TEST_ASSERT(a.remove(0));
 }
-void test_same(void){
-	int ary[] = {1, 2, 3};
-	int ary2[] = {1, 2, 3};
-	Array<int> a(ary, 3);
-	Array<int> a2(ary2, 3);
-	TEST_ASSERT(a == a2);
-}
-void test_pos(void){
-	int ary[] = {1, 2, 3, 4, 5, 6};
-	Array<int> a(ary, 6);
-	TEST_ASSERT(a[3] == 3);
-}
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_simple);
@@ -59,7 +47,5 @@ int main(void) {
     RUN_TEST(test_nonindex);
     RUN_TEST(test_remove);
     RUN_TEST(test_remove2);
-    RUN_TEST(test_same);
-    RUN_TEST(test_pos);
     return UNITY_END();
 }
