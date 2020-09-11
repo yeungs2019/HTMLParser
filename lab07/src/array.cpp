@@ -68,8 +68,13 @@ T& Array<T>::operator[](const int pos){
 template <class T>
 bool Array<T>::operator==(Array<T> &list) const {
 	bool noEquality = false;
-	if (ptrArr == list) {
-		noEquality = true;
+	for (int i = 0; i < fitSize; i++){
+		if (ptrArr[i] == list[i]) {
+			noEquality = true;
+		}
+		else{
+			noEquality = false;
+		}	
 	}
 	return noEquality;
 }
