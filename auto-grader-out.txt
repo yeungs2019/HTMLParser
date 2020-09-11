@@ -1,4 +1,4 @@
-I am run number 000118.
+I am run number 000120.
 Pulling source code...
 ------------------------------------------------
 Changes found in create
@@ -16,14 +16,14 @@ Total grade so far: 0
 ******************* Index Of Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:40:25: error: request for member 'ptrArr' in 'value', which is of non-class type 'const int'
-+ 0 pts of 33.333
-Total grade so far: 0
+MAKE_ERROR = 
++ 33.333 pts of 33.333
+Total grade so far: 33.333
 ******************* Remove Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+Failures = 2
+MAKE_ERROR = 
 + 0 pts of 33.334
-Total grade so far: 0
-Auto-grader grade: 0
+Total grade so far: 33.333
+Auto-grader grade: 33.333
 *****************Finished lab07****************
