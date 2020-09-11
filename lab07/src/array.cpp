@@ -37,11 +37,17 @@ int Array<T>::getLength() const {
 template <class T>
 int Array<T>::indexOf(const T &value){
 	for (int i = 0; i < fitSize; i++) {
-		if(ptrArr[i] == value.ptrArr){
+		if(ptrArr[i] == value){
 			return i;
 		}
 	}
 	return -1;
+}
+
+// Removes an item at position index by shifting later elements left.
+template <class T>
+bool Array<T>::remove(const int index){
+
 }
 
 /* Retrieves the element at position pos */
@@ -52,6 +58,7 @@ T& Array<T>::operator[](const int pos){
 
 template <class T>
 Array<T>::~Array() {
+	delete ptrArr;
 }
 
 #endif
