@@ -7,7 +7,7 @@ Total grade so far: 0
 ******************* Index Of Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:40:25: error: request for member 'ptrArr' in 'value', which is of non-class type 'const int'
 + 0 pts of 33.333
 Total grade so far: 0
 ******************* Remove Test *********************
