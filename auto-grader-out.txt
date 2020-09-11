@@ -1,29 +1,26 @@
-I am run number 000122.
+I am run number 000124.
 Pulling source code...
 ------------------------------------------------
-Changes found in create
 Changes found in lab07
 ------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
 *****************Examining lab07****************
 ******************* Equal Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/array.cpp:71:13: error: no match for 'operator==' (operand types are 'int* const' and 'Array<int>')
-+ 0 pts of 33.333
-Total grade so far: 0
+Failures = 2
+MAKE_ERROR = 
++ 11.099 pts of 33.333
+Total grade so far: 11.099
 ******************* Index Of Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 33.333 pts of 33.333
-Total grade so far: 33.333
+Total grade so far: 44.432
 ******************* Remove Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 33.334 pts of 33.334
-Total grade so far: 66.667
-Auto-grader grade: 66.667
+Total grade so far: 77.766
+Auto-grader grade: 77.766
 *****************Finished lab07****************
