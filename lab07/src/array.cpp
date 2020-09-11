@@ -47,13 +47,31 @@ int Array<T>::indexOf(const T &value){
 // Removes an item at position index by shifting later elements left.
 template <class T>
 bool Array<T>::remove(const int index){
-
+	bool found = false;
+	if (index >= 0 && index < fitSize){
+		for (int i = index; i < fitSize; i++){
+			ptrArr[i] = ptrArr[i+1];
+		}
+		found = true;
+		fitSize--;
+	}
+	return found;
 }
 
 /* Retrieves the element at position pos */
 template <class T>
 T& Array<T>::operator[](const int pos){
 	return ptrArr[pos];
+}
+
+// Returns if the two lists contain the same elements in the same order
+template <class T>
+bool Array<T>::operator==(Array<T> &list) const {
+	bool noEquality = false;
+	if (ptrArr == list) {
+		noEquality = true;
+	}
+	return noEquality;
 }
 
 template <class T>
