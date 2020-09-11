@@ -4,13 +4,9 @@
 template <class T>
 class Array {
     private:
-	 T* ptr;
-	 int fit;
-	 int list;
+	 T* ptrArr;
+	 int fitSize;
     public:
-    	Array(T arr[], int s);
-	void print();
-	T arr[];
 
     Array(const T *array, const int size);
     /* Do a deep copy of the array into the list
