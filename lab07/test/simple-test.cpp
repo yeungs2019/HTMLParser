@@ -75,6 +75,23 @@ void test_dif4(void){
 	Array<int> a2(ary2, 4);
 	TEST_ASSERT(a == a2);
 }
+
+void test_dif5(void){
+        int ary[] = {1, 2, 3, 4};
+        int ary2[] = {4, 3, 2, 1};
+        Array<int> a(ary, 4);
+        Array<int> a2(ary2, 4);
+        TEST_ASSERT(a == a2);
+}
+
+void test_dif6(void){
+        int ary[] = {1, 2, 3, 4};
+        int ary2[] = {1, 2, 3, 5, 6};
+        Array<int> a(ary, 4);
+        Array<int> a2(ary2, 5);
+        TEST_ASSERT(a == a2);
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_simple);
@@ -87,5 +104,7 @@ int main(void) {
     RUN_TEST(test_dif2);
     RUN_TEST(test_dif3);
     RUN_TEST(test_dif4);
+    RUN_TEST(test_dif5);
+    RUN_TEST(test_dif6);
     return UNITY_END();
 }
