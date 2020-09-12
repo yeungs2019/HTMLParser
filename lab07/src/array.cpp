@@ -45,7 +45,7 @@ int Array<T>::indexOf(const T &value){
 }
 
 // Removes an item at position index by shifting later elements left.
-template <class T>
+template <class T> // from https://stackoverflow.com/questions/879603/remove-an-array-element-and shift-the-remaining-ones
 bool Array<T>::remove(const int index){
 	bool found = false;
 	if (index >= 0 && index < fitSize){
@@ -65,14 +65,14 @@ T& Array<T>::operator[](const int pos){
 }
 
 // Returns if the two lists contain the same elements in the same order
-template <class T>
+template <class T> // from https://stackoverflow.com/questions/12866413/comparing-arrays-for-equality-in-c
 bool Array<T>::operator==(Array<T> &list) const {
 	bool noEquality = false;
 	for (int i = 0; i < fitSize; i++){
 		if (ptrArr[i] == list[i]) {
 			noEquality = true;
 		}
-		if (!ptrArr[i] == list[i]) {
+		else if (ptrArr[i] != list[i]) {
 
 			noEquality = false;
 		}
