@@ -16,3 +16,5 @@ Failures =
 MAKE_ERROR = 
 + 33.334 pts of 33.334
 Total grade so far: 77.766
+Auto-grader grade: 77.766
+*****************Finished lab07****************

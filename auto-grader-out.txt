@@ -1,26 +1,2 @@
-I am run number 000130.
+I am run number 000131.
 Pulling source code...
-------------------------------------------------
-Changes found in lab07
-------------------------------------------------
-*****************Examining lab07****************
-******************* Equal Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 2
-MAKE_ERROR = 
-+ 11.099 pts of 33.333
-Total grade so far: 11.099
-******************* Index Of Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 33.333 pts of 33.333
-Total grade so far: 44.432
-******************* Remove Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 33.334 pts of 33.334
-Total grade so far: 77.766
-Auto-grader grade: 77.766
-*****************Finished lab07****************
