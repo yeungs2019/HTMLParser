@@ -76,8 +76,9 @@ bool Array<T>::operator==(Array<T> &list) const {
 
 			noEquality = false;
 		}
-	return noEquality;
+		i++;
 	}
+	return noEquality;
 }
 
 template <class T>
