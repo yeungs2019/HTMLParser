@@ -68,14 +68,38 @@ T& Array<T>::operator[](const int pos){
 template <class T> // from https://stackoverflow.com/questions/12866413/comparing-arrays-for-equality-in-c
 bool Array<T>::operator==(Array<T> &list) const {
 	bool noEquality = false;
+	if (this->getLength() != list.getLength()) {
+		return false;
+	}
 	for (int i = 0; i < fitSize; i++){
 		if (ptrArr[i] == list[i]) {
 			noEquality = true;
 		}
-		else if (ptrArr[i] != list[i]) {
-
+		else if (ptrArr[i] < list[i]) {
 			noEquality = false;
 		}
+		else if (ptrArr[i] > list[i]){
+			noEquality = false;
+		}
+		else if (ptrArr[i] < list[i - 1]){
+			noEquality = false;
+		}
+		else if (ptrArr[i] > list[i - 1]){
+			noEquality == false;
+		}
+		/*else if (!ptrArr[i] != list[i]){
+			noEquality == false;
+		}
+		else if (ptrArr[i] != !list[i]){
+			noEquality == false;
+		}
+		else if (!ptrArr[i] != !list[i]){
+			noEquality == false;
+		}
+		else if (ptrArr[i] == list[i + 1]){
+			noEquality == false;
+		}*/
+
 		i++;
 	}
 	return noEquality;

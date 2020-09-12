@@ -6,6 +6,7 @@ class Array {
     private:
 	 T* ptrArr;
 	 int fitSize;
+	 int length;
     public:
 
     Array(const T *array, const int size);
