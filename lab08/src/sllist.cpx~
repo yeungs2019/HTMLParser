@@ -6,7 +6,6 @@ template<class T>
 SLList<T>::SLList() {
 	head = NULL;
 	tail = NULL;
-	length = 0;
 }
 
 /* Do a deep copy of sll into the this.
@@ -14,19 +13,14 @@ SLList<T>::SLList() {
  */
 template<class T>
 SLList<T>::SLList(const SLList<T> &sll) {
-	SLLNode<T>* rover = sll.head;
-	sll.append(head);
+
 }
 
 // free the memory
 template<class T>
 SLList<T>::~SLList(){
-	SLLNode<T>* rover = head;
-	SLLNode<T>* toDelete = rover;
-	while (rover != NULL){
-		rover = rover->getNext();
-		delete toDelete;
-		toDelete = rover;
+	while (head != NULL){
+		remove(head->getData());
 	}
 }
 
@@ -70,13 +64,11 @@ void SLList<T>::print() const {
  */
 template<class T>
 bool SLList<T>::insert(const int pos, T &val) {
-	/*bool isFound = false;
-	SLLNode<T>* rover = head;
-	if (rover == NULL){
-		SLLNode<T>* newNode = new SLLNode<T>(val, NULL);
-		
-	
-    return false;*/
+	bool isFound = false;
+	if(head->getNext() == NULL){
+		return false;
+	}
+    return false;
 }
 
 /* Remove the first instance of val
@@ -91,8 +83,8 @@ bool SLList<T>::remove(const T &val) {
 	while (rover != NULL){
 		if (rover->getData() != val) {
 			rover2 = rover;
+			rover = rover->getNext();
 		}
-		rover = rover->getNext();
 	}
 	if (rover == NULL){
 		return false;
@@ -114,15 +106,15 @@ bool SLList<T>::remove(const T &val) {
 			rover2->getNext() == rover->getNext();
 			delete rover;
 		}
-		//return true;
+			
+		return true;
 	}
-	return true;
 }
 
 // retrieves the element at position pos
 template<class T>
 T& SLList<T>::operator[](const int pos) {
-	//return head[pos];
+	return head[pos];
 }
 
 // returns the two lists if they are the same
