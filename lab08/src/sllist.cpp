@@ -34,7 +34,7 @@ int SLList<T>::getLength() const {
 template<class T>
 bool SLList<T>::append(const T &val) {
 	bool isAppend = false;
-	SLLNode<T>* rover = new T(val, NULL);
+	SLLNode<T>* rover = new SLLNode<T>(val, NULL);
 	if (head == NULL) {
 		head = rover;
 		tail = rover;
@@ -122,13 +122,26 @@ T& SLList<T>::operator[](const int pos) {
 // returns the two lists if they are the same
 template<class T>
 bool SLList<T>::operator==(const SLList<T> &list) const {
-	/*bool noEquality = false;
 	SLLNode<T>* rover = head;
+	SLLNode<T>* rover2 = list.head;
+	int temp;
 	if(this->getLength() != list.getLength()){
 		return false;
 	}
-	for*/
-    return false;
+	while(rover != NULL && rover2 != NULL){
+		if(rover->getData() == rover2->getData()){
+			temp++;
+			rover = rover->getNext();
+			rover2 = rover2->getNext();
+		}
+		else{
+			return false;
+		}
+	}
+	if(temp == list.getLength()){
+		return true;
+	}
+   	return false;
 }
 
 #endif
