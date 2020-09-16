@@ -27,8 +27,8 @@ void test_remove2(void){
 }
 void test_remove3(void){
     SLList<int> sll;
-    sll.append(1);
-    TEST_ASSERT(sll.remove(1));
+    sll.append(7);
+    TEST_ASSERT(sll.remove(7));
 }
 void test_append(void){
     SLList<int> sll;
@@ -49,24 +49,35 @@ void test_notEqu(void){
 	SLList<int> sll;
 	sll.append(1);
 	SLList<int> sll2;
-	sll.append(2);
+	sll2.append(2);
 	TEST_ASSERT(!(sll == sll2));
 }
 
 void test_yesE(void){
 	SLList<int> sll;
-        sll.append(52);
+        sll.append(3);
         SLList<int> sll2;
-        sll.append(52);
+        sll2.append(3);
         TEST_ASSERT(sll == sll2);
 }
 void test_noE(void){
         SLList<int> sll;
         sll.append(52);
         SLList<int> sll2;
-        sll.append(3);
+        sll2.append(3);
         TEST_ASSERT(!(sll == sll2));
 }
+void test_insert(void){
+	SLList<int> sll;
+	sll.append(1);
+	TEST_ASSERT(sll.insert(1, 3));
+}
+void test_insert2(void){
+        SLList<int> sll;
+       	sll.append(-1);
+        TEST_ASSERT(!sll.insert(-1, 3));
+}
+
 
 int main(void) {
     UNITY_BEGIN();
@@ -80,5 +91,7 @@ int main(void) {
     RUN_TEST(test_notEqu);
     RUN_TEST(test_yesE);
     RUN_TEST(test_noE);
+    RUN_TEST(test_insert);
+    RUN_TEST(test_insert2);
     return UNITY_END();
 }
