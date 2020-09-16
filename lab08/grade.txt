@@ -13,3 +13,5 @@ MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-t
 Total grade so far: 0
 ******************* Remove Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Auto-grader grade: 0
+*****************Finished lab08****************
