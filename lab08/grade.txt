@@ -1,15 +1,30 @@
 ******************* Append Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 0 pts of 25.000
+Total grade so far: 0
 ******************* Equal Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/sllist.cpp:18:2: error: passing 'const SLList<int>' as 'this' argument discards qualifiers [-fpermissive]
+src/sllist.cpp:18:13: error: invalid conversion from 'SLLNode<int>*' to 'int' [-fpermissive]
++ 0 pts of 25.000
+Total grade so far: 0
 ******************* Insert Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* Remove Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 4
+MAKE_ERROR = 
++ 0 pts of 25.000
+Total grade so far: 0
+WARNING: this lab requires an inspection from the Professor.
+The given grade is not final.

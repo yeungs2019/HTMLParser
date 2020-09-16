@@ -1,23 +1,104 @@
-I am run number 000208.
+I am run number 000255.
 Pulling source code...
 ------------------------------------------------
+Changes found in course-materials
+Changes found in create
+Changes found in lab06
 Changes found in lab08
+Changes found in lab09
+Changes found in lab10
 ------------------------------------------------
+*****************Examining course-materials****************
+Auto-grader grade: *****************Finished course-materials****************
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab06****************
+******************* Count Negatives Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 25.000
+******************* Find Min Odd Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 18.750 pts of 25.000
+Total grade so far: 43.750
+******************* Remove Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 2
+MAKE_ERROR = 
++ 12.500 pts of 25.000
+Total grade so far: 56.250
+******************* Search Test *********************
+g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 81.250
+Auto-grader grade: 81.250
+*****************Finished lab06****************
 *****************Examining lab08****************
 ******************* Append Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 0 pts of 25.000
+Total grade so far: 0
 ******************* Equal Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/sllist.cpp:18:2: error: passing 'const SLList<int>' as 'this' argument discards qualifiers [-fpermissive]
+src/sllist.cpp:18:13: error: invalid conversion from 'SLLNode<int>*' to 'int' [-fpermissive]
++ 0 pts of 25.000
+Total grade so far: 0
 ******************* Insert Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000255/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* Remove Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 4
+MAKE_ERROR = 
++ 0 pts of 25.000
+Total grade so far: 0
+WARNING: this lab requires an inspection from the Professor.
+The given grade is not final.
 Auto-grader grade: 0
 *****************Finished lab08****************
+*****************Examining lab09****************
+******************* Bubble Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+******************* Binary Search PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab09****************
+*****************Examining lab10****************
+******************* Stack PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+******************* Queue PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab10****************
