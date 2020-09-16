@@ -21,5 +21,3 @@ g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 makefile aborted due to runtime error.
 WARNING: this lab requires an inspection from the Professor.
 The given grade is not final.
-Auto-grader grade: 75.000
-*****************Finished lab08****************
