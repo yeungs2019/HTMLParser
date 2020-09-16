@@ -1,45 +1,23 @@
-I am run number 000206.
+I am run number 000208.
 Pulling source code...
 ------------------------------------------------
-Changes found in create
 Changes found in lab08
 ------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
 *****************Examining lab08****************
 ******************* Append Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/sllist.cpp:37:22: error: new initializer expression list treated as compound expression [-fpermissive]
-src/sllist.cpp:37:37: error: cannot convert 'int*' to 'SLLNode<int>*' in initialization
-+ 0 pts of 25.000
-Total grade so far: 0
 ******************* Equal Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/sllist.cpp:37:22: error: new initializer expression list treated as compound expression [-fpermissive]
-src/sllist.cpp:37:37: error: cannot convert 'int*' to 'SLLNode<int>*' in initialization
-+ 0 pts of 25.000
-Total grade so far: 0
 ******************* Insert Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000206/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000206/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000206/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-/srv/auto-grader/csci-315-fall-2020/run/000206/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-src/sllist.cpp:37:22: error: new initializer expression list treated as compound expression [-fpermissive]
-src/sllist.cpp:37:37: error: cannot convert 'int*' to 'SLLNode<int>*' in initialization
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:16:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:28:42: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:39:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+/srv/auto-grader/csci-315-fall-2020/run/000208/lab08/tests/insert-test.cpp:51:41: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* Remove Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/sllist.cpp:37:22: error: new initializer expression list treated as compound expression [-fpermissive]
-src/sllist.cpp:37:37: error: cannot convert 'int*' to 'SLLNode<int>*' in initialization
-+ 0 pts of 25.000
-Total grade so far: 0
-WARNING: this lab requires an inspection from the Professor.
-The given grade is not final.
 Auto-grader grade: 0
 *****************Finished lab08****************
