@@ -3,7 +3,7 @@ SRCS   = $(filter-out $(MAIN),$(wildcard src/*.cpp))
 OBJS   = $(SRCS:src/%.cpp=obj/%.o)
 UNITY  = test/unity.c
 CFLAGS = -g -I src/
-EXEC   = main
+EXEC   = map-test
 .PHONY: clean test all
 
 all: $(SRCS) $(EXEC)
