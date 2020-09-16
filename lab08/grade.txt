@@ -32,3 +32,5 @@ src/sllist.cpp:37:37: error: cannot convert 'int*' to 'SLLNode<int>*' in initial
 Total grade so far: 0
 WARNING: this lab requires an inspection from the Professor.
 The given grade is not final.
+Auto-grader grade: 0
+*****************Finished lab08****************
