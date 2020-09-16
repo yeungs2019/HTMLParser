@@ -138,12 +138,12 @@ bool SLList<T>::remove(const T &val) {
 			delete rover;
 		}
 		else {
-			rover2->getNext() == rover->getNext();
+			rover2->getNext() ==  rover->getNext();
 			delete rover;
 		}
-		//return true;
+		return true;
 	}
-	return true;
+	//return true;
 }
 
 // retrieves the element at position pos
