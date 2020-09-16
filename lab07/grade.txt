@@ -1,18 +1,18 @@
 ******************* Equal Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 2
+Failures = 
 MAKE_ERROR = 
-+ 11.099 pts of 33.333
-Total grade so far: 11.099
++ 33.333 pts of 33.333
+Total grade so far: 33.333
 ******************* Index Of Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 33.333 pts of 33.333
-Total grade so far: 44.432
+Total grade so far: 66.666
 ******************* Remove Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 33.334 pts of 33.334
-Total grade so far: 77.766
+Total grade so far: 100.000
