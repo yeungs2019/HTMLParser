@@ -1,11 +1,30 @@
 #ifndef SLLIST_HPP
 #define SLLIST_HPP
 
+#include <stdlib.h>
+/*SLLNode class*/
+template<class T>
+class SLLNode {
+	private:
+		 int data;
+		 SLLNode* nextNode;
+	public:
+		 SLLNode (const int data, SLLNode *next){
+			 this->data = data;
+			 this->nextNode = next;
+		 }
+		 int& getData() { return data; }
+		 SLLNode *getNext() { return nextNode; }
+		 void setNext(SLLNode *node) {this->nextNode = node; }
+};
+
 /* SLL = Singly Linked List */
 template<class T>
 class SLList {
     private:
-        /* Class exercise to fill in. */
+	    SLLNode<T>* head;
+	    SLLNode<T>* tail;
+	    int length;
     public:
 
         /* Empty constructor shall create an empty Linked List! */
@@ -23,7 +42,7 @@ class SLList {
         int getLength() const;
 
         /* Insert at the end of the list.*/
-        bool append(T val);
+        bool append(const T &val);
 
         /* Insert val at position pos.
          * Return true if successful (it can be placed.)
