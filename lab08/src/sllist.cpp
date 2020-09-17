@@ -26,12 +26,12 @@ SLList<T>::SLList(const SLList<T> &sll) {
 template<class T>
 SLList<T>::~SLList(){
 	SLLNode<T>* rover = head;
-	//SLLNode<T>* toDelete = rover;
+	SLLNode<T>* toDelete = rover;
 	//SLLNode<T>* current = tail;
 	//SLLNode<T>* toDelete2 = current;
 	while (rover != NULL){
 		rover = rover->getNext();
-		//toDelete = rover;
+		toDelete = rover;
 		delete rover;
 	}
 }
@@ -133,19 +133,19 @@ bool SLList<T>::remove(const T &val) {
 			if (rover->getNext() == NULL){
 				tail == NULL;
 			}
-			delete rover;
-			rover = NULL;
+			//delete rover;
+			//rover = NULL;
 		}
 		else if (rover->getNext() == NULL){
 			tail = rover2;
 			rover2 = NULL;
-			delete rover;
-			rover = NULL;
+			//delete rover;
+			//rover = NULL;
 		}
 		else {
 			rover2->getNext() ==  rover->getNext();
-			delete rover;
-			rover = NULL;
+			//delete rover;
+			//rover = NULL;
 		}
 		return true;
 	}
@@ -205,7 +205,7 @@ DLList<T>::DLList(const DLList<T> &dll) {
         }
 }
 // free the memory
-template<class T>
+/*template<class T>
 DLList<T>::~DLList(){
         DLLNode<T>* rover = head;
         DLLNode<T>* toDelete = rover;
@@ -214,7 +214,7 @@ DLList<T>::~DLList(){
                 delete toDelete;
                 toDelete = rover;
         }
-}
+}*/
 
 // returns length of list
 template<class T>
