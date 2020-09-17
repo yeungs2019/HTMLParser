@@ -30,18 +30,13 @@ int search(const int array[], int size, int value) {
 }
 
 bool remove(int array[], int size, int index) {
-	// Searches for the index
-	for (int i = 0; i < size; i++) {
-		if (array[i] == index){
-			for (int i = index - 1; i < size; i++){
-				array[index] = array[index + 1];
-			}
-			size--;
+	if (index >= 0 && index < size){
+		for (int i = index; i < size; i++){
+			array[i] = array[i + 1];
 		}
-	}
-	if (0 <= index && index < size){
 		return true;
+		size--;
 	}
-    return false;
+	return false;
 } //from www.cprogrammingcode.com/2012/05/write-program-to-delete-element-from.html
 
