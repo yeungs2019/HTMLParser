@@ -31,8 +31,8 @@ SLList<T>::~SLList(){
 	//SLLNode<T>* toDelete2 = current;
 	while (rover != NULL){
 		rover = rover->getNext();
-		delete toDelete;
 		toDelete = rover;
+		delete toDelete;
 	}
 }
 
