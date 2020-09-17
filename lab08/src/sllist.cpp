@@ -293,7 +293,7 @@ bool DLList<T>::insert(const int pos, const T &val) {
  * Return true if found and removed.
  * Otherwise return false.
  */
-template<class T>
+/*template<class T>
 bool DLList<T>::remove(const T &val) {
         DLLNode<T>* rover = head;
         DLLNode<T>* rover2 = NULL;
@@ -323,7 +323,7 @@ bool DLList<T>::remove(const T &val) {
                 }
         }
         return true;
-}
+}*/
 
 // retrieves the element at position pos
 template<class T>
