@@ -107,8 +107,10 @@ bool SLList<T>::insert(const int pos, const T &val) {
                  newNode->setNext(rover);
                  return true;
 	}
-	
-
+	delete rover;
+	delete current;
+	rover = NULL;
+	current = NULL;
 }
 /* Remove the first instance of val
  * Return true if found and removed.
