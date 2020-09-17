@@ -26,13 +26,13 @@ SLList<T>::SLList(const SLList<T> &sll) {
 template<class T>
 SLList<T>::~SLList(){
 	SLLNode<T>* rover = head;
-	SLLNode<T>* toDelete = rover;
+	//SLLNode<T>* toDelete = rover;
 	//SLLNode<T>* current = tail;
 	//SLLNode<T>* toDelete2 = current;
 	while (rover != NULL){
 		rover = rover->getNext();
-		toDelete = rover;
-		delete toDelete;
+		//toDelete = rover;
+		delete rover;
 	}
 }
 

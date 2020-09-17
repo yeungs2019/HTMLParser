@@ -93,6 +93,24 @@ void test_insert2(void){
        	sll.append(5);
         TEST_ASSERT(!sll.insert(6, 3));
 }*/
+void test_overflow(void){
+	SLList<int> sll;
+	sll.append(1);
+	sll.append(2);
+	sll.append(3);
+	sll.append(4);
+	sll.append(5);
+	TEST_ASSERT(sll.remove(3));
+}
+void test_overflow2(void){
+        SLList<int> sll;
+        sll.append(1);
+        sll.append(2);
+        sll.append(3);
+        sll.append(4);
+        sll.append(5);
+        TEST_ASSERT(!(sll.remove(10)));
+}
 
 
 int main(void) {
@@ -110,6 +128,8 @@ int main(void) {
     RUN_TEST(test_notEqu);
     RUN_TEST(test_yesE);
     RUN_TEST(test_noE);
+    RUN_TEST(test_overflow);
+    RUN_TEST(test_overflow2);
    // RUN_TEST(test_insert);
    // RUN_TEST(test_insert2);
     return UNITY_END();
