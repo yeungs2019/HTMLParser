@@ -30,9 +30,6 @@ int search(const int array[], int size, int value) {
 }
 
 bool remove(int array[], int size, int index) {	
-	if (size = 0){
-		return false;
-	}
 	if (index >= 0 && index < size){
 		for (int i = index; i < size; i++){
 			array[i] = array[i + 1];
