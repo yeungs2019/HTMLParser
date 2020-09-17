@@ -30,6 +30,22 @@ void test_remove3(void){
     sll.append(7);
     TEST_ASSERT(sll.remove(7));
 }
+void test_remove4(void){
+    SLList<int> sll;
+    sll.append(5);
+    TEST_ASSERT(!(sll.remove(7)));
+}
+void test_remove5(void){
+    SLList<int> sll;
+    sll.append(7);
+    TEST_ASSERT(!(sll.remove(5)));
+}
+void test_remove6(void){
+    SLList<int> sll;
+    sll.append(777);
+    TEST_ASSERT(sll.remove(777));
+}
+
 void test_append(void){
     SLList<int> sll;
     TEST_ASSERT(sll.append(1));
@@ -74,8 +90,8 @@ void test_insert(void){
 }
 void test_insert2(void){
         SLList<int> sll;
-       	sll.append(-1);
-        TEST_ASSERT(!sll.insert(-1, 3));
+       	sll.append(5);
+        TEST_ASSERT(!sll.insert(6, 3));
 }
 
 
@@ -85,6 +101,9 @@ int main(void) {
     RUN_TEST(test_remove);
     RUN_TEST(test_remove2);
     RUN_TEST(test_remove3);
+    RUN_TEST(test_remove4);
+    RUN_TEST(test_remove5);
+    RUN_TEST(test_remove6);
     RUN_TEST(test_append);
     RUN_TEST(test_equals);
     RUN_TEST(test_notEqual);
