@@ -27,6 +27,8 @@ template<class T>
 SLList<T>::~SLList(){
 	SLLNode<T>* rover = head;
 	SLLNode<T>* toDelete = rover;
+	//SLLNode<T>* current = tail;
+	//SLLNode<T>* toDelete2 = current;
 	while (rover != NULL){
 		rover = rover->getNext();
 		delete toDelete;
@@ -84,29 +86,34 @@ bool SLList<T>::insert(const int pos, const T &val) {
 	SLLNode<T>* rover = new SLLNode<T>(val, NULL);
 	SLLNode<T>* current = new SLLNode<T>(val, head);
 	if (pos < 0 || pos > this->getLength()){
-		std::cout << this->getLength();
 		return false;
 	}
 	if (head == NULL && pos == this->getLength()){
-                        append(val);
-                        return true;
+                 append(val);
+		 delete rover;
+		 delete current;
+                 return true;
 
 	}
 	if (pos == 0){
-      	                // adding node at pos
-                        head = current;
-                        return true;
-                }
-                else{
-                        SLLNode<T>* newNode = head;
-                        for (int i = 0; i < pos - 1; i++){
-                                newNode = newNode->getNext();
-                        }
-                        rover->setNext(newNode->getNext());
-                        newNode->setNext(rover);
-                    	return true;
-
+      	      // adding node at pos
+                 head = current;
+		 delete rover;
+		 delete current;
+                 return true;
+        }
+        else{
+                 SLLNode<T>* newNode = head;
+                 for (int i = 0; i < pos - 1; i++){
+                 	newNode = newNode->getNext();
+                 }
+                 rover->setNext(newNode->getNext());
+                 newNode->setNext(rover);
+		 delete rover;
+		 delete current;
+                 return true;
 	}
+	delete current;
 
 }
 /* Remove the first instance of val
