@@ -12,15 +12,13 @@ MAKE_ERROR =
 Total grade so far: 43.750
 ******************* Remove Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
-Failures = 1
+Failures = 2
 MAKE_ERROR = 
-+ 18.750 pts of 25.000
-Total grade so far: 62.500
++ 12.500 pts of 25.000
+Total grade so far: 56.250
 ******************* Search Test *********************
 g++ -o arrays -O2 -I src/ --std=c++14 src/arrays.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 25.000 pts of 25.000
-Total grade so far: 87.500
-Auto-grader grade: 87.500
-*****************Finished lab06****************
+Total grade so far: 81.250
