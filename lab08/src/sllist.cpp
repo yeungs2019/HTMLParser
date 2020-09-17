@@ -191,9 +191,9 @@ DLList<T>::DLList() {
         tail = NULL;
 }
 
-/* Do a deep copy of sll into the this.
- * Note: This one uses a reference to a Singly Linked List!
- */
+// Do a deep copy of sll into the this.
+ // Note: This one uses a reference to a Singly Linked List!
+ 
 template<class T>
 DLList<T>::DLList(const DLList<T> &dll) {
         DLLNode<T>* rover = dll.head;
@@ -204,7 +204,6 @@ DLList<T>::DLList(const DLList<T> &dll) {
                 rover = rover->getNext();
         }
 }
-
 // free the memory
 template<class T>
 DLList<T>::~DLList(){
