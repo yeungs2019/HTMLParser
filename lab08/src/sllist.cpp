@@ -133,18 +133,18 @@ bool SLList<T>::remove(const T &val) {
 			if (rover->getNext() == NULL){
 				tail == NULL;
 			}
-			//delete rover;
+			delete rover;
 			//rover = NULL;
 		}
 		else if (rover->getNext() == NULL){
 			tail = rover2;
 			rover2 = NULL;
-			//delete rover;
+			delete rover;
 			//rover = NULL;
 		}
 		else {
 			rover2->getNext() ==  rover->getNext();
-			//delete rover;
+			delete rover;
 			//rover = NULL;
 		}
 		return true;
