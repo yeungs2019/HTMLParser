@@ -90,16 +90,12 @@ bool SLList<T>::insert(const int pos, const T &val) {
 	}
 	if (head == NULL && pos == this->getLength()){
                  append(val);
-		 delete rover;
-		 delete current;
                  return true;
 
 	}
 	if (pos == 0){
       	      // adding node at pos
                  head = current;
-		 delete rover;
-		 delete current;
                  return true;
         }
         else{
@@ -109,11 +105,9 @@ bool SLList<T>::insert(const int pos, const T &val) {
                  }
                  rover->setNext(newNode->getNext());
                  newNode->setNext(rover);
-		 delete rover;
-		 delete current;
                  return true;
 	}
-	delete current;
+	
 
 }
 /* Remove the first instance of val
