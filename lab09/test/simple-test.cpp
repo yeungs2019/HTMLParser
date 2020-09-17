@@ -12,9 +12,34 @@ void test_simple(void) {
     TEST_ASSERT_EQUAL_INT(10, 1);
     TEST_ASSERT(10 == 0);
 }
+void test_sort(void) {
+	int ary[] = {1, 3, 2, 6, 4};
+	int ary2[] = {1, 2, 3, 4, 6};
+	Array<int> a(ary, 5);
+	Array<int> a2(ary2, 5);
+	TEST_ASSERT(a.bubbleSort() == a2);
+}
+void test_sort2(void) {
+        int ary[] = {1, 2, 3, 4, 6};
+        int ary2[] = {1, 2, 3, 4, 6};
+        Array<int> a(ary, 5);
+        Array<int> a2(ary2, 5);
+        TEST_ASSERT(a.bubbleSort() == a2);
+}
+void test_sort3(void) {
+        int ary[] = {1, 2, 3, 4, 6};
+        int ary2[] = {1, 3, 6, 4, 2};
+        Array<int> a(ary, 5);
+        Array<int> a2(ary2, 5);
+        TEST_ASSERT(a2.bubbleSort() == a);
+}
 
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_simple);
+    RUN_TEST(test_sort);
+    RUN_TEST(test_sort2);
+    RUN_TEST(test_sort3);
+//    RUN_TEST(test_sort4);
     return UNITY_END();
 }
