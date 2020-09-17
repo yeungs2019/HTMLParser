@@ -1,2 +1,34 @@
 I am run number 000307.
 Pulling source code...
+------------------------------------------------
+Changes found in lab08
+------------------------------------------------
+*****************Examining lab08****************
+******************* Append Test *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 25.000
+******************* Equal Test *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 18.750 pts of 25.000
+Total grade so far: 43.750
+******************* Insert Test *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 68.750
+******************* Remove Test *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+Failures = 2
+MAKE_ERROR = 
++ 12.500 pts of 25.000
+Total grade so far: 81.250
+WARNING: this lab requires an inspection from the Professor.
+The given grade is not final.
+Auto-grader grade: 81.250
+*****************Finished lab08****************
