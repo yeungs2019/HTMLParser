@@ -6,9 +6,7 @@ MAKE_ERROR =
 Total grade so far: 50.000
 ******************* Binary Search PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+Failures = 1
+MAKE_ERROR = 
 + 0 pts of 50.000
 Total grade so far: 50.000
-Auto-grader grade: 50.000
-*****************Finished lab09****************
