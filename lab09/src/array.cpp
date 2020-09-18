@@ -138,7 +138,7 @@ int Array<T>::retArray(T* arr, int size, T val){
 	}
 	else {
 		//middle + 1;
-		return middle + 1 + retArray(arr, middle - even, val);
+		return middle + 1 + retArray(arr + (middle + 1), middle - even, val);
 	}
 		
 }
