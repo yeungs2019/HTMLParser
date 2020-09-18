@@ -170,9 +170,9 @@ int Array<T>::binarySearch(const T &value) {
 		return -1;
 	}
 	while(left < right){
-		printf("Looking at %d\n", ptrArr[fitSize/2]);
+		//printf("Looking at %d\n", ptrArr[fitSize/2]);
 		//printf("\n");
-		print();
+		//print();
 		//int middle = left + (right - left) / 2;
 		if (ptrArr[middle] == value) {
                         return middle;
@@ -187,16 +187,16 @@ int Array<T>::binarySearch(const T &value) {
                         //return right;
 			//return left = middle + 1;
                 }
-		printf("Look at the right %d\n", ptrArr[right]);
-		printf("left %d\n", ptrArr[left]);
-		print();
+		//printf("Look at the right %d\n", ptrArr[right]);
+		//printf("left %d\n", ptrArr[left]);
+		//print();
                 if (value > this->ptrArr[middle]){
 			left = middle + 1;
 			middle = (left + right) / 2;
 			//return right = middle - 1;
                 }
-		printf("Look at the left %d\n", ptrArr[left]);
-		print();
+		//printf("Look at the left %d\n", ptrArr[left]);
+		//print();
 	}
 	return -1;
 	//printf("exited while loop\n");
