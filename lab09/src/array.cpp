@@ -117,6 +117,37 @@ void Array<T>::bubbleSort() {
 }
 
 template <class T>
+int Array<T>::binarySearch(const T &value) {
+	int left = 0;
+	int right = this->getLength() - 1;
+	if (left <= right){
+		int middle = left + ((right - left) / 2);
+		if (ptrArr[middle] == value) {
+                        return middle;
+                }
+                else if (value < ptrArr[middle]){
+                        return right = middle - 1;
+                }
+                else{
+                        return left = middle + 1;
+                }
+	}
+	if (left >= right){
+		int middle = left - ((right + left) / 2);
+		if(ptrArr[middle] = value){
+			return middle;
+		}
+		else if (value < ptrArr[middle]){
+			return right = middle + 1;
+		}
+		else{
+			return left = middle - 1;
+		}
+	}
+	return -1;
+}
+
+template <class T>
 Array<T>::~Array() {
 	delete ptrArr;
 }
