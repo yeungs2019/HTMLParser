@@ -49,6 +49,8 @@ class Array {
      * NOTE: We assume the array is sorted!
      * Return -1 if the value is not found.
      */
+    void print() const;
+    int retArray (T* arr, int size, T val);
     int binarySearch(const T &value);
 
     /* Free any memory used! */
