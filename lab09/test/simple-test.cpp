@@ -38,9 +38,9 @@ void test_bsearch(void){
 	TEST_ASSERT(a.binarySearch(4) == 2);
 }
 void test_notThere(void){
-	int ary[] = {1, 3, 4, 5, 6, 12, 14, 56};
-	Array<int> a(ary, 22);
-	TEST_ASSERT(a.binarySearch(22) == -1);
+	int ary[] = {1, 3, 4, 5, 6, 12, 56, 57};
+	Array<int> a(ary, 8);
+	TEST_ASSERT(a.binarySearch(7) == -1);
 }
 void test_bsearch2(void){
 	int ary[] = {56, 14, 12, 6, 5, 4, 3, 1};

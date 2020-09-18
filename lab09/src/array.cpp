@@ -115,43 +115,76 @@ void Array<T>::bubbleSort() {
 		}
 	}
 }
-
+template <class T>
+void Array<T>::print()const{
+	for (int i = 0; i < fitSize; i++){
+		printf("%d ", ptrArr[i]);
+	}
+	printf("\n");
+}
+template<class T>
+int Array<T>::retArray(T* arr, int size, T val){
+	if (size <= 0){
+		return -1;
+	}
+	int middle = size / 2;
+	int even = (size + 1) % 2;
+	if (arr[middle] = val){
+		return middle;
+	}
+	else if(arr[middle] > val){
+		//return middle - 1;
+		return retArray(arr, middle, val);
+	}
+	else {
+		//middle + 1;
+		return middle + 1 + retArray(arr, middle - even, val);
+	}
+		
+}
 template <class T>
 int Array<T>::binarySearch(const T &value) {
-	int left = 0;
-	int right = this->getLength() - 1;
-	int middle = left + ((right - left) / 2);
+	//int left = 0;
+	//int right = this->getLength() - 1;
+	//int left;
+	//int right;
 	/*while(left <= right){
-		int middle = left + ((right - left) / 2);
+		printf("Looking at %d\n", ptrArr[fitSize/2]);
+		//printf("\n");
+		print();
+		int middle = left + (right - left) / 2;
 		if (ptrArr[middle] == value) {
                         return middle;
+			break;
 			//return left = middle + 1;
                 }
+		 printf("Look at the middle %d\n", ptrArr[middle]);
+                 print();
+
                 if (value < ptrArr[middle]){
-                        return right = middle - 1;
+			right = middle - 1;
+                        return right;
 			//return left = middle + 1;
                 }
+		printf("Look at the right %d\n", ptrArr[right]);
+		printf("left %d\n", ptrArr[left]);
+		print();
                 if (value > ptrArr[middle]){
-                        return left = middle + 1;
+			left = middle + 1;
+                        return left;
 			//return right = middle - 1;
                 }
-		if (ptrArr[middle] != value){
-			return -1;
-		}
-	}*/
-	for (int i = 0; i < fitSize; i++){
-		if (ptrArr[middle] == value){
-			return middle;
-		}
-		if (ptrArr[middle] > value){
-			return right = middle - 1;
-		}
-		if (ptrArr[middle] < value){
-			return left = middle + 1;
-		}
+		printf("Look at the left %d\n", ptrArr[left]);
+		print();
 	}
-	return -1;
+	if (left > right){
+		return -1;
+	}*/
+	//printf("exited while loop\n");
+	//print();
+	return retArray(ptrArr, fitSize, value);
 }
+
 
 template <class T>
 Array<T>::~Array() {
