@@ -120,28 +120,34 @@ template <class T>
 int Array<T>::binarySearch(const T &value) {
 	int left = 0;
 	int right = this->getLength() - 1;
-	if (left <= right){
+	int middle = left + ((right - left) / 2);
+	/*while(left <= right){
 		int middle = left + ((right - left) / 2);
 		if (ptrArr[middle] == value) {
                         return middle;
+			//return left = middle + 1;
                 }
-                else if (value < ptrArr[middle]){
+                if (value < ptrArr[middle]){
                         return right = middle - 1;
+			//return left = middle + 1;
                 }
-                else{
+                if (value > ptrArr[middle]){
                         return left = middle + 1;
+			//return right = middle - 1;
                 }
-	}
-	if (left >= right){
-		int middle = left - ((right + left) / 2);
-		if(ptrArr[middle] = value){
+		if (ptrArr[middle] != value){
+			return -1;
+		}
+	}*/
+	for (int i = 0; i < fitSize; i++){
+		if (ptrArr[middle] == value){
 			return middle;
 		}
-		else if (value < ptrArr[middle]){
-			return right = middle + 1;
+		if (ptrArr[middle] > value){
+			return right = middle - 1;
 		}
-		else{
-			return left = middle - 1;
+		if (ptrArr[middle] < value){
+			return left = middle + 1;
 		}
 	}
 	return -1;
