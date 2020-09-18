@@ -132,14 +132,11 @@ int Array<T>::retArray(T* arr, int size, T val){
 	if (arr[middle] = val){
 		return middle;
 	}
-	else if(arr[middle] > val){
+	if(arr[middle] > val){
 		//return middle - 1;
 		return retArray(arr, middle, val);
 	}
-	else {
-		//middle + 1;
-		return middle + 1 + retArray(arr + (middle + 1), middle - even, val);
-	}
+	return middle + 1 + retArray(arr + (middle + 1), middle - even, val);
 		
 }
 template <class T>
@@ -182,7 +179,7 @@ int Array<T>::binarySearch(const T &value) {
 	}*/
 	//printf("exited while loop\n");
 	//print();
-	return retArray(ptrArr, fitSize, value);
+	retArray(ptrArr, fitSize, value);
 }
 
 
