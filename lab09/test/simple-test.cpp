@@ -47,7 +47,11 @@ void test_bsearch2(void){
 	Array<int> a(ary, 8);
 	TEST_ASSERT(a.binarySearch(4) == 5);
 }
-
+void test_bsearch3(void){
+        int ary[] = {};
+        Array<int> a(ary, 0);
+        TEST_ASSERT(a.binarySearch(2) == -1);
+}
 int main(void) {
     UNITY_BEGIN();
     //RUN_TEST(test_simple);
@@ -58,5 +62,6 @@ int main(void) {
     RUN_TEST(test_bsearch);
     RUN_TEST(test_notThere);
     RUN_TEST(test_bsearch2);
+    RUN_TEST(test_bsearch3);
     return UNITY_END();
 }
