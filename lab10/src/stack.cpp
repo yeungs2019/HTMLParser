@@ -78,20 +78,24 @@ void Stack<T>::print() const{
 // pushes the val to top of stack
 template <class T>
 bool Stack<T>::push(const T &val) {
-    bool isPush = false; 
+    //bool isPush = false; 
     stackNode<T>* rover = new stackNode<T>(val, NULL);
-    //stackNode<T>* top = NULL;
+    stackNode<T>* top = NULL;
     /*while(rover != NULL && rover->getData() != val){
 	rover = rover->getNext();
 	top = rover;
 	isPush = true;
     }*/
-    if (head == NULL){
-        head = rover;
-	isPush = true;
+    if (top == NULL){
+        top = rover;
+	return true;
     }
-        
-    return isPush;
+    else{
+	top = rover->getNext();
+        top = rover;
+	return true;
+    }	
+    //return isPush;
 }
 
 // returns the top element from the stack
