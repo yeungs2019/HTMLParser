@@ -1,21 +1,2 @@
-I am run number 000475.
+I am run number 000476.
 Pulling source code...
-------------------------------------------------
-Changes found in lab10
-------------------------------------------------
-*****************Examining lab10****************
-******************* Stack PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
-Memory errors found: ==17096==    definitely lost: 6,400 bytes in 400 blocks
-+ 0 pts of 50.000
-Total grade so far: 0
-******************* Queue PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 50.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab10****************
