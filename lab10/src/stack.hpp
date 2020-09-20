@@ -2,9 +2,25 @@
 #define STACK_H
 
 template<class T>
+class stackNode {
+    private:
+	int data;
+	stackNode* nextNode;
+    public:
+	stackNode (const int data, stackNode* next){
+		this->data = data;
+		this->nextNode = next;
+	}
+	int& getData() { return data; }
+	stackNode* getNext() { return nextNode; }
+	void setNext(stackNode* node) {this->nextNode = node; }
+};
+
+template<class T>
 class Stack {
     private:
-        /* Class to implement.*/
+        stackNode<T>* head;
+	stackNode<T>* tail;
     public:
         /* Empty constructor shall create an empty Stack! */
         Stack();
@@ -20,6 +36,8 @@ class Stack {
         bool isEmpty() const;
         /* Print out the Stack */
         void print() const;
+	/* appends node at end of list (only for deep copy*/
+	bool append(const T &val);
         /* Pushes the val to the top of the stack. */
         bool push(const T &val);
         /* Returns the top element from the stack. */
