@@ -80,7 +80,7 @@ template <class T>
 bool Stack<T>::push(const T &val) {
     bool isPush = false; 
     stackNode<T>* rover = new stackNode<T>(val, NULL);
-    stackNode<T>* top = NULL;
+    //stackNode<T>* top = NULL;
     /*while(rover != NULL && rover->getData() != val){
 	rover = rover->getNext();
 	top = rover;
