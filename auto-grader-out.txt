@@ -1,2 +1,23 @@
 I am run number 000507.
 Pulling source code...
+------------------------------------------------
+Changes found in lab10
+------------------------------------------------
+*****************Examining lab10****************
+******************* Stack PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/stack.cpp:117:16: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+src/stack.cpp:123:10: error: invalid conversion from 'int' to 'stackNode<int>*' [-fpermissive]
+src/stack.cpp:124:12: error: invalid conversion from 'stackNode<int>*' to 'int' [-fpermissive]
+src/stack.cpp:124:12: error: cannot bind rvalue '(int)temp' to 'int&'
++ 0 pts of 50.000
+Total grade so far: 0
+******************* Queue PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab10****************
