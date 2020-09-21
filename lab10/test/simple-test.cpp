@@ -30,6 +30,12 @@ void test_append(void){
     Stack<int> stack;
     TEST_ASSERT(stack.append(3));
 }
+/*void test_pop(void){
+    Stack<int> stack;
+    //stack.push(10);
+    TEST_ASSERT(stack.pop());
+}*/
+
 
 int main(void) {
     UNITY_BEGIN();
@@ -38,5 +44,6 @@ int main(void) {
     RUN_TEST(test_empty);
     RUN_TEST(test_push);
     RUN_TEST(test_append);
+    //RUN_TEST(test_pop);
     return UNITY_END();
 }

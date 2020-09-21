@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include "stack.hpp"
+#include <stdio.h>
 
 // Empty constructor
 template <class T>
@@ -87,12 +88,23 @@ bool Stack<T>::push(const T &val) {
 	isPush = true;
     }*/
     if (top == NULL){
+	//printf("This is the top's value %d\n", top);
+	//print();
         top = rover;
+	printf("This is the top's value %d\n", top);
+        print();
+
+	printf("This is rover's %d\n", rover);
+	print();
 	return true;
     }
     else{
 	top = rover->getNext();
+	printf("This is new top %d\n", top);
+	print();
         top = rover;
+	printf("This is new rover %d\n", rover);
+	print();
 	return true;
     }	
     //return isPush;
@@ -101,11 +113,32 @@ bool Stack<T>::push(const T &val) {
 // returns the top element from the stack
 template <class T>
 T& Stack<T>::top() {
+    if (head == NULL){
+        return NULL;
+    }
+    stackNode<T>* temp = head;
+    while(temp->getNext() != NULL){
+	temp = temp->getNext();
+    }
+    temp = temp->getData();
+    return temp;    
 }
 
 // removes top element from stack
 template <class T>
 void Stack<T>::pop() {
+   stackNode<T>* top = head;
+   stackNode<T>* temp = top;
+   int tempData;
+   if (top == NULL){
+           return;
+   }
+   else{
+	   tempData = top->getData();
+	   top = top->getNext();
+	   delete temp;
+   }
+
 }
 
 // returns if two stacks contain same elements in same order
