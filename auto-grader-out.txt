@@ -1,4 +1,4 @@
-I am run number 000475.
+I am run number 000477.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab10
@@ -8,7 +8,7 @@ Changes found in lab10
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 3
 MAKE_ERROR = 
-Memory errors found: ==17096==    definitely lost: 6,400 bytes in 400 blocks
+Memory errors found: ==17325==    definitely lost: 6,400 bytes in 400 blocks
 + 0 pts of 50.000
 Total grade so far: 0
 ******************* Queue PART *********************
