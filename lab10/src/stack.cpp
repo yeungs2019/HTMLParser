@@ -113,7 +113,7 @@ bool Stack<T>::push(const T &val) {
 // returns the top element from the stack
 template <class T>
 T& Stack<T>::top() {
-    if (head == NULL){
+    /*if (head == NULL){
         return NULL;
     }
     stackNode<T>* temp = head;
@@ -121,7 +121,11 @@ T& Stack<T>::top() {
 	temp = temp->getNext();
     }
     temp = temp->getData();
-    return temp;    
+    return temp;*/
+    if(!isEmpty()){
+       top = top->getData();
+       return top;
+    }       
 }
 
 // removes top element from stack
