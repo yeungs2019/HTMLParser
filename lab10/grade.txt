@@ -1,10 +1,9 @@
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/stack.cpp:117:16: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-src/stack.cpp:123:10: error: invalid conversion from 'int' to 'stackNode<int>*' [-fpermissive]
-src/stack.cpp:124:12: error: invalid conversion from 'stackNode<int>*' to 'int' [-fpermissive]
-src/stack.cpp:124:12: error: cannot bind rvalue '(int)temp' to 'int&'
+MAKE_ERROR = src/stack.cpp:126:14: error: invalid use of member function 'T& Stack<T>::top() [with T = int]' (did you forget the '()' ?)
+src/stack.cpp:126:14: error: base operand of '->' is not a pointer
+src/stack.cpp:127:15: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type '<unresolved overloaded function type>'
 + 0 pts of 50.000
 Total grade so far: 0
 ******************* Queue PART *********************
@@ -13,5 +12,3 @@ Failures =
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 50.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab10****************
