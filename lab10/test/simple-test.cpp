@@ -24,12 +24,15 @@ void test_empty(void){
 }
 void test_push(void){
     Stack<int> stack;
-    TEST_ASSERT(stack.push(1));
+    stack.push(10);
+    TEST_ASSERT(stack.top());
 }
 void test_append(void){
     Stack<int> stack;
     TEST_ASSERT(stack.append(3));
 }
+
+
 /*void test_pop(void){
     Stack<int> stack;
     //stack.push(10);

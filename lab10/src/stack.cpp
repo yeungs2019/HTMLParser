@@ -65,7 +65,7 @@ bool Stack<T>::append(const T &val){
 template <class T>
 bool Stack<T>::isEmpty() const{
     stackNode<T>* rover = head;
-    if(head == NULL){
+    if(rover == NULL){
         return true;
     }
     return false;
@@ -81,13 +81,13 @@ template <class T>
 bool Stack<T>::push(const T &val) {
     //bool isPush = false; 
     stackNode<T>* rover = new stackNode<T>(val, NULL);
-    stackNode<T>* top = NULL;
+    //stackNode<T>* top = NULL;
     /*while(rover != NULL && rover->getData() != val){
 	rover = rover->getNext();
 	top = rover;
 	isPush = true;
     }*/
-    if (top == NULL){
+    /*if (top == NULL){
 	//printf("This is the top's value %d\n", top);
 	//print();
         top = rover;
@@ -106,8 +106,14 @@ bool Stack<T>::push(const T &val) {
 	printf("This is new rover %d\n", rover);
 	print();
 	return true;
-    }	
+    }*/	
     //return isPush;
+    /*rover->getData() = val;
+    rover->getNext() = top;
+    top = rover;
+    return true;*/
+    rover->setNext(head);
+    head = rover;
 }
 
 // returns the top element from the stack
@@ -122,10 +128,13 @@ T& Stack<T>::top() {
     }
     temp = temp->getData();
     return temp;*/
-    if(!isEmpty()){
-       top = top->getData();
-       return top;
-    }       
+    /*if(!isEmpty()){
+       head = head->getData();
+       return head;
+    }*/   
+    if (head != NULL){
+        return head->getData();
+    }    
 }
 
 // removes top element from stack
