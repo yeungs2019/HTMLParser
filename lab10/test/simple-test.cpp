@@ -32,13 +32,45 @@ void test_append(void){
     TEST_ASSERT(stack.append(3));
 }
 
-
-/*void test_pop(void){
+void test_pop(void){
     Stack<int> stack;
-    //stack.push(10);
-    TEST_ASSERT(stack.pop());
-}*/
-
+    stack.push(10);
+    TEST_ASSERT(stack.top());
+    stack.push(15);
+    TEST_ASSERT(stack.top());
+    stack.pop();
+}
+void test_pop2(void){
+    Stack<int> stack;
+    stack.push(10);
+    TEST_ASSERT(stack.top());
+    stack.push(15);
+    TEST_ASSERT(stack.top());
+    stack.push(2);
+    TEST_ASSERT(stack.top());
+    stack.pop();
+}
+void test_pop3(void){
+    Stack<int> stack;
+    stack.push(3);
+    TEST_ASSERT(stack.top());
+    stack.push(19);
+    TEST_ASSERT(stack.top());
+    stack.push(20);
+    TEST_ASSERT(stack.top());
+    stack.pop();
+}
+void test_stress(void){
+    Stack<int> stack;
+    for (int i = 0; i < 1000000; i++){
+        stack.push(i);
+	TEST_ASSERT(stack.top());
+    }
+    for (int i = 999999; i >= 0; i--){
+	TEST_ASSERT(stack.top());
+	stack.pop();
+    }
+}
 
 int main(void) {
     UNITY_BEGIN();
@@ -47,6 +79,9 @@ int main(void) {
     RUN_TEST(test_empty);
     RUN_TEST(test_push);
     RUN_TEST(test_append);
-    //RUN_TEST(test_pop);
+    RUN_TEST(test_pop);
+    RUN_TEST(test_pop2);
+    RUN_TEST(test_pop3);
+    RUN_TEST(test_stress);
     return UNITY_END();
 }
