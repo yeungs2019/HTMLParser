@@ -12,3 +12,5 @@ MAKE_ERROR = src/queue.cpp:45:4: error: no matching function for call to 'std::_
 src/queue.cpp:66:27: error: expression cannot be used as a function
 + 0 pts of 50.000
 Total grade so far: 29.970
+Auto-grader grade: 29.970
+*****************Finished lab10****************
