@@ -1,6 +1,7 @@
 1. a) Output is 32.
    b) y's value is the memory address of x.
    c) x, y, z are in static
+DPW: Stack, -5
 
 2. a) Output is 200.
    b) x. y, z are in stack

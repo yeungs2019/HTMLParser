@@ -1,24 +1,7 @@
-I am run number 000549.
+I am run number 000583.
 Pulling source code...
 ------------------------------------------------
-Changes found in create
-Changes found in lab10
+Changes found in lab05
 ------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab10****************
-******************* Stack PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 2
-MAKE_ERROR = 
-Memory errors found: ==30034==    definitely lost: 32 bytes in 2 blocks
-+ 14.985 pts of 50.000
-Total grade so far: 14.985
-******************* Queue PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 50.000
-Total grade so far: 14.985
-Auto-grader grade: 14.985
-*****************Finished lab10****************
+*****************Examining lab05****************
+Auto-grader grade: *****************Finished lab05****************
