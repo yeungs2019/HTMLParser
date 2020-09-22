@@ -1,15 +1,13 @@
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 2
+Failures = 1
 MAKE_ERROR = 
-Memory errors found: ==30034==    definitely lost: 32 bytes in 2 blocks
-+ 14.985 pts of 50.000
-Total grade so far: 14.985
+Memory errors found: ==30381==    definitely lost: 32 bytes in 2 blocks
++ 29.970 pts of 50.000
+Total grade so far: 29.970
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 50.000
-Total grade so far: 14.985
-Auto-grader grade: 14.985
-*****************Finished lab10****************
+Total grade so far: 29.970
