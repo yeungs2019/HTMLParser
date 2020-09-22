@@ -11,3 +11,5 @@ Failures =
 MAKE_ERROR = src/queue.cpp:66:25: error: invalid use of member function 'std::__cxx11::list<_Tp, _Alloc>::size_type std::__cxx11::list<_Tp, _Alloc>::size() const [with _Tp = int; _Alloc = std::allocator<int>; std::__cxx11::list<_Tp, _Alloc>::size_type = long unsigned int]' (did you forget the '()' ?)
 + 0 pts of 50.000
 Total grade so far: 29.970
+Auto-grader grade: 29.970
+*****************Finished lab10****************
