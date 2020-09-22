@@ -140,9 +140,9 @@ T& Stack<T>::top() {
 // removes top element from stack
 template <class T>
 void Stack<T>::pop() {
-   stackNode<T>* top = head;
-   stackNode<T>* temp = top;
-   int tempData;
+   //stackNode<T>* top = head;
+   stackNode<T>* temp = NULL;
+   /*int tempData;
    if (top == NULL){
            return;
    }
@@ -150,8 +150,15 @@ void Stack<T>::pop() {
 	   tempData = top->getData();
 	   top = top->getNext();
 	   delete temp;
+   }*/
+   if (head != NULL){
+       temp = head;
+       head = head->getNext();
+       delete temp;
    }
-
+   else{
+       return;
+   }
 }
 
 // returns if two stacks contain same elements in same order
