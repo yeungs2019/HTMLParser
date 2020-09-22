@@ -1,22 +1,24 @@
-I am run number 000537.
+I am run number 000549.
 Pulling source code...
 ------------------------------------------------
+Changes found in create
 Changes found in lab10
 ------------------------------------------------
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
 *****************Examining lab10****************
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/stack.cpp:126:14: error: invalid use of member function 'T& Stack<T>::top() [with T = int]' (did you forget the '()' ?)
-src/stack.cpp:126:14: error: base operand of '->' is not a pointer
-src/stack.cpp:127:15: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type '<unresolved overloaded function type>'
-+ 0 pts of 50.000
-Total grade so far: 0
+Failures = 2
+MAKE_ERROR = 
+Memory errors found: ==30034==    definitely lost: 32 bytes in 2 blocks
++ 14.985 pts of 50.000
+Total grade so far: 14.985
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 50.000
-Total grade so far: 0
-Auto-grader grade: 0
+Total grade so far: 14.985
+Auto-grader grade: 14.985
 *****************Finished lab10****************
