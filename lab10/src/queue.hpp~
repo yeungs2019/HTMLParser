@@ -1,12 +1,10 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-#include<list>
 
 template<class T>
 class Queue {
     private:
-	    std::list<T> mList;
-	    int size;
+        /* Class to implement.*/
     public:
         /* Empty constructor shall create an empty Queue! */
         Queue();

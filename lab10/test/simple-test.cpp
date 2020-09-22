@@ -60,6 +60,25 @@ void test_pop3(void){
     TEST_ASSERT(stack.top());
     stack.pop();
 }
+void test_eNull(void){
+    Stack<int> stack;
+    Stack<int> stack2;
+    TEST_ASSERT(stack == stack2);
+}
+void test_notSize(void){
+    Stack<int> stack;
+    stack.push(1);
+    Stack<int> stack2;
+    stack2.push(2);
+    TEST_ASSERT(!(stack == stack2));
+}
+void test_sizey(void){
+    Stack<int> stack;
+    stack.push(20);
+    Stack<int> stack2;
+    stack2.push(20);
+    TEST_ASSERT(stack == stack2);
+}
 void test_stress(void){
     Stack<int> stack;
     for (int i = 0; i < 1000000; i++){
@@ -82,6 +101,9 @@ int main(void) {
     RUN_TEST(test_pop);
     RUN_TEST(test_pop2);
     RUN_TEST(test_pop3);
+    RUN_TEST(test_eNull);
+    RUN_TEST(test_notSize);
+    RUN_TEST(test_sizey);
     RUN_TEST(test_stress);
     return UNITY_END();
 }

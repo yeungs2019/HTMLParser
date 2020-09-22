@@ -1,6 +1,6 @@
 #ifndef STACK_H
 #define STACK_H
-
+#include <list>
 template<class T>
 class stackNode {
     private:

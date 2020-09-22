@@ -164,6 +164,15 @@ void Stack<T>::pop() {
 // returns if two stacks contain same elements in same order
 template <class T>
 bool Stack<T>::operator==(const Stack<T> &stack) const{
+    stackNode<T>* rover = head;
+    stackNode<T>* rover2 = stack.head;
+    if (this->getLength() != stack.getLength()){
+        return false;
+    }
+    if (this->head == NULL && stack.head == NULL){
+	return true;
+    }
+    
 }
 
 #endif
