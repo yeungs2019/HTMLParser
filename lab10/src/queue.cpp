@@ -18,7 +18,7 @@ Queue<T>::Queue(const Queue<T> &queue){
 template <class T>
 Queue<T>::~Queue(){
     for(int i = 0; i < size; i++){
-	this->mList.pop_back;
+	this->mList.pop_back();
     }
 }
 
@@ -42,7 +42,7 @@ void Queue<T>::print() const{
 //push to end of queue
 template <class T>
 bool Queue<T>::push(const T &val){
-   this->mList.push_front;
+   this->mList.push_front(val);
    size++;
    return true;
 }
@@ -50,13 +50,13 @@ bool Queue<T>::push(const T &val){
 // returns first element from queue
 template <class T>
 T& Queue<T>::first(){
-    return this->mList.front;
+    return this->mList.front();
 }
 
 // removes first element form queue
 template <class T>
 void Queue<T>::pop(){
-    this->mList.pop_back;
+    this->mList.pop_back();
     size--;
 }
 
