@@ -42,9 +42,9 @@ void Queue<T>::print() const{
 //push to end of queue
 template <class T>
 bool Queue<T>::push(const T &val){
-   this->mList.push_front();
+   this->mList.push_back(val);
    mSize++;
-   //return true;
+   return true;
 }
 
 // returns first element from queue
