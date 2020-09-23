@@ -63,9 +63,9 @@ void Queue<T>::pop(){
 //returns if two queues contain same elements in same order
 template <class T>
 bool Queue<T>::operator==(const Queue<T> &queue) const{
-    if(this->mList.getLength() != queue.getLength()){
+    /*if(this->mList.getLength() != queue.getLength()){
 	return false;
-    }
+    }*/
     std::list<T> copymList(this->mList);
     std::list<T> copyQueue(queue.mList);
     
