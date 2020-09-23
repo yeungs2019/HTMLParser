@@ -2,7 +2,7 @@
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 1
 MAKE_ERROR = 
-Memory errors found: ==9329==    definitely lost: 32 bytes in 2 blocks
+Memory errors found: ==9610==    definitely lost: 32 bytes in 2 blocks
 + 29.970 pts of 50.000
 Total grade so far: 29.970
 ******************* Queue PART *********************
