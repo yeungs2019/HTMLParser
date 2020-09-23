@@ -11,3 +11,5 @@ Failures = 1
 MAKE_ERROR = 
 + 33.300 pts of 50.000
 Total grade so far: 63.270
+Auto-grader grade: 63.270
+*****************Finished lab10****************
