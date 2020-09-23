@@ -59,6 +59,7 @@ bool Stack<T>::append(const T &val){
    }
    isAppend = true;
    return isAppend;
+   delete rover;
 }
 
 // returns true if stack is empty
@@ -114,6 +115,7 @@ bool Stack<T>::push(const T &val) {
     return true;*/
     rover->setNext(head);
     head = rover;
+    delete rover;
 }
 
 // returns the top element from the stack
