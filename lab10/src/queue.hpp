@@ -6,7 +6,7 @@ template<class T>
 class Queue {
     private:
 	    std::list<T> mList;
-	    int size;
+	    int mSize;
     public:
         /* Empty constructor shall create an empty Queue! */
         Queue();
