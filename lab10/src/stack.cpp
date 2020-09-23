@@ -172,15 +172,17 @@ bool Stack<T>::operator==(const Stack<T> &stack) const{
     if (this->head == NULL && stack.head == NULL){
 	return true;
     }
-    while(rover != NULL && rover2 != NULL){
+    while(rover2 != NULL){
 	if(rover->getData() == rover2->getData()){
 	    rover = rover->getNext();
 	    rover2 = rover2->getNext();
+	   // rover2 = rover;
 	}
     	else{
 	    return false;
 	}
     }
+    return true;
 }
 
 #endif
