@@ -2,14 +2,12 @@
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 1
 MAKE_ERROR = 
-Memory errors found: ==8595==    definitely lost: 32 bytes in 2 blocks
+Memory errors found: ==8872==    definitely lost: 32 bytes in 2 blocks
 + 29.970 pts of 50.000
 Total grade so far: 29.970
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/queue.cpp:45:4: error: no matching function for call to 'std::__cxx11::list<int, std::allocator<int> >::push_front()'
-+ 0 pts of 50.000
-Total grade so far: 29.970
-Auto-grader grade: 29.970
-*****************Finished lab10****************
+Failures = 2
+MAKE_ERROR = 
++ 16.650 pts of 50.000
+Total grade so far: 46.620
