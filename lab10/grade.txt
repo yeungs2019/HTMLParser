@@ -11,3 +11,5 @@ Failures =
 MAKE_ERROR = src/queue.cpp:66:20: error: 'const class std::__cxx11::list<int, std::allocator<int> >' has no member named 'getLength'
 + 0 pts of 50.000
 Total grade so far: 29.970
+Auto-grader grade: 29.970
+*****************Finished lab10****************
