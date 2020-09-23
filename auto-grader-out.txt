@@ -1,2 +1,21 @@
 I am run number 000628.
 Pulling source code...
+------------------------------------------------
+Changes found in lab10
+------------------------------------------------
+*****************Examining lab10****************
+******************* Stack PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
+Memory errors found: ==9102==    definitely lost: 32 bytes in 2 blocks
++ 29.970 pts of 50.000
+Total grade so far: 29.970
+******************* Queue PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 1
+MAKE_ERROR = 
++ 33.300 pts of 50.000
+Total grade so far: 63.270
+Auto-grader grade: 63.270
+*****************Finished lab10****************
