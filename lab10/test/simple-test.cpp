@@ -90,11 +90,11 @@ void test_stress(void){
 	stack.pop();
     }
 }
-void test_pushQ(void){
+/*void test_pushQ(void){
     Queue queue;
     queue.push(10);
     TEST_ASSERT(queue.top());
-}
+}*/
 
 int main(void) {
     UNITY_BEGIN();
@@ -110,6 +110,6 @@ int main(void) {
     RUN_TEST(test_notSize);
     RUN_TEST(test_sizey);
     RUN_TEST(test_stress);
-    RUN_TEST(test_pushQ);
+   // RUN_TEST(test_pushQ);
     return UNITY_END();
 }
