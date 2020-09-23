@@ -5,7 +5,7 @@
 //empty constructor
 template <class T>
 Queue<T>::Queue(){
-    size = 0;
+    mSize = 0;
     std::list<T> mList;
 }
 
@@ -17,7 +17,7 @@ Queue<T>::Queue(const Queue<T> &queue){
 //free me
 template <class T>
 Queue<T>::~Queue(){
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < mSize; i++){
 	this->mList.pop_back();
     }
 }
@@ -25,7 +25,7 @@ Queue<T>::~Queue(){
 //return length
 template <class T>
 int Queue<T>::getLength() const{
-    return size;
+    return mSize;
 }
 
 //is it empty?
@@ -43,7 +43,7 @@ void Queue<T>::print() const{
 template <class T>
 bool Queue<T>::push(const T &val){
    this->mList.push_front(val);
-   size++;
+   mSize++;
    return true;
 }
 
@@ -57,7 +57,7 @@ T& Queue<T>::first(){
 template <class T>
 void Queue<T>::pop(){
     this->mList.pop_back();
-    size--;
+    mSize--;
 }
 
 //returns if two queues contain same elements in same order
