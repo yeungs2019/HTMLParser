@@ -1,15 +1,13 @@
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 1
+Failures = 
 MAKE_ERROR = 
-Memory errors found: ==9610==    definitely lost: 32 bytes in 2 blocks
-+ 29.970 pts of 50.000
-Total grade so far: 29.970
+Memory errors found: ==9836==    definitely lost: 32 bytes in 2 blocks
++ 45.000 pts of 50.000
+Total grade so far: 45.000
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 50.000 pts of 50.000
-Total grade so far: 79.970
-Auto-grader grade: 79.970
-*****************Finished lab10****************
+Total grade so far: 95.000
