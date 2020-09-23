@@ -1,21 +1,2 @@
-I am run number 000618.
+I am run number 000619.
 Pulling source code...
-------------------------------------------------
-Changes found in lab10
-------------------------------------------------
-*****************Examining lab10****************
-******************* Stack PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-Memory errors found: ==7926==    definitely lost: 32 bytes in 2 blocks
-+ 29.970 pts of 50.000
-Total grade so far: 29.970
-******************* Queue PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/queue.cpp:66:36: error: 'const class Queue<int>' has no member named 'size'; did you mean 'mSize'?
-+ 0 pts of 50.000
-Total grade so far: 29.970
-Auto-grader grade: 29.970
-*****************Finished lab10****************

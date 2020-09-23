@@ -11,3 +11,5 @@ Failures =
 MAKE_ERROR = src/queue.cpp:66:36: error: 'const class Queue<int>' has no member named 'size'; did you mean 'mSize'?
 + 0 pts of 50.000
 Total grade so far: 29.970
+Auto-grader grade: 29.970
+*****************Finished lab10****************
