@@ -56,7 +56,7 @@ T& Queue<T>::first(){
 // removes first element form queue
 template <class T>
 void Queue<T>::pop(){
-    this->mList.pop_back();
+    this->mList.pop_front();
     mSize--;
 }
 
