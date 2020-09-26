@@ -9,9 +9,10 @@ Total grade so far: 33.333
 ******************* Priority PART *********************
 make: Nothing to be done for 'all'.
 Failures = 
-MAKE_ERROR = src/queue.cpp:94:22: error: no matching function for call to 'Queue<int>::push()'
-src/queue.cpp:94:28: error: request for member 'first' in 'val', which is of non-class type 'const int'
-src/queue.cpp:95:9: error: no matching function for call to 'std::__cxx11::list<int, std::allocator<int> >::swap(const int&)'
+MAKE_ERROR = src/queue.cpp:109:23: error: lvalue required as left operand of assignment
+src/queue.cpp:112:26: error: lvalue required as left operand of assignment
+src/queue.cpp:113:23: error: lvalue required as left operand of assignment
+src/queue.cpp:114:26: error: lvalue required as left operand of assignment
 + 0 pts of 33.333
 Total grade so far: 33.333
 ******************* depth first search PART *********************
