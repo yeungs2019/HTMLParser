@@ -10,9 +10,6 @@ Total grade so far: 33.333
 make: Nothing to be done for 'all'.
 Failures = 
 MAKE_ERROR = src/queue.cpp:109:23: error: lvalue required as left operand of assignment
-src/queue.cpp:112:26: error: lvalue required as left operand of assignment
-src/queue.cpp:113:23: error: lvalue required as left operand of assignment
-src/queue.cpp:114:26: error: lvalue required as left operand of assignment
 + 0 pts of 33.333
 Total grade so far: 33.333
 ******************* depth first search PART *********************
