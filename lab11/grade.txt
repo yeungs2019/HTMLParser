@@ -8,12 +8,13 @@ MAKE_ERROR =
 Total grade so far: 33.333
 ******************* Priority PART *********************
 make: Nothing to be done for 'all'.
-makefile aborted due to runtime error.
+Failures = 3
+MAKE_ERROR = 
++ 8.333 pts of 33.333
+Total grade so far: 41.666
 ******************* depth first search PART *********************
 make: Nothing to be done for 'all'.
 Failures = 5
 MAKE_ERROR = 
 + 0 pts of 33.334
-Total grade so far: 33.333
-Auto-grader grade: 33.333
-*****************Finished lab11****************
+Total grade so far: 41.666
