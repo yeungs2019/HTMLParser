@@ -106,7 +106,7 @@ void Queue<T>::addWithPriority(const T& val) {
 	}
 	if(previous == NULL){
 	    head = rover;
-	    rover->getNext() = current;
+	    current = rover->getNext();
 	}
 	else{
 	    rover = previous->getNext();
