@@ -98,12 +98,12 @@ void Queue<T>::addWithPriority(const T& val) {
         push(val);
 	return;
     }
-    for(int i = 0; i = mSize - 1; i++){
+    for(int i = 0; i < mSize - 1; i++){
+	rover = rover->getNext();
 	if(val < rover->getData()){
 	   queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
 	   rover->setNext(rover2);
 	}
-	rover = rover->getNext();
     }
 }
  /* a 2D array with each cell having the following property
