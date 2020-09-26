@@ -6,6 +6,8 @@ template <class T>
 Queue<T>::Queue(){
     mSize = 0;
     std::list<T> mList;
+    head = NULL;
+    tail = NULL;
 }
 
 //deep copy please
@@ -91,13 +93,31 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
  */
 template<class T>
 void Queue<T>::addWithPriority(const T& val) {
-    if (this->push() < val.first()){
-        this->mList.swap(val);
-	mSize++;
-    } 
+    queueNode<T>* rover = new queueNode<T>(val, NULL);
+    if (head == NULL){
+	head = rover;
+    }
+    else{
+	queueNode<T>* current = head;
+	queueNode<T>* previous = NULL;
+	while (current != NULL && current->getData() > val){
+	    previous = current;
+	    current = current->getNext();
+	}
+	if(previous == NULL){
+	    head = rover;
+	    rover->getNext() = current;
+	}
+	else{
+	    previous->getNext() = rover;
+	    rover->getNext() = current;
+	    if(rover->getNext() = NULL){
+		tail = rover;
+	    }
+	}
+    }
 }
-/* Return the length of the shortest path, but with warps.  The map is
- * a 2D array with each cell having the following property
+ /* a 2D array with each cell having the following property
  *   0: Cell is open (passable)
  *  -1: Cell is a wall (unpassable)
  * > 0: Cell is a warp.
