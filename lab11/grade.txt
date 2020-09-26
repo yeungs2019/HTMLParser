@@ -8,15 +8,10 @@ MAKE_ERROR =
 Total grade so far: 33.333
 ******************* Priority PART *********************
 make: Nothing to be done for 'all'.
-Failures = 
-MAKE_ERROR = src/queue.cpp:109:23: error: lvalue required as left operand of assignment
-+ 0 pts of 33.333
-Total grade so far: 33.333
+makefile aborted due to runtime error.
 ******************* depth first search PART *********************
 make: Nothing to be done for 'all'.
 Failures = 5
 MAKE_ERROR = 
 + 0 pts of 33.334
 Total grade so far: 33.333
-Auto-grader grade: 33.333
-*****************Finished lab11****************
