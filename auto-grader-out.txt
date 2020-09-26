@@ -1,4 +1,4 @@
-I am run number 000731.
+I am run number 000733.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab11
@@ -14,10 +14,7 @@ MAKE_ERROR =
 Total grade so far: 33.333
 ******************* Priority PART *********************
 make: Nothing to be done for 'all'.
-Failures = 
-MAKE_ERROR = src/queue.cpp:109:23: error: lvalue required as left operand of assignment
-+ 0 pts of 33.333
-Total grade so far: 33.333
+makefile aborted due to runtime error.
 ******************* depth first search PART *********************
 make: Nothing to be done for 'all'.
 Failures = 5
