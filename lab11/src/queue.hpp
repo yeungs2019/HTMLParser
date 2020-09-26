@@ -1,10 +1,28 @@
 #ifndef QUEUE_H
 #define QUEUE_H
+#include <list>
+template<class T>
+class queueNode {
+    private:
+        int data;
+        queueNode* nextNode;
+    public:
+        queueNode (const int data, queueNode* next){
+                this->data = data;
+                this->nextNode = next;
+        }
+        int& getData() { return data; }
+        queueNode* getNext() { return nextNode; }
+        void setNext(queueNode* node) {this->nextNode = node; }
+};
 
 template<class T>
 class Queue {
     private:
-        /* Class to implement.*/
+	    std::list<T> mList;
+	    int mSize;
+	    queueNode<T>* head;
+	    queueNode<T>* tail;
     public:
         /* Empty constructor shall create an empty Queue! */
         Queue();

@@ -1,50 +1,89 @@
 #ifdef QUEUE_H
 #include "queue.hpp"
 
-/* Empty constructor shall create an empty Queue! */
-template<class T>
-Queue<T>::Queue() {
+//empty constructor
+template <class T>
+Queue<T>::Queue(){
+    mSize = 0;
+    std::list<T> mList;
 }
-/* Do a deep copy of queue into the this.
- * Note: This one uses a reference to a Queue!
- */
-template<class T>
-Queue<T>::Queue(const Queue<T> &queue) {
+
+//deep copy please
+template <class T>
+Queue<T>::Queue(const Queue<T> &queue){
 }
-/* Deconstructor shall free up memory */
-template<class T>
-Queue<T>::~Queue() {
+
+//free me
+template <class T>
+Queue<T>::~Queue(){
+    for(int i = 0; i < mSize; i++){
+        this->mList.pop_back();
+    }
 }
-/* Return the current length (number of items) in the queue */
-template<class T>
-int Queue<T>::getLength() const {
+
+//return length
+template <class T>
+int Queue<T>::getLength() const{
+    return mSize;
 }
-/* Returns true if the queue is empty. */
-template<class T>
-bool Queue<T>::isEmpty() const {
+
+//is it empty?
+template <class T>
+bool Queue<T>::isEmpty() const{
+    return this->mList.empty();
 }
-/* Print out the Queue */
-template<class T>
-void Queue<T>::print() const {
+
+//print
+template <class T>
+void Queue<T>::print() const{
 }
-/* Pushes the val to the end of the queue. */
-template<class T>
-bool Queue<T>::push(const T &val) {
+
+//push to end of queue
+template <class T>
+bool Queue<T>::push(const T &val){
+   this->mList.push_back(val);
+   mSize++;
+   return true;
 }
-/* returns the first element from the queue. */
-template<class T>
-T& Queue<T>::first() {
+
+// returns first element from queue
+template <class T>
+T& Queue<T>::first(){
+    return this->mList.front();
 }
-/* Removes the first element from the queue. */
-template<class T>
-void Queue<T>::pop() {
+
+template <class T>
+void Queue<T>::pop(){
+    this->mList.pop_front();
+    mSize--;
 }
-/* Returns if the two queues contain the same elements in the
- * same order.
- */
-template<class T>
-bool Queue<T>::operator==(const Queue<T> &queue) const {
+
+//returns if two queues contain same elements in same order
+template <class T>
+bool Queue<T>::operator==(const Queue<T> &queue) const{
+    if(this->getLength() != queue.getLength()){
+        return false;
+    }
+    std::list<T> copymList(this->mList);
+    std::list<T> copyQueue(queue.mList);
+
+    int length;
+    T val1;
+    T val2;
+    length = queue.getLength();
+    for (int i = 0; i < length; i++){
+         val1 = copymList.front();
+         val2 = copyQueue.front();
+         copymList.pop_front();
+         copyQueue.pop_front();
+         if (val1 != val2){
+             return false;
+         }
+    }
+    return true;
 }
+
+
 /* Add a value to the queue with respect to priority.
  * For this function a lower number is a higher priority.
  * EX: If the Queue is of integers and is { 5, 10, 15} and I add 7, 
@@ -52,6 +91,10 @@ bool Queue<T>::operator==(const Queue<T> &queue) const {
  */
 template<class T>
 void Queue<T>::addWithPriority(const T& val) {
+    if (this->push() < val.first()){
+        this->mList.swap(val);
+	mSize++;
+    } 
 }
 /* Return the length of the shortest path, but with warps.  The map is
  * a 2D array with each cell having the following property
