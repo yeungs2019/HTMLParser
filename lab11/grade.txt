@@ -9,8 +9,7 @@ Total grade so far: 33.333
 ******************* Priority PART *********************
 make: Nothing to be done for 'all'.
 Failures = 
-MAKE_ERROR = src/queue.cpp:97:28: error: no matching function for call to 'queueNode<int>::queueNode(const int&, queueNode<int>*)'
-src/queue.cpp:103:65: error: invalid use of member function 'int& queueNode<T>::getPriorty() [with T = int]' (did you forget the '()' ?)
+MAKE_ERROR = src/queue.cpp:97:28: error: no matching function for call to 'queueNode<int>::queueNode(const int&, NULL)'
 src/queue.cpp:106:20: error: lvalue required as left operand of assignment
 + 0 pts of 33.333
 Total grade so far: 33.333
@@ -20,5 +19,3 @@ Failures = 5
 MAKE_ERROR = 
 + 0 pts of 33.334
 Total grade so far: 33.333
-Auto-grader grade: 33.333
-*****************Finished lab11****************
