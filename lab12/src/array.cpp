@@ -10,7 +10,7 @@
 template <class T>
 Array<T>::Array(const T *array, const int size){
     ptrArr = new T[size];
-    fitsSize = size;
+    fitSize = size;
     for(int i = 0; i < size; i++){
 	ptrArr[i] = array[i];
     }
