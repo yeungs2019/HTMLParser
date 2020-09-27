@@ -103,20 +103,17 @@ void Array<T>::bubbleSort() {
 }
 template <class T>
 void Array<T>::selectionSort(){
-     if(fitSize < 2){
-	 return;
-     }
-     int min = 0;
-     for(int i = 0; i < fitSize; i++){
-	 if(ptrArr[min] > ptrArr[i]){
-	     min = i;
+     for (int i = 0; i < fitSize - 1; i++){
+	 int min = i;
+	 for (int j = i + 1; i < fitSize; i++){
+	     if(ptrArr[min] > ptrArr[i]){
+		 min = j;
+	     }
 	 }
+	 int temp = ptrArr[i];
+	 ptrArr[i] = ptrArr[min];
+	 ptrArr[min] = temp;
      }
-     int temp = ptrArr[0];
-     ptrArr[0] = ptrArr[min];
-     ptrArr[min] = temp;
-
-     //selectionSort(ptrArr + 1, fitSize - 1);
 }
 
 template <class T>
