@@ -94,13 +94,13 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
 template<class T>
 void Queue<T>::addWithPriority(const T& val) {
     queueNode<T>* rover = head;
-    queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
+    queueNode<T>* rover2 = new queueNode<T>(val, NULL);
     if(rover == NULL){
         push(val);
 	return;
     }
     else{
-	while(rover->getNext() != NULL && rover->getNext()->getPriorty < val){
+	while(rover->getNext() != NULL && rover->getNext()->getPriorty() < val){
 	     rover = rover->getNext();
 	}
 	rover2->getNext() = rover->getNext();
