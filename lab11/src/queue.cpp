@@ -1,6 +1,8 @@
 #ifdef QUEUE_H
 #include "queue.hpp"
-
+#define O (0)
+#define W(-1)
+#define V(-2)
 //empty constructor
 template <class T>
 Queue<T>::Queue(){
@@ -99,13 +101,13 @@ void Queue<T>::addWithPriority(const T& val) {
         push(val);
 	return;
     }
-    else{
+    /*else{
 	while(rover->getNext() != NULL && rover->getNext()->getPriorty() < val){
 	     rover = rover->getNext();
 	}
 	rover2->getNext() = rover->getNext();
 	rover2 = rover->getNext();
-    }
+    }*/
 }
 
     /*for(int i = 0; i < this->getLength() - 1; i++){
@@ -131,6 +133,17 @@ void Queue<T>::addWithPriority(const T& val) {
  */
 template<class T>
 int Queue<T>::getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey) {
+    if(sx < 0 || sx >= width || sy < 0 || sy >= length) { return -1; }
+    if(map[sx][sy] == W || map[sx][sy] == V) { return -1; }
+    if(sx = ex && sy == ey) { return 1; }
+    
+    map[sx][sy] = V;
+    if(getShortestPathWithWarps(map, width, height, sx, sy + 1, ex, ey) != -1) { return 1; }
+    if(getShortestPathWithWarps(map, width, height, sx + 1, sy, ex, ey) != -1) { return 1; }
+    if(getShortestPathWithWarps(map, width, height, sx, sy - 1, ex, ey) != -1) { return 1; }
+    if(getShortestPathWithWarps(map, width, height, sx - 1, sy, ex, ey) != -1) { return 1; }
+
+    return -1;
 }
 
 #endif
