@@ -1,28 +1,33 @@
-I am run number 000773.
+I am run number 000785.
 Pulling source code...
 ------------------------------------------------
-Changes found in lab11
+Changes found in lab12
 ------------------------------------------------
-*****************Examining lab11****************
-******************* Queue test PART *********************
-mkdir -p obj
-g++ -c -g -I src/ src/queue.cpp -o obj/queue.o
-g++ -g -I src/ obj/queue.o src/main.cpp -o stack-test
+*****************Examining lab12****************
+******************* Selection Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = 
-+ 33.333 pts of 33.333
-Total grade so far: 33.333
-******************* Priority PART *********************
-make: Nothing to be done for 'all'.
-Failures = 3
-MAKE_ERROR = 
-+ 8.333 pts of 33.333
-Total grade so far: 41.666
-******************* depth first search PART *********************
-make: Nothing to be done for 'all'.
-Failures = 5
-MAKE_ERROR = 
-+ 0 pts of 33.334
-Total grade so far: 41.666
-Auto-grader grade: 41.666
-*****************Finished lab11****************
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
+src/array.cpp:119:19: error: no matching function for call to 'Array<int>::selectionSort(int*, int)'
++ 0 pts of 30.000
+Total grade so far: 0
+******************* Insertion Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
++ 0 pts of 30.000
+Total grade so far: 0
+******************* Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
++ 0 pts of 10.000
+Total grade so far: 0
+******************* SLList Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000785/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
++ 0 pts of 30.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab12****************

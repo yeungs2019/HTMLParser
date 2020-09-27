@@ -1,26 +1,25 @@
 ******************* Selection Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
+src/array.cpp:119:19: error: no matching function for call to 'Array<int>::selectionSort(int*, int)'
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Insertion Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:13:5: error: 'fitsSize' was not declared in this scope
 + 0 pts of 10.000
 Total grade so far: 0
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000727/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000785/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
 + 0 pts of 30.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab12****************
