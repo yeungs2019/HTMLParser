@@ -117,19 +117,17 @@ void Array<T>::selectionSort(){
 }
 template <class T>
 void Array<T>::insertionSort(){
-    int after;
-    for(int i = 2; i <= fitSize; i++){
-	for(after = 0; after < i; after++){
-	    if(ptrArr[i - 1] < ptrArr[after]){
-		break;
-	    }
+    int temp;
+    int temp2;
+    for(int i = 1; i < fitSize; i++){
+	temp = ptrArr[i];
+	temp2 = i - 1;
+	while (temp2 >= 0 && ptrArr[temp2] > temp){
+	    ptrArr[temp2 + 1] = ptrArr[temp2];
+	    temp2 = temp2 - 1;
 	}
-	int temp = ptrArr[i - 1];
-	for(int j = i - 1; j > after; j--){
-	    ptrArr[j] = ptrArr[j - 1];
-	}
-	ptrArr[after] = temp;
-    }
+	ptrArr[temp2 + 1] = temp;
+    }	
 }
 
 template <class T>
