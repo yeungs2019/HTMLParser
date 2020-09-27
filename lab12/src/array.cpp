@@ -105,8 +105,8 @@ template <class T>
 void Array<T>::selectionSort(){
      for (int i = 0; i < fitSize - 1; i++){
 	 int min = i;
-	 for (int j = i + 1; i < fitSize; i++){
-	     if(ptrArr[min] > ptrArr[i]){
+	 for (int j = i + 1; j < fitSize; j++){
+	     if(ptrArr[min] > ptrArr[j]){
 		 min = j;
 	     }
 	 }
