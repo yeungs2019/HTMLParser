@@ -129,7 +129,7 @@ void Array<T>::insertionSort(){
 	}
 	int temp = ptrArr[i - 1];
 	for(int j = i - 1; j > after; j--){
-	    ptrArr[j] = ptr[j - 1];
+	    ptrArr[j] = ptrArr[j - 1];
 	}
 	ptrArr[after] = temp;
     }
