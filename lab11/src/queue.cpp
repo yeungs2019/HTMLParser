@@ -106,9 +106,9 @@ void Queue<T>::addWithPriority(const T& val) {
 	queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
         rover->setNext(rover2->getNext());
 	rover2->setNext(rover);
-        }
     }
 }
+
 
  /* a 2D array with each cell having the following property
  *   0: Cell is open (passable)
