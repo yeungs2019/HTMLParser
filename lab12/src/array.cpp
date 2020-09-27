@@ -131,6 +131,7 @@ void Array<T>::insertionSort(){
 	ptrArr[i] = ptrArr[i - 1];
     }
     ptrArr[after] = temp;
+}
 	    
 
 template <class T>
