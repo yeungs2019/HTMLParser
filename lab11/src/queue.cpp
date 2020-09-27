@@ -98,12 +98,13 @@ void Queue<T>::addWithPriority(const T& val) {
         push(val);
 	return;
     }
-    for(int i = 0; i = mSize - 1; i++){
+    for(int i = 0; i < this->getLength() - 1; i++){
 	rover = rover->getNext();
     }
-    if(val > rover->getData()){
+    if(val < rover->getData()){
 	queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
-        rover->setNext(rover2);
+        rover->setNext(rover2->getNext());
+	rover2->setNext(rover);
     }
 }
 
