@@ -4,8 +4,10 @@
 template <class T>
 class Array {
     private:
-    /* You fill out the private contents. */
-
+        T* ptrArr;
+	int fitSize;
+	int length;
+   
     public:
     /* Do a deep copy of the array into the list.
      * Note: This one uses a pointer!
