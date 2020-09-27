@@ -1,7 +1,7 @@
 ******************* Selection Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/array.cpp:119:19: error: no matching function for call to 'Array<int>::selectionSort(int*, int)'
+Failures = 4
+MAKE_ERROR = 
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Insertion Sort PART *********************
@@ -19,6 +19,6 @@ Total grade so far: 0
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000787/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000789/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
 + 0 pts of 30.000
 Total grade so far: 0
