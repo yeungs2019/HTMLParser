@@ -115,6 +115,23 @@ void Array<T>::selectionSort(){
 	 ptrArr[min] = temp;
      }
 }
+template <class T>
+void Array<T>::insertionSort(){
+    int after;
+    if(fitSize < 2){
+	return;
+    }
+    for(after = 0; after < fitSize; after++){
+	if(ptrArr[fitSize - 1] < ptrArr[after]){
+	    break;
+	}
+    }
+    int temp = ptrArr[fitSize - 1];
+    for(int i = fitSize - 1; i > after; i--){
+	ptrArr[i] = ptrArr[i - 1];
+    }
+    ptrArr[after] = temp;
+	    
 
 template <class T>
 Array<T>::~Array() {
