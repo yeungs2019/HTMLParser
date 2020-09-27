@@ -1,4 +1,4 @@
-I am run number 000793.
+I am run number 000801.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab12
@@ -7,26 +7,146 @@ Changes found in lab12
 ******************* Selection Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = 
-+ 30.000 pts of 30.000
-Total grade so far: 30.000
+MAKE_ERROR = src/array.cpp:136:1: error: a template declaration cannot appear at block scope
+tests/test-runner.cpp:24:8: error: 'MyTestSuite1' does not name a type
+tests/test-runner.cpp:27:116: error: 'suite_MyTestSuite1' was not declared in this scope
+tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:32:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:38:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:44:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:49:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:50:19: error: use of local variable with automatic storage from containing function
+/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
+/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
+tests/test-runner.cpp:54:55: error: qualified-id in declaration before '=' token
+tests/test-runner.cpp:54:66: error: expected '}' at end of input
++ 0 pts of 30.000
+Total grade so far: 0
 ******************* Insertion Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:136:1: error: a template declaration cannot appear at block scope
+tests/test-runner.cpp:24:8: error: 'MyTestSuite1' does not name a type
+tests/test-runner.cpp:27:116: error: 'suite_MyTestSuite1' was not declared in this scope
+tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:32:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:38:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:44:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:49:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:50:19: error: use of local variable with automatic storage from containing function
+/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
+/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
+tests/test-runner.cpp:54:55: error: qualified-id in declaration before '=' token
+tests/test-runner.cpp:54:66: error: expected '}' at end of input
 + 0 pts of 30.000
-Total grade so far: 30.000
+Total grade so far: 0
 ******************* Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/array.cpp:136:1: error: a template declaration cannot appear at block scope
+tests/test-runner.cpp:24:8: error: 'MyTestSuite1' does not name a type
+tests/test-runner.cpp:27:106: error: 'suite_MyTestSuite1' was not declared in this scope
+tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:32:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:38:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:44:19: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:49:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:50:19: error: use of local variable with automatic storage from containing function
+/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
+/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
+tests/test-runner.cpp:54:55: error: qualified-id in declaration before '=' token
+tests/test-runner.cpp:54:66: error: expected '}' at end of input
 + 0 pts of 10.000
-Total grade so far: 30.000
+Total grade so far: 0
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000793/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
+MAKE_ERROR = /srv/auto-grader/csci-315-fall-2020/run/000801/lab12/tests/sll-sort-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
 + 0 pts of 30.000
-Total grade so far: 30.000
-Auto-grader grade: 30.000
+Total grade so far: 0
+Auto-grader grade: 0
 *****************Finished lab12****************
