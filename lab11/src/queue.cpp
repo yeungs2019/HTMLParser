@@ -100,12 +100,13 @@ void Queue<T>::addWithPriority(const T& val) {
     }
     for(int i = 0; i = mSize - 1; i++){
 	rover = rover->getNext();
-	if(val <= rover->getData()){
-	   queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
-	   rover->setNext(rover2);
-	}
+    }
+    if(val > rover->getData()){
+	queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
+        rover->setNext(rover2);
     }
 }
+
  /* a 2D array with each cell having the following property
  *   0: Cell is open (passable)
  *  -1: Cell is a wall (unpassable)
