@@ -121,18 +121,19 @@ void Array<T>::insertionSort(){
     if(fitSize < 2){
 	return;
     }
-    for(after = 0; after < fitSize; after++){
-	if(ptrArr[fitSize - 1] < ptrArr[after]){
-	    break;
+    for(int i = 2; i <= fitSize; i++){
+	for(after = 0; after < i; after++){
+	    if(ptrArr[i - 1] < ptrArr[after]){
+		break;
+	    }
 	}
+	int temp = ptrArr[i - 1];
+	for(int j = i - 1; j > after; j--){
+	    ptrArr[j] = ptr[j - 1];
+	}
+	ptrArr[after] = temp;
     }
-    int temp = ptrArr[fitSize - 1];
-    for(int i = fitSize - 1; i > after; i--){
-	ptrArr[i] = ptrArr[i - 1];
-    }
-    ptrArr[after] = temp;
 }
-	    
 
 template <class T>
 Array<T>::~Array() {
