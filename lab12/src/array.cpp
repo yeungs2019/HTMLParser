@@ -118,9 +118,6 @@ void Array<T>::selectionSort(){
 template <class T>
 void Array<T>::insertionSort(){
     int after;
-    if(fitSize < 2){
-	return;
-    }
     for(int i = 2; i <= fitSize; i++){
 	for(after = 0; after < i; after++){
 	    if(ptrArr[i - 1] < ptrArr[after]){
