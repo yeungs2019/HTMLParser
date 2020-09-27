@@ -1,8 +1,7 @@
 #ifdef QUEUE_H
 #include "queue.hpp"
-#define O (0)
-#define W(-1)
-#define V(-2)
+
+
 //empty constructor
 template <class T>
 Queue<T>::Queue(){
@@ -96,7 +95,7 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
 template<class T>
 void Queue<T>::addWithPriority(const T& val) {
     queueNode<T>* rover = head;
-    queueNode<T>* rover2 = new queueNode<T>(val, NULL);
+    //queueNode<T>* rover2 = new queueNode<T>(val, NULL);
     if(rover == NULL){
         push(val);
 	return;
