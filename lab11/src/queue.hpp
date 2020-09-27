@@ -5,13 +5,16 @@ template<class T>
 class queueNode {
     private:
         int data;
+	int priorty;
         queueNode* nextNode;
     public:
-        queueNode (const int data, queueNode* next){
+        queueNode (const int data, queueNode* next, const int prior){
                 this->data = data;
                 this->nextNode = next;
+		this->priorty = prior;
         }
         int& getData() { return data; }
+	int& getPriorty() { return priorty; }
         queueNode* getNext() { return nextNode; }
         void setNext(queueNode* node) {this->nextNode = node; }
 };

@@ -94,20 +94,29 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
 template<class T>
 void Queue<T>::addWithPriority(const T& val) {
     queueNode<T>* rover = head;
+    queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
     if(rover == NULL){
         push(val);
 	return;
     }
+    else{
+	while(rover->getNext() != NULL && rover->getNext()->getPriorty < val){
+	     rover = rover->getNext();
+	}
+	rover2->getNext() = rover->getNext();
+	rover2 = rover->getNext();
+    }
+}
+
     /*for(int i = 0; i < this->getLength() - 1; i++){
 	rover = rover->getNext();
     }*/
-    while(val < rover->getData()){
+    //while(rover->getData(val) > 0){
         //if(val > rover->getData()){
-	queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
-        rover->setNext(rover2->getNext());
-	rover2->setNext(rover);
-    }
-}
+	//queueNode<T>* rover2 = new queueNode<T>(val, rover->getNext());
+        //rover->setNext(rover2->getNext());
+	//rover2->setNext(rover);
+	//rover->
 
 
  /* a 2D array with each cell having the following property
