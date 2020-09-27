@@ -116,7 +116,7 @@ void Array<T>::selectionSort(){
      ptrArr[0] = ptrArr[min];
      ptrArr[min] = temp;
 
-     selectionSort(ptrArr + 1, fitSize - 1);
+     //selectionSort(ptrArr + 1, fitSize - 1);
 }
 
 template <class T>
