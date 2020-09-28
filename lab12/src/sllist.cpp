@@ -1,5 +1,6 @@
 #ifdef SLLIST_HPP
 #include<iostream>
+#include "sllist.hpp"
 
 template <class T>
 SLList<T>::SLList(){
