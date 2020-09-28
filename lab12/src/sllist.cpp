@@ -17,6 +17,21 @@ T& SLList<T>::operator[](const int pos){
     return rover->getData();
 }
 template <class T>
+bool SLList<T>::append(const T &val){
+    bool isAppend = false;
+    SLLNode<T>* rover = new SLLNode<T>(val, NULL);
+    if (head == NULL){
+	head = rover;
+	tail = rover;
+    }
+    else{
+	tail->setNext(rover);
+	tail = rover;
+    }
+    isAppend = true;
+    return isAppend;
+}
+template <class T>
 void SLList<T>::sort(){
     SLLNode<T>* rover = head;
     while(rover != NULL){

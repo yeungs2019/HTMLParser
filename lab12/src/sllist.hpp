@@ -26,6 +26,7 @@ class SLList{
     public:
 	SLList();
 	T& operator[](const int pos);
+	bool append(const T &val);
 	void sort();
 };
 
