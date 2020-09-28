@@ -14,7 +14,7 @@ void SLList<T>::sort(){
 	SLLNode<T>* rover2 = rover;
 	SLLNode<T>* rover3 = rover->getNext();
 	while(rover3 != NULL){
-	    if(rover2->getData() > rover3->getData(){
+	    if(rover2->getData() > rover3->getData()){
 	        rover2 = rover3;
 	    }
 	    rover3 = rover3->getNext();
