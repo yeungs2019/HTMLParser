@@ -25,6 +25,7 @@ class SLList{
 	SLLNode<T>* tail;
     public:
 	SLList();
+	T& operator[](const int pos);
 	void sort();
 };
 

@@ -9,6 +9,14 @@ SLList<T>::SLList(){
 }
 
 template <class T>
+T& SLList<T>::operator[](const int pos){
+    SLLNode<T>* rover = head;
+    for(int i = 0; i < pos; i++){
+	rover = rover->getNext();
+    }
+    return rover->getData();
+}
+template <class T>
 void SLList<T>::sort(){
     SLLNode<T>* rover = head;
     while(rover != NULL){
