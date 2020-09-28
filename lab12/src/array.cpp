@@ -129,6 +129,20 @@ void Array<T>::insertionSort(){
 	ptrArr[temp2 + 1] = temp;
     }	
 }
+template <class T>
+void Array<T>::sort(){
+    int temp;
+    int temp2;
+    for(int i = 1; i < fitSize; i++){
+        temp = ptrArr[i];
+        temp2 = i - 1;
+        while (temp2 >= 0 && ptrArr[temp2] > temp){
+            ptrArr[temp2 + 1] = ptrArr[temp2];
+            temp2 = temp2 - 1;
+        }
+        ptrArr[temp2 + 1] = temp;
+    }
+}
 
 template <class T>
 Array<T>::~Array() {
