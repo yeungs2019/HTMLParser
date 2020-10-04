@@ -1,4 +1,4 @@
-I am run number 001056.
+I am run number 001058.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab12
@@ -24,9 +24,6 @@ MAKE_ERROR =
 Total grade so far: 70.000
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/sllist.cpp:61:18: error: invalid use of member function 'int& SLLNode<T>::getData() [with T = int]' (did you forget the '()' ?)
-+ 0 pts of 30.000
-Total grade so far: 70.000
+Seg fault detected, please test and fix.
 Auto-grader grade: 70.000
 *****************Finished lab12****************
