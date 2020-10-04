@@ -22,3 +22,5 @@ Failures =
 MAKE_ERROR = src/sllist.cpp:61:18: error: invalid use of member function 'int& SLLNode<T>::getData() [with T = int]' (did you forget the '()' ?)
 + 0 pts of 30.000
 Total grade so far: 70.000
+Auto-grader grade: 70.000
+*****************Finished lab12****************
