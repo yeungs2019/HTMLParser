@@ -76,7 +76,7 @@ bool Array<T>::operator==(Array<T> &list) const{
 	else if(ptrArr[i] < list[i - 1]){
 	    noEquality = false;
 	}
-	i++
+	i++;
     }
     return noEquality;
 }
