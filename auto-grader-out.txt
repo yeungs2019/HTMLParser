@@ -1,4 +1,4 @@
-I am run number 000856.
+I am run number 001054.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab12
@@ -24,5 +24,9 @@ MAKE_ERROR =
 Total grade so far: 70.000
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/sllist.cpp:82:1: error: expected declaration before '}' token
++ 0 pts of 30.000
+Total grade so far: 70.000
 Auto-grader grade: 70.000
 *****************Finished lab12****************
