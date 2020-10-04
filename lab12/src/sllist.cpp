@@ -58,7 +58,7 @@ void SLList<T>::sort(){
 		rover3 = rover3->getNext();
 	    }
 	}
-	rover3->getData = temp;
+	rover3->getData() = temp;
 	rover2 = rover2->getNext();
     }
 }
