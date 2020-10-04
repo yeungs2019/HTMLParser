@@ -22,3 +22,5 @@ Failures =
 MAKE_ERROR = src/sllist.cpp:82:1: error: expected declaration before '}' token
 + 0 pts of 30.000
 Total grade so far: 70.000
+Auto-grader grade: 70.000
+*****************Finished lab12****************
