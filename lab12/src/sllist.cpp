@@ -34,7 +34,35 @@ bool SLList<T>::append(const T &val){
 template <class T>
 void SLList<T>::sort(){
     SLLNode<T>* rover = head;
-    while(rover != NULL){
+    if(rover == NULL || rover->getNext() == NULL){
+	return;
+    }
+    SLLNode<T>* rover2 = head->getNext();
+    while(rover2 != NULL){
+	int temp = rover2->getData();
+	int counter = 0;
+	SLLNode<T>* rover3 = head;
+	while(rover3 != rover2){
+	    if(rover3->getData() > rover2->getData() && counter == 0){
+		temp = rover3->getData();
+		rover3->getData() = rover2->getData();
+		counter = 1;
+		rover2 = rover2->getNext();
+	    }
+	    else{
+		if(counter == 1){
+ 		    int x = temp;
+		    temp = rover3->getData();
+		    rover3->getData() = x;
+		}
+		rover3 = rover3->getNext();
+	    }
+	}
+	rover3->getData = temp;
+	rover2 = rover2->getNext();
+    }
+}
+    /*while(rover != NULL){
 	SLLNode<T>* rover2 = rover;
 	SLLNode<T>* rover3 = rover->getNext();
 	while(rover3 != NULL){
@@ -48,7 +76,9 @@ void SLList<T>::sort(){
 	rover->getData() = rover2->getData();
 	rover2->getData() = x;
 	rover = rover->getNext();
-    }
+    }*/
+    
+
 }
 
 
