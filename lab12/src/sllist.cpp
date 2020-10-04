@@ -47,7 +47,7 @@ void SLList<T>::sort(){
 		temp = rover3->getData();
 		rover3->getData() = rover2->getData();
 		counter = 1;
-		rover2 = rover2->getNext();
+		rover3 = rover3->getNext();
 	    }
 	    else{
 		if(counter == 1){
