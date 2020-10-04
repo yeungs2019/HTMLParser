@@ -1,10 +1,11 @@
-#ifndef ARRAY_H
+#ifndef ARRAY_H:
 #define ARRAY_H
 
 template <class T>
 class Array {
     private:
-
+	T* ptrArr;
+	int fitSize;
     public:
     /* Do a deep copy of the array into the list.
      * Note: This one uses a pointer!
@@ -36,7 +37,11 @@ class Array {
      */
     bool operator==(Array<T> &list) const;
 
+    void qsort();
+
     void msort();
+
+    void sort();
 
     /* Free any memory used! */
     ~Array();
