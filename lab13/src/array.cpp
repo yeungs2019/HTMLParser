@@ -98,14 +98,14 @@ void Array<T>::qsort(){
 	    start++;
 	}
 	if(start < end){
-	    rover = ptrArr[end];
+	    rov = ptrArr[end];
 	    ptrArr[end] = ptrArr[start];
 	    ptrArr[start] = rov;
 	}
     }
     ptrArr[end] = temp;
-    qSort(ptrArr, start, end - 1);
-    qSort(ptrArr, end + 1, end);
+    //qSort(ptrArr, start, end - 1);
+    //qSort(ptrArr, end + 1, end);
 }
 
 template <class T>
