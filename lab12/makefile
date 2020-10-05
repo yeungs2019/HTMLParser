@@ -23,3 +23,8 @@ obj:
 
 clean:
 	rm -rf $(EXEC) obj test/test-runner.cpp test-runner
+
+plot: timings.plot data1
+	gnuplot < timings.plot
+	ps2pdf data1.ps
+	evince data1.pdf

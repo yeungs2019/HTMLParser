@@ -1,8 +1,6 @@
 #include <iostream>
 #include <time.h>
-#include "array.hpp"
 
-void selectionSort();
 int main(int argc, char *argv[]) { // Standard main heading.
     /* clock_t is the data type for storing timing information.
      * We must make two variables, one for the start and the other to capture
@@ -20,7 +18,7 @@ int main(int argc, char *argv[]) { // Standard main heading.
 
         // This is were your algorithm should be called.
         // Keep in mind that i is the SIZE of the input -- you may have to change it!
-        selectionSort();
+        functionCallToYouAlgorithm(i);
 
         // Capture the clock and subtract the start to get the total time elapsed.
         diff = clock() - start;
@@ -37,8 +35,4 @@ int main(int argc, char *argv[]) { // Standard main heading.
 
     return 0;
 }
-void selectionSort(){
-    return;
-}
-
 
