@@ -38,7 +38,7 @@ void SLList<T>::sort(){
 	SLLNode<T>* minimum = rover;
 	SLLNode<T>* rover2 = rover->getNext();
 	while(rover2){
-	    if(minimum->getData() > rover2->getData(){
+	    if(minimum->getData() > rover2->getData()){
 		minimum = rover2;
 	    }
 	    rover2 = rover2->getNext();
