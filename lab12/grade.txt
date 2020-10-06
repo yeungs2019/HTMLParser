@@ -23,3 +23,5 @@ MAKE_ERROR = src/sllist.cpp:54:5: error: expected ';' before '}' token
 src/sllist.cpp:40:11: error: invalid conversion from 'SLLNode<int>*' to 'int' [-fpermissive]
 + 0 pts of 30.000
 Total grade so far: 70.000
+Auto-grader grade: 70.000
+*****************Finished lab12****************
