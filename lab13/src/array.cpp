@@ -85,9 +85,29 @@ void Array<T>::msort(T *list, const int len) {
 }*/
 template <class T>
 void Array<T>::qsort(){
-    int start;
-    int end;
-    int temp = ptrArr[(start + end) / 2];
+    int left;
+    int right;
+    int pivot = ptrArr[(left + right) / 2];
+    int temp;
+    while(left <= right){
+	while(ptrArr[left] < pivot){
+	    left++;
+	}
+	while(ptrArr[right] > pivot){
+	    right--;
+	}
+	if(left <= right){
+	    temp = ptrArr[left];
+	    ptrArr[left] = ptrArr[right];
+	    ptrArr[right] = temp;
+	    left++;
+	    right--;
+	}
+    }
+}
+	
+
+    /*int temp = ptrArr[(start + end) / 2];
     //int temp2 = (start + end) / 2;
     int rov;
     while(start < end){
@@ -105,8 +125,8 @@ void Array<T>::qsort(){
     }
     ptrArr[end] = temp;
     //qSort(ptrArr, start, end - 1);
-    //qSort(ptrArr, end + 1, end);
-}
+    //qSort(ptrArr, end + 1, end);*/
+//}
 
 template <class T>
 void Array<T>::msort() {
