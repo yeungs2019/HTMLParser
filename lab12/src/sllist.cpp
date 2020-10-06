@@ -40,7 +40,7 @@ void SLList<T>::sort(){
     while(rov != NULL){
 	rover = rov;
 	junk = rov->getNext();
-	while(junk){
+	while(junk != NULL){
 	    if(junk->getData() < rover->getData()){
 		rover = junk;
 	    }
