@@ -37,7 +37,7 @@ void SLList<T>::sort(){
     SLLNode<T>* junk = NULL;
     int sorted;
     while(head){
-	sorted = head;
+	rover = head;
 	junk = head->getNext();
 	while(junk){
 	    if(junk->getData() < rover->getData()){
@@ -50,7 +50,7 @@ void SLList<T>::sort(){
 	    rover->getData() = head->getData();
 	    head->getData() = sorted;
 	}
-	head = head->getNext()
+	head = head->getNext();
     }
 	//head = head->getNext();
 }
