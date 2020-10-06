@@ -18,5 +18,8 @@ MAKE_ERROR =
 Total grade so far: 70.000
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Auto-grader grade: 70.000
-*****************Finished lab12****************
+Failures = 
+MAKE_ERROR = src/sllist.cpp:54:5: error: expected ';' before '}' token
+src/sllist.cpp:40:11: error: invalid conversion from 'SLLNode<int>*' to 'int' [-fpermissive]
++ 0 pts of 30.000
+Total grade so far: 70.000
