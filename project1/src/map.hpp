@@ -1,6 +1,19 @@
 #ifndef MAP_H
 #define MAP_H
-
+#include <string>
+#include <vector>
+#include <cstring>
+using namespace std;
+/*class mapNode{
+    private:
+	int ID;
+	std::string stName;
+	mapNode* nextNode;
+    public:
+	mapNode(const int data, std::string name, mapNode* next){
+	    this->ID= data;
+	    this->stName = name;
+	    this->nextNode = next;*/
 class Map{
     public:
         Map();
@@ -23,14 +36,19 @@ class Map{
          * Returns true if there was something to remove, false otherwise.
          */
         bool remove(const char *key);
+
+	// prints the stuff
+	void print() const;
     
         int howMany(const char *prefix);
     
         /* Frees all memory */
         ~Map();
     private:
-        /* Store you data here.  I highly recommend talking to me about your
-         * data structure before implementing. */
+	vector<string> sName;
+	vector<int> studentID;
+	//mapNode* head;
+	//mapNode* tail;
 };
 
 #endif
