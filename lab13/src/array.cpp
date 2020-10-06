@@ -86,7 +86,7 @@ void Array<T>::msort(T *list, const int len) {
 template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
-    int left = 1;
+    int left = 0;
     int right = size;
     int pivot = ptrArr[(left + right) / 2];
     int temp;
@@ -131,6 +131,14 @@ void Array<T>::qsort(){
 
 template <class T>
 void Array<T>::msort() {
+    int size = this->getLength();
+    int left = 0;
+    int right = size;
+    int middle;
+    if(left < right){
+	    middle = left + (right - left) / 2;
+    }
+
 }
 template <class T>
 void Array<T>::sort() {
