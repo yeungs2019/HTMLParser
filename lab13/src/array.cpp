@@ -85,8 +85,9 @@ void Array<T>::msort(T *list, const int len) {
 }*/
 template <class T>
 void Array<T>::qsort(){
-    int left;
-    int right;
+    int size = ptrArr.getLength();
+    int left = ptrArr[0];
+    int right = ptrArr[size];
     int pivot = ptrArr[(left + right) / 2];
     int temp;
     while(left <= right){
