@@ -169,15 +169,57 @@ void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
     }
 }*/
 template <class T>
+void Array<T>::merge(int *a, int size, int low, int high, int mid){
+    int i, j, k;
+    int *c = new int[size];
+    i = low;
+    k = low;
+    j = mid + 1;
+    while(i <= mid && j <= high){
+	if(a[i] < a[j]){
+	    c[k] = a[i];
+	    k++;
+	    i++;
+	}
+	else{
+	    c[k] = a[j];
+	    k++;
+	    j++;
+	}
+    }
+    while(i <= mid){
+	c[k] = a[i];
+	k++;
+	i++;
+    }
+    while(j <= high){
+        c[k] = a[j];
+	k++;
+	j++;
+    }
+    for(i = low; i < k; i++){
+	a[i] = c[i];
+    }
+}
+template <class T>
 void Array<T>::msort(){
-    /*int middle;
-    int low, high;
-    if(low < high){
-	//middle = (low + high) / 2;
-	//msorts(ptrArr, low, mid);
-	//msorts(ptrArr, middle + 1, high);
-	
-	merge(ptrArr, low, high, middle);*/
+    int mid;
+    int size = this->getLength();
+    int low;
+    int high;
+    for(int i = 2; i <= size; i *= 2){
+	for(int x = 0; x < size; x += i){
+	    int newHigh;
+	    if(x + i - 1 < size - 1){
+		newHigh = x + i - 1;
+	    }
+	    else{
+		mid = (newHigh - low) / 2;
+		merge(ptrArr, size, x, newHigh, mid);
+	    }
+	}
+	return;
+    }	
 }
 template <class T>
 void Array<T>::sort() {
