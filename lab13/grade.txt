@@ -1,23 +1,27 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 
+MAKE_ERROR = src/array.cpp:258:48: error: missing terminating ' character
+src/array.cpp:259:2: error: expected ',' or ';' before '}' token
+src/array.cpp:258:19: error: no matching function for call to 'Array<int>::min(int*&, int*&, int&, int&, int&)'
++ 0 pts of 30.000
+Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-+ 19.980 pts of 30.000
-Total grade so far: 19.980
+Failures = 
+MAKE_ERROR = src/array.cpp:258:48: error: missing terminating ' character
+src/array.cpp:259:2: error: expected ',' or ';' before '}' token
++ 0 pts of 30.000
+Total grade so far: 0
 ******************* Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 10.000 pts of 10.000
-Total grade so far: 29.980
+Total grade so far: 10.000
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 30.000 pts of 30.000
-Total grade so far: 59.980
-Auto-grader grade: 59.980
-*****************Finished lab13****************
+Total grade so far: 40.000
