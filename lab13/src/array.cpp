@@ -81,7 +81,7 @@ bool Array<T>::operator==(Array<T> &list) const{
     return noEquality;
 }
 /*template <class T>
-void Array<T>::msort(T *list, const int len) {
+void Array<T>::merge(T *list, const int len) {
 }*/
 template <class T>
 void Array<T>::qsort(){
@@ -134,14 +134,39 @@ void Array<T>::qsort(){
 
 template <class T>
 void Array<T>::msort() {
-    int size = this->getLength();
-    int left = 0;
-    int right = size;
+    //int size = this->getLength();
+    int start;
+    int end;
     int middle;
-    if(left < right){
-	    middle = left + (right - left) / 2;
+    int temp[end - start + 1];
+    int i = start;
+    int j = middle + 1;
+    int x = 0;
+    while(i <= middle && j <= end){
+	if(ptrArr[i] <= ptrArr[j]){
+	    temp[k] = ptrArr[i];
+	    k += 1;
+	    i += 1;
+	}
+	else{
+	    temp[k] = ptrArr[j];
+	    k += 1;
+	    j += 1;
+	}
     }
-
+    while(i <= middle){
+	temp[k] = ptrArr[i];
+	k += 1;
+	i += 1;
+    }
+    while(j <= end){
+	temp[k] = ptrArr[j];
+	k += 1;
+	j += 1;
+    }
+    for(i = start; i <= end; i+= 1){
+	ptrArr[i] = temp[i - start];
+    }
 }
 template <class T>
 void Array<T>::sort() {
