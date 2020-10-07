@@ -20,7 +20,6 @@ Total grade so far: 29.980
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = src/sllist.cpp:53:5: error: expected ',' or ';' before 'SLLNode'
-src/sllist.cpp:55:5: error: expected ',' or ';' before 'SLLNode'
 src/sllist.cpp:57:21: error: 'aend' was not declared in this scope
 src/sllist.cpp:66:18: error: 'aend' was not declared in this scope
 src/sllist.cpp:112:22: error: lvalue required as left operand of assignment
@@ -30,5 +29,3 @@ src/sllist.cpp:61:24: error: lvalue required as left operand of assignment
 src/sllist.cpp:67:20: error: lvalue required as left operand of assignment
 + 0 pts of 30.000
 Total grade so far: 29.980
-Auto-grader grade: 29.980
-*****************Finished lab13****************
