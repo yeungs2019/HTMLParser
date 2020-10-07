@@ -1,7 +1,17 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:136:64: error: no 'void Array<T>::merge(int*, int, int, int)' member function declared in class 'Array<T>'
+MAKE_ERROR = src/array.cpp:141:14: error: 'end' was not declared in this scope
+src/array.cpp:141:20: error: 'start' was not declared in this scope
+src/array.cpp:142:9: error: redeclaration of 'int i'
+src/array.cpp:143:9: error: redeclaration of 'int j'
+src/array.cpp:144:9: error: redeclaration of 'int k'
+src/array.cpp:147:6: error: 'temp' was not declared in this scope
+src/array.cpp:152:6: error: 'temp' was not declared in this scope
+src/array.cpp:158:2: error: 'temp' was not declared in this scope
+src/array.cpp:163:2: error: 'temp' was not declared in this scope
+src/array.cpp:167:28: error: expected ';' before 'i'
+src/array.cpp:168:14: error: 'temp' was not declared in this scope
 src/array.cpp:182:1: error: a template declaration cannot appear at block scope
 tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
 tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
@@ -41,7 +51,17 @@ Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:136:64: error: no 'void Array<T>::merge(int*, int, int, int)' member function declared in class 'Array<T>'
+MAKE_ERROR = src/array.cpp:141:14: error: 'end' was not declared in this scope
+src/array.cpp:141:20: error: 'start' was not declared in this scope
+src/array.cpp:142:9: error: redeclaration of 'int i'
+src/array.cpp:143:9: error: redeclaration of 'int j'
+src/array.cpp:144:9: error: redeclaration of 'int k'
+src/array.cpp:147:6: error: 'temp' was not declared in this scope
+src/array.cpp:152:6: error: 'temp' was not declared in this scope
+src/array.cpp:158:2: error: 'temp' was not declared in this scope
+src/array.cpp:163:2: error: 'temp' was not declared in this scope
+src/array.cpp:167:28: error: expected ';' before 'i'
+src/array.cpp:168:14: error: 'temp' was not declared in this scope
 src/array.cpp:182:1: error: a template declaration cannot appear at block scope
 tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
 tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
