@@ -49,7 +49,7 @@ void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNod
 	std::swap(*end1, *end2);
     }
 
-    SLLNode* astart = *start1 
+    SLLNode* astart = *start1;
     SLLNode* aend = *end1;
     SLLNode* bstart = *start2;
     SLLNode* bend = *end2;
