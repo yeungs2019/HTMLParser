@@ -40,7 +40,7 @@ class Array {
     void qsort();
     //void msort(int *ptrArr, int low, int high)
     void msort();
-    //void merge(int *ptrArr, int low, int high, int middle);
+    void merge(int *ptrArr, int low, int high, int middle);
     void sort();
 
     /* Free any memory used! */
