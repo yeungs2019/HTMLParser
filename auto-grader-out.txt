@@ -1,4 +1,4 @@
-I am run number 001298.
+I am run number 001304.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab13
@@ -24,8 +24,30 @@ MAKE_ERROR =
 Total grade so far: 29.980
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
+Failures = 
+MAKE_ERROR = src/sllist.cpp:45:23: error: variable or field 'merge' declared void
+src/sllist.cpp:45:30: error: missing template arguments before '*' token
+src/sllist.cpp:45:33: error: 'start1' was not declared in this scope
+src/sllist.cpp:45:48: error: missing template arguments before '*' token
+src/sllist.cpp:45:51: error: 'end1' was not declared in this scope
+src/sllist.cpp:45:64: error: missing template arguments before '*' token
+src/sllist.cpp:45:67: error: 'start2' was not declared in this scope
+src/sllist.cpp:45:82: error: missing template arguments before '*' token
+src/sllist.cpp:45:85: error: 'end2' was not declared in this scope
+src/sllist.cpp:77:12: error: missing template arguments before '*' token
+src/sllist.cpp:77:14: error: 'start1' was not declared in this scope
+src/sllist.cpp:78:12: error: missing template arguments before '*' token
+src/sllist.cpp:78:14: error: 'end1' was not declared in this scope
+src/sllist.cpp:79:12: error: missing template arguments before '*' token
+src/sllist.cpp:79:14: error: 'start2' was not declared in this scope
+src/sllist.cpp:80:12: error: missing template arguments before '*' token
+src/sllist.cpp:80:14: error: 'end2' was not declared in this scope
+src/sllist.cpp:81:12: error: missing template arguments before '*' token
+src/sllist.cpp:81:14: error: 'prevend' was not declared in this scope
+src/sllist.cpp:104:13: error: missing template arguments before '*' token
+src/sllist.cpp:104:15: error: 'temp' was not declared in this scope
+src/sllist.cpp:105:42: error: there are no arguments to 'merge' that depend on a template parameter, so a declaration of 'merge' must be available [-fpermissive]
+src/sllist.cpp:105:42: error: 'merge' was not declared in this scope
 + 0 pts of 30.000
 Total grade so far: 29.980
 Auto-grader grade: 29.980
