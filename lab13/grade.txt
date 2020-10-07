@@ -1,123 +1,24 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.hpp:41:46: error: expected ';' at end of member declaration
-src/array.cpp:141:14: error: 'end' was not declared in this scope
-src/array.cpp:141:20: error: 'start' was not declared in this scope
-src/array.cpp:142:9: error: redeclaration of 'int i'
-src/array.cpp:143:9: error: redeclaration of 'int j'
-src/array.cpp:144:9: error: redeclaration of 'int k'
-src/array.cpp:147:6: error: 'temp' was not declared in this scope
-src/array.cpp:152:6: error: 'temp' was not declared in this scope
-src/array.cpp:158:2: error: 'temp' was not declared in this scope
-src/array.cpp:163:2: error: 'temp' was not declared in this scope
-src/array.cpp:167:28: error: expected ';' before 'i'
-src/array.cpp:168:14: error: 'temp' was not declared in this scope
-src/array.cpp:176:22: error: 'mid' was not declared in this scope
-src/array.cpp:176:25: error: there are no arguments to 'msorts' that depend on a template parameter, so a declaration of 'msorts' must be available [-fpermissive]
-src/array.cpp:177:33: error: there are no arguments to 'msorts' that depend on a template parameter, so a declaration of 'msorts' must be available [-fpermissive]
-src/array.cpp:181:1: error: a template declaration cannot appear at block scope
-/srv/auto-grader/csci-315-fall-2020/run/001290/lab13/tests/merge-test.cpp:11:26: error: no matching function for call to 'Array<int>::msort()'
-/srv/auto-grader/csci-315-fall-2020/run/001290/lab13/tests/merge-test.cpp:22:26: error: no matching function for call to 'Array<int>::msort()'
-/srv/auto-grader/csci-315-fall-2020/run/001290/lab13/tests/merge-test.cpp:37:25: error: no matching function for call to 'Array<int>::msort()'
-tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
-tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
-tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
-/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
-/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
-tests/test-runner.cpp:48:55: error: qualified-id in declaration before '=' token
-tests/test-runner.cpp:48:66: error: expected '}' at end of input
+MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/array.hpp:41:46: error: expected ';' at end of member declaration
-src/array.cpp:141:14: error: 'end' was not declared in this scope
-src/array.cpp:141:20: error: 'start' was not declared in this scope
-src/array.cpp:142:9: error: redeclaration of 'int i'
-src/array.cpp:143:9: error: redeclaration of 'int j'
-src/array.cpp:144:9: error: redeclaration of 'int k'
-src/array.cpp:147:6: error: 'temp' was not declared in this scope
-src/array.cpp:152:6: error: 'temp' was not declared in this scope
-src/array.cpp:158:2: error: 'temp' was not declared in this scope
-src/array.cpp:163:2: error: 'temp' was not declared in this scope
-src/array.cpp:167:28: error: expected ';' before 'i'
-src/array.cpp:168:14: error: 'temp' was not declared in this scope
-src/array.cpp:176:22: error: 'mid' was not declared in this scope
-src/array.cpp:176:25: error: there are no arguments to 'msorts' that depend on a template parameter, so a declaration of 'msorts' must be available [-fpermissive]
-src/array.cpp:177:33: error: there are no arguments to 'msorts' that depend on a template parameter, so a declaration of 'msorts' must be available [-fpermissive]
-src/array.cpp:181:1: error: a template declaration cannot appear at block scope
-tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
-tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
-tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
-/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
-/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
-/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
-/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
-/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
-tests/test-runner.cpp:48:55: error: qualified-id in declaration before '=' token
-tests/test-runner.cpp:48:66: error: expected '}' at end of input
-+ 0 pts of 30.000
-Total grade so far: 0
+Failures = 1
+MAKE_ERROR = 
++ 19.980 pts of 30.000
+Total grade so far: 19.980
 ******************* Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 10.000 pts of 10.000
-Total grade so far: 10.000
+Total grade so far: 29.980
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 3
 MAKE_ERROR = 
 + 0 pts of 30.000
-Total grade so far: 10.000
+Total grade so far: 29.980
