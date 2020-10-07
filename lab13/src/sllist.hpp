@@ -48,6 +48,7 @@ class SLList{
 
     public:
 	SLList();
+	~SLList();
 	int getLength() const;
 	T& operator[](const int pos);
 	bool append(const T &val);

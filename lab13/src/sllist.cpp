@@ -4,8 +4,18 @@
 
 template <class T>
 SLList<T>::SLList(){
-    //head = NULL;
-    //tail = NULL;
+    head = NULL;
+    tail = NULL;
+}
+template <class T>
+SLList<T>::~SLList(){
+    SLLNode* rover = head;
+    SLLNode* toDelete = rover;
+    while(rover != NULL){
+	rover = rover->getNext();
+	toDelete = rover;
+	delete rover;
+    }
 }
 template <class T>
 int SLList<T>::getLength() const{
