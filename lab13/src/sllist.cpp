@@ -57,14 +57,14 @@ void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNod
     while(astart != aend && bstart != bendnext){
 	if(astart->getNext()->getData() > bstart->getData()){
 	    temp = bstart->getNext();
-	    bstart->getNext() = astart->getNext();
-	    astart->getNext() = bstart;
+	    bstart->setNext(astart->getNext());
+	    astart->setNext(bstart);
 	    bstart = temp;
 	}
 	astart = astart->getNext();
     }
     if(astart == aend){
-	astart->getNext() = bstart;
+	astart->setNext(bstart);
     }
     else{
 	*end2 = *end1;
@@ -109,12 +109,12 @@ void SLList<T>::sort(){
 		head = start1;
 	    }
 	    else{
-		prevend->getNext() = start1;
+		prevend->setNext(start1);
 	    }
 	    prevend = end2;
 	    start1 = temp;
 	}
-	prevend->getNext() = start1;
+	prevend->setNext(start1);
     }
 }
     
