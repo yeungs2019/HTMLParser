@@ -25,8 +25,8 @@ class SLLNode{
 template <class T>
 class SLList{
     private:
-	SLLNode* head;
-	SLLNode* tail;
+	//SLLNode* head;
+	//SLLNode* tail;
 	class SLLNode{
              private:
                 int data;
@@ -44,6 +44,7 @@ class SLList{
              void setNext(SLLNode* node) {this->nextNode = node;}
              //void setPrev(SLLNode* node2) {this->prevNode = node2;}
        };
+       SLLNode *head, *tail;
 
     public:
 	SLList();
