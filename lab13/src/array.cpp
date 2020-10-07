@@ -214,12 +214,13 @@ void Array<T>::msort(){
 		newHigh = x + i - 1;
 	    }
 	    else{
-		mid = (newHigh - low) / 2;
-		merge(ptrArr, size, x, newHigh, mid);
+		newHigh = size - 1;
 	    }
+	    mid = (newHigh - low) / 2;
+	    merge(ptrArr, size, x, newHigh, mid);
 	}
-	return;
     }	
+    return;
 }
 template <class T>
 void Array<T>::sort() {
