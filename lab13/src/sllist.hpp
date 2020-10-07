@@ -29,6 +29,7 @@ class SLList{
 	SLLNode<T>* tail;
     public:
 	SLList();
+	int getLength() const;
 	T& operator[](const int pos);
 	bool append(const T &val);
 	void sort();
