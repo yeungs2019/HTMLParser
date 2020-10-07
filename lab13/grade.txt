@@ -19,3 +19,5 @@ Total grade so far: 29.980
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Seg fault detected, please test and fix.
+Auto-grader grade: 29.980
+*****************Finished lab13****************
