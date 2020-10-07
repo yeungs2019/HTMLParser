@@ -255,7 +255,8 @@ void Array<T>::msort(){
 	for(int i = low; i < high; i += 2*m){
 	     int from = i;
 	     int mid = i + m - 1;
-	     int to = min(ptrArr, temp, from, mid, to);
+	     int to = min(i + 2*m - 1, high);
+	     merge(ptrArr, temp, from, mid, to);
 	}
     }
 }
