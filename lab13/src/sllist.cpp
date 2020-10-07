@@ -42,7 +42,7 @@ bool SLList<T>::append(const T &val){
     return isAppend;
 }
 template <class T>
-void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNode** end2){
+void SLList<T>::merge(SLLNode<T>** start1, SLLNode<T>** end1, SLLNode<T>** start2, SLLNode<T>** end2){
     SLLNode<T>* temp = NULL;
     if((*start1)->getData() > (*start2)->getData()){
 	std::swap(*start1, *start2);
