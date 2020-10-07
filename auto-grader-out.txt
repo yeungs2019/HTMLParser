@@ -1,4 +1,4 @@
-I am run number 001322.
+I am run number 001324.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab13
@@ -24,6 +24,9 @@ MAKE_ERROR =
 Total grade so far: 29.980
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Seg fault detected, please test and fix.
-Auto-grader grade: 29.980
+Failures = 
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 59.980
+Auto-grader grade: 59.980
 *****************Finished lab13****************
