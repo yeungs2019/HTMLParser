@@ -32,17 +32,10 @@ src/sllist.cpp:45:64: error: missing template arguments before '*' token
 src/sllist.cpp:45:67: error: 'start2' was not declared in this scope
 src/sllist.cpp:45:82: error: missing template arguments before '*' token
 src/sllist.cpp:45:85: error: 'end2' was not declared in this scope
-src/sllist.cpp:77:12: error: missing template arguments before '*' token
-src/sllist.cpp:77:14: error: 'start1' was not declared in this scope
-src/sllist.cpp:78:12: error: missing template arguments before '*' token
-src/sllist.cpp:78:14: error: 'end1' was not declared in this scope
-src/sllist.cpp:79:12: error: missing template arguments before '*' token
-src/sllist.cpp:79:14: error: 'start2' was not declared in this scope
-src/sllist.cpp:80:12: error: missing template arguments before '*' token
-src/sllist.cpp:80:14: error: 'end2' was not declared in this scope
-src/sllist.cpp:81:12: error: missing template arguments before '*' token
-src/sllist.cpp:81:14: error: 'prevend' was not declared in this scope
-src/sllist.cpp:104:13: error: missing template arguments before '*' token
-src/sllist.cpp:104:15: error: 'temp' was not declared in this scope
+src/sllist.cpp:106:13: error: missing template arguments before '*' token
+src/sllist.cpp:106:15: error: 'temp' was not declared in this scope
+src/sllist.cpp:107:11: error: no matching function for call to 'SLList<int>::merge(SLLNode<int>**, SLLNode<int>**, SLLNode<int>**, SLLNode<int>**)'
+src/sllist.cpp:112:22: error: lvalue required as left operand of assignment
+src/sllist.cpp:117:21: error: lvalue required as left operand of assignment
 + 0 pts of 30.000
 Total grade so far: 29.980
