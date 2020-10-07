@@ -168,7 +168,7 @@ void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
 	ptrArr[i] = temp[i - low];
     }
 }*/
-template <class T>
+/*template <class T>
 void Array<T>::merge(int *a, int size, int low, int high, int mid){
     int i, j, k;
     int *c = new int[size];
@@ -221,7 +221,61 @@ void Array<T>::msort(){
 	}
     }	
     return;
+}*/
+template <class T>
+int Array<T>::min(int x, int y){ return (x<y)? x :y; }
+
+template <class T>
+void Array<T>::merge(int *a, int l, int m, int r){
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    int L[n1], R[n2];
+
+    for (i = 0; i < n1; i++){
+	L[i] = a[l + i];
+    }
+    for(j = 0; j < n2; j++){
+	R[j] = a[m + 1 + j];
+    }
+    i = 0;
+    j = 0;
+    k = 1;
+    while(i < n1 && j < n2){
+	if(L[i] <= R[j]){
+	    a[k] = L[i];
+	    i++;
+	}
+	else{
+	    a[k] = R[j];
+	    j++;
+	}
+	k++;
+    }
+    while(i < n1){
+	a[k] = L[i];
+	i++;
+	k++;
+    }
+    while(j < n2){
+	a[k] = R[j];
+	j++;
+	k++;
+    }
 }
+void Array<T>::msort(){
+    int curr;
+    int left;
+    int n = this->getLength();
+    for(curr = 1; curr <= n - 1; curr = 2*curr){
+	 for(left = 0; left < n - 1; left += 2*curr){
+	     int mid = left + curr - 1;
+	     int right = min(left + 2*curr - 1, n - 1);
+	     merge(ptrArr, left, mid, right);
+	 }
+    }
+}
+
 template <class T>
 void Array<T>::sort() {
 }
