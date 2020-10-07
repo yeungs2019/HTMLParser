@@ -3,6 +3,7 @@
  */
 #ifdef ARRAY_H
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Do a deep copy of the array into the list.
  * Note: This one uses a pointer!
