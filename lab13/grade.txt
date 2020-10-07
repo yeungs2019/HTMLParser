@@ -23,15 +23,8 @@ MAKE_ERROR = src/sllist.hpp:35:13: error: 'SLLNode' is not a type
 src/sllist.hpp:35:31: error: 'SLLNode' is not a type
 src/sllist.hpp:35:47: error: 'SLLNode' is not a type
 src/sllist.hpp:35:65: error: 'SLLNode' is not a type
-src/sllist.cpp:45:23: error: variable or field 'merge' declared void
-src/sllist.cpp:45:30: error: missing template arguments before '*' token
-src/sllist.cpp:45:33: error: 'start1' was not declared in this scope
-src/sllist.cpp:45:48: error: missing template arguments before '*' token
-src/sllist.cpp:45:51: error: 'end1' was not declared in this scope
-src/sllist.cpp:45:64: error: missing template arguments before '*' token
-src/sllist.cpp:45:67: error: 'start2' was not declared in this scope
-src/sllist.cpp:45:82: error: missing template arguments before '*' token
-src/sllist.cpp:45:85: error: 'end2' was not declared in this scope
+src/sllist.cpp:45:6: error: prototype for 'void SLList<T>::merge(SLLNode<T>**, SLLNode<T>**, SLLNode<T>**, SLLNode<T>**)' does not match any in class 'SLList<T>'
+src/sllist.hpp:35:7: error: candidate is: void SLList<T>::merge(int**, int**, int**, int**)
 src/sllist.cpp:106:13: error: missing template arguments before '*' token
 src/sllist.cpp:106:15: error: 'temp' was not declared in this scope
 src/sllist.cpp:107:11: error: no matching function for call to 'SLList<int>::merge(SLLNode<int>**, SLLNode<int>**, SLLNode<int>**, SLLNode<int>**)'
@@ -39,5 +32,3 @@ src/sllist.cpp:112:22: error: lvalue required as left operand of assignment
 src/sllist.cpp:117:21: error: lvalue required as left operand of assignment
 + 0 pts of 30.000
 Total grade so far: 29.980
-Auto-grader grade: 29.980
-*****************Finished lab13****************
