@@ -4,6 +4,7 @@
 #ifdef ARRAY_H
 #include <stdio.h>
 #include <stdlib.h>
+#define N 10
 
 /* Do a deep copy of the array into the list.
  * Note: This one uses a pointer!
@@ -227,54 +228,35 @@ template <class T>
 int Array<T>::min(int x, int y){ return (x<y)? x :y; }
 
 template <class T>
-void Array<T>::merge(int *a, int l, int m, int r){
-    int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
-    int L[n1], R[n2];
-
-    for (i = 0; i < n1; i++){
-	L[i] = a[l + i];
-    }
-    for(j = 0; j < n2; j++){
-	R[j] = a[m + 1 + j];
-    }
-    i = 0;
-    j = 0;
-    k = 1;
-    while(i < n1 && j < n2){
-	if(L[i] <= R[j]){
-	    a[k] = L[i];
-	    i++;
+void Array<T>::merge(int *a, int *t, int from, int mid, int to){
+    int k = from;
+    int i = from;
+    int j = mid + 1;
+    while(i <= mid && j <= to){
+	if(a[i] < a[j]){
+	    t[k++] = a[i++];
 	}
 	else{
-	    a[k] = R[j];
-	    j++;
+	    t[k++] = a[j++];
 	}
-	k++;
     }
-    /*while(i < n1){
-	a[k] = L[i];
-	i++;
-	k++;
+    while(i < N && i <= mid){
+         t[k++] = a[i++];
     }
-    while(j < n2){
-	a[k] = R[j];
-	j++;
-	k++;
-    }*/
+    for(i = from; i <= to; i++){
+	 a[i] = t[i];
+    }
 }
 template <class T>
 void Array<T>::msort(){
-    int curr;
-    int left;
-    int n = this->getLength();
-    for(curr = 1; curr <= n - 1; curr = 2*curr){
-	 for(left = 0; left < n - 1; left += 2*curr){
-	     int mid = left + curr - 1;
-	     int right = min(left + 2*curr - 1, n - 1);
-	     merge(ptrArr, left, mid, right);
-	 }
+    int high, low;
+    int *temp;
+    for(int m = 1; m <= high - low; m = 2*m){
+	for(int i = low; i < high; i += 2*m){
+	     int from = i;
+	     int mid = i + m - 1;
+	     int to = min(ptrArr, temp, from, mid, to)'
+	}
     }
 }
 
