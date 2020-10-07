@@ -43,15 +43,17 @@ bool SLList<T>::append(const T &val){
 }
 template <class T>
 void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNode** end2){
-    SLLNode* temp = NULL;
+    SLLNode<T>* temp = NULL;
     if((*start1)->getData() > (*start2)->getData()){
 	std::swap(*start1, *start2);
 	std::swap(*end1, *end2);
     }
 
-    SLLNode* astart = *start1, *aend = *end1;
-    SLLNode* bstart = *start2, *bend = *end2;
-    SLLNode* bendnext = (*end2)->getNext();
+    SLLNode<T>* astart = *start1 
+    SLLNode<T>* aend = *end1;
+    SLLNode<T>* bstart = *start2 
+    SLLNode<T>* bend = *end2;
+    SLLNode<T>* bendnext = (*end2)->getNext();
     while(astart != aend && bstart != bendnext){
 	if(astart->getNext()->getData() > bstart->getData()){
 	    temp = bstart->getNext();
@@ -74,11 +76,11 @@ void SLList<T>::sort(){
     if(head == NULL){
         return;
     }
-    SLLNode* start1 = NULL;
-    SLLNode* end1 = NULL;
-    SLLNode* start2 = NULL;
-    SLLNode* end2 = NULL;
-    SLLNode* prevend = NULL;
+    SLLNode<T>* start1 = NULL;
+    SLLNode<T>* end1 = NULL;
+    SLLNode<T>* start2 = NULL;
+    SLLNode<T>* end2 = NULL;
+    SLLNode<T>* prevend = NULL;
     int len = this->getLength();
     for(int gap = 1; gap < len; gap = gap * 2){
 	start1 = head;
