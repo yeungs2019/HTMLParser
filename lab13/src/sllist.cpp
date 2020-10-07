@@ -4,8 +4,8 @@
 
 template <class T>
 SLList<T>::SLList(){
-    head = NULL;
-    tail = NULL;
+    //head = NULL;
+    //tail = NULL;
 }
 template <class T>
 int SLList<T>::getLength() const{
