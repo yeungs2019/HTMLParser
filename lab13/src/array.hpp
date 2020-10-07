@@ -39,8 +39,10 @@ class Array {
 
     void qsort();
     //void msort(int *ptrArr, int low, int high)
+    int min(int x, int y);
     void msort();
-    void merge(int *a, int size, int low, int high, int mid);
+    void merge(int *a, int l, int m, int r);
+    //void merge(int *a, int size, int low, int high, int mid);
     //void merge(int *ptrArr, int low, int high, int middle);
     void sort();
 
