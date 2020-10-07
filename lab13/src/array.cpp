@@ -263,6 +263,7 @@ void Array<T>::merge(int *a, int l, int m, int r){
 	k++;
     }
 }
+template <class T>
 void Array<T>::msort(){
     int curr;
     int left;
