@@ -32,6 +32,7 @@ class SLList{
 	int getLength() const;
 	T& operator[](const int pos);
 	bool append(const T &val);
+	void merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNode** end2);
 	void sort();
 };
 
