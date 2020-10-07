@@ -1,4 +1,4 @@
-I am run number 001320.
+I am run number 001322.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab13
@@ -24,13 +24,6 @@ MAKE_ERROR =
 Total grade so far: 29.980
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/sllist.cpp:112:22: error: lvalue required as left operand of assignment
-src/sllist.cpp:117:21: error: lvalue required as left operand of assignment
-src/sllist.cpp:60:24: error: lvalue required as left operand of assignment
-src/sllist.cpp:61:24: error: lvalue required as left operand of assignment
-src/sllist.cpp:67:20: error: lvalue required as left operand of assignment
-+ 0 pts of 30.000
-Total grade so far: 29.980
+Seg fault detected, please test and fix.
 Auto-grader grade: 29.980
 *****************Finished lab13****************
