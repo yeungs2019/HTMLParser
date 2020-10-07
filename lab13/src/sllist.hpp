@@ -25,8 +25,8 @@ class SLLNode{
 template <class T>
 class SLList{
     private:
-	SLLNode<T>* head;
-	SLLNode<T>* tail;
+	SLLNode* head;
+	SLLNode* tail;
 	class SLLNode{
              private:
                 int data;
