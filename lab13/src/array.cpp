@@ -141,7 +141,7 @@ void Array<T>::msort() {
     int temp[end - start + 1];
     int i = start;
     int j = middle + 1;
-    int x = 0;
+    int k = 0;
     while(i <= middle && j <= end){
 	if(ptrArr[i] <= ptrArr[j]){
 	    temp[k] = ptrArr[i];
