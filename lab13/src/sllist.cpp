@@ -51,7 +51,7 @@ void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNod
 
     SLLNode* astart = *start1 
     SLLNode* aend = *end1;
-    SLLNode* bstart = *start2 
+    SLLNode* bstart = *start2;
     SLLNode* bend = *end2;
     SLLNode* bendnext = (*end2)->getNext();
     while(astart != aend && bstart != bendnext){
