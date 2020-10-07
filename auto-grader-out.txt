@@ -1,2 +1,100 @@
 I am run number 001294.
 Pulling source code...
+------------------------------------------------
+Changes found in lab13
+------------------------------------------------
+*****************Examining lab13****************
+******************* Merge Sort PART *********************
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/array.cpp:136:64: error: no 'void Array<T>::merge(int*, int, int, int)' member function declared in class 'Array<T>'
+src/array.cpp:182:1: error: a template declaration cannot appear at block scope
+tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
+/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
+/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
+tests/test-runner.cpp:48:55: error: qualified-id in declaration before '=' token
+tests/test-runner.cpp:48:66: error: expected '}' at end of input
++ 0 pts of 30.000
+Total grade so far: 0
+******************* Quick Sort PART *********************
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/array.cpp:136:64: error: no 'void Array<T>::merge(int*, int, int, int)' member function declared in class 'Array<T>'
+src/array.cpp:182:1: error: a template declaration cannot appear at block scope
+tests/test-runner.cpp:31:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:37:97: error: use of local variable with automatic storage from containing function
+tests/test-runner.cpp:43:97: error: use of local variable with automatic storage from containing function
+/usr/include/cxxtest/ValueTraits.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/Descriptions.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/DummyDescriptions.cpp:14:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/GlobalFixture.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/LinkedList.cpp:17:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/RealDescriptions.cpp:22:1: error: 'namespace' definition is not allowed here
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/codecvt.h:41:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/c++io.h:38:15: error: expected primary-expression before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected '=' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected identifier before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected ';' before '__attribute__'
+/usr/include/x86_64-linux-gnu/c++/6/bits/basic_file.h:44:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/fstream:47:15: error: expected primary-expression before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected '=' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected identifier before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected ';' before '__attribute__'
+/usr/include/c++/6/bits/fstream.tcc:42:15: error: expected primary-expression before '__attribute__'
+/usr/include/cxxtest/TestSuite.cpp:20:1: error: 'namespace' definition is not allowed here
+/usr/include/cxxtest/TestTracker.cpp:17:1: error: 'namespace' definition is not allowed here
+tests/test-runner.cpp:48:55: error: qualified-id in declaration before '=' token
+tests/test-runner.cpp:48:66: error: expected '}' at end of input
++ 0 pts of 30.000
+Total grade so far: 0
+******************* Sort PART *********************
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 10.000 pts of 10.000
+Total grade so far: 10.000
+******************* SLList Sort PART *********************
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 3
+MAKE_ERROR = 
++ 0 pts of 30.000
+Total grade so far: 10.000
+Auto-grader grade: 10.000
+*****************Finished lab13****************
