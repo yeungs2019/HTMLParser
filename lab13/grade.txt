@@ -44,3 +44,5 @@ src/sllist.cpp:105:42: error: there are no arguments to 'merge' that depend on a
 src/sllist.cpp:105:42: error: 'merge' was not declared in this scope
 + 0 pts of 30.000
 Total grade so far: 29.980
+Auto-grader grade: 29.980
+*****************Finished lab13****************
