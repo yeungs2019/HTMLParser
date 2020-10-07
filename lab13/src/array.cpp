@@ -253,7 +253,7 @@ void Array<T>::merge(int *a, int l, int m, int r){
 	}
 	k++;
     }
-    while(i < n1){
+    /*while(i < n1){
 	a[k] = L[i];
 	i++;
 	k++;
@@ -262,7 +262,7 @@ void Array<T>::merge(int *a, int l, int m, int r){
 	a[k] = R[j];
 	j++;
 	k++;
-    }
+    }*/
 }
 template <class T>
 void Array<T>::msort(){
