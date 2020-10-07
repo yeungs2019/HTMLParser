@@ -132,7 +132,7 @@ void Array<T>::qsort(){
     //qSort(ptrArr, end + 1, end);*/
 //}
 
-template <class T>
+/*template <class T>
 void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
     //int size = this->getLength();
     int i;
@@ -167,17 +167,17 @@ void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
     for(i = low; i <= high i++){
 	ptrArr[i] = temp[i - low];
     }
-}
+}*/
 template <class T>
 void Array<T>::msort(){
-    int middle;
+    /*int middle;
     int low, high;
     if(low < high){
 	//middle = (low + high) / 2;
 	//msorts(ptrArr, low, mid);
 	//msorts(ptrArr, middle + 1, high);
 	
-	merge(ptrArr, low, high, middle);
+	merge(ptrArr, low, high, middle);*/
 }
 template <class T>
 void Array<T>::sort() {
