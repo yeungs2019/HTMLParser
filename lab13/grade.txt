@@ -32,3 +32,5 @@ src/sllist.cpp:112:22: error: lvalue required as left operand of assignment
 src/sllist.cpp:117:21: error: lvalue required as left operand of assignment
 + 0 pts of 30.000
 Total grade so far: 29.980
+Auto-grader grade: 29.980
+*****************Finished lab13****************
