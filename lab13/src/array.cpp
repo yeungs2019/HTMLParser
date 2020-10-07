@@ -81,7 +81,7 @@ bool Array<T>::operator==(Array<T> &list) const{
     return noEquality;
 }
 /*template <class T>
-void Array<T>::merge(T *list, const int len) {
+void Array<T>::merge(T* list, const int) {
 }*/
 template <class T>
 void Array<T>::qsort(){
@@ -133,40 +133,50 @@ void Array<T>::qsort(){
 //}
 
 template <class T>
-void Array<T>::msort() {
+void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
     //int size = this->getLength();
-    int start;
-    int end;
-    int middle;
+    int i;
+    int j;
+    int k;
     int temp[end - start + 1];
-    int i = start;
+    int i = low;
     int j = middle + 1;
     int k = 0;
-    while(i <= middle && j <= end){
-	if(ptrArr[i] <= ptrArr[j]){
+    while(i <= middle && j <= high){
+	if(ptrArr[i] < ptrArr[j]){
 	    temp[k] = ptrArr[i];
-	    k += 1;
-	    i += 1;
+	    k++;
+	    i++;
 	}
 	else{
 	    temp[k] = ptrArr[j];
-	    k += 1;
-	    j += 1;
+	    k++;
+	    j++;
 	}
     }
     while(i <= middle){
 	temp[k] = ptrArr[i];
-	k += 1;
-	i += 1;
+	k++;
+	i++;
     }
-    while(j <= end){
+    while(j <= high){
 	temp[k] = ptrArr[j];
-	k += 1;
-	j += 1;
+	k++;
+	j++;
     }
-    for(i = start; i <= end; i+= 1){
-	ptrArr[i] = temp[i - start];
+    for(i = low; i <= high i++){
+	ptrArr[i] = temp[i - low];
     }
+}
+template <class T>
+void Array<T>::msort(int *ptrArr, int low, int high){
+    int middle;
+    if(low < high){
+	middle = (low + high) / 2;
+	msorts(ptrArr, low, mid);
+	msorts(ptrArr, middle + 1, high);
+	
+	merge(ptrArr, low, high, middle);
 }
 template <class T>
 void Array<T>::sort() {
