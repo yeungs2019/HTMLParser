@@ -9,7 +9,7 @@ SLList<T>::SLList(){
 }
 template <class T>
 int SLList<T>::getLength() const{
-    SLLNode<T>* rover = head;
+    SLLNode* rover = head;
     int newLength = 0;
     while(rover != NULL){
 	newLength++;
@@ -20,7 +20,7 @@ int SLList<T>::getLength() const{
 
 template <class T>
 T& SLList<T>::operator[](const int pos){
-    SLLNode<T>* rover = head;
+    SLLNode* rover = head;
     for(int i = 0; i < pos; i++){
 	rover = rover->getNext();
     }
@@ -29,7 +29,7 @@ T& SLList<T>::operator[](const int pos){
 template <class T>
 bool SLList<T>::append(const T &val){
     bool isAppend = false;
-    SLLNode<T>* rover = new SLLNode<T>(val, NULL);
+    SLLNode* rover = new SLLNode(val, NULL);
     if (head == NULL){
 	head = rover;
 	tail = rover;
@@ -42,18 +42,18 @@ bool SLList<T>::append(const T &val){
     return isAppend;
 }
 template <class T>
-void SLList<T>::merge(SLLNode<T>** start1, SLLNode<T>** end1, SLLNode<T>** start2, SLLNode<T>** end2){
-    SLLNode<T>* temp = NULL;
+void SLList<T>::merge(SLLNode** start1, SLLNode** end1, SLLNode** start2, SLLNode** end2){
+    SLLNode* temp = NULL;
     if((*start1)->getData() > (*start2)->getData()){
 	std::swap(*start1, *start2);
 	std::swap(*end1, *end2);
     }
 
-    SLLNode<T>* astart = *start1 
-    SLLNode<T>* aend = *end1;
-    SLLNode<T>* bstart = *start2 
-    SLLNode<T>* bend = *end2;
-    SLLNode<T>* bendnext = (*end2)->getNext();
+    SLLNode* astart = *start1 
+    SLLNode* aend = *end1;
+    SLLNode* bstart = *start2 
+    SLLNode* bend = *end2;
+    SLLNode* bendnext = (*end2)->getNext();
     while(astart != aend && bstart != bendnext){
 	if(astart->getNext()->getData() > bstart->getData()){
 	    temp = bstart->getNext();
@@ -76,11 +76,11 @@ void SLList<T>::sort(){
     if(head == NULL){
         return;
     }
-    SLLNode<T>* start1 = NULL;
-    SLLNode<T>* end1 = NULL;
-    SLLNode<T>* start2 = NULL;
-    SLLNode<T>* end2 = NULL;
-    SLLNode<T>* prevend = NULL;
+    SLLNode* start1 = NULL;
+    SLLNode* end1 = NULL;
+    SLLNode* start2 = NULL;
+    SLLNode* end2 = NULL;
+    SLLNode* prevend = NULL;
     int len = this->getLength();
     for(int gap = 1; gap < len; gap = gap * 2){
 	start1 = head;
