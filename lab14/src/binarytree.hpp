@@ -3,22 +3,39 @@
 
 #include <string>
 
-template<class T>
+/*template<class T>
 class BinaryTreeNode {
     public:
         BinaryTreeNode<T> () {
         }
-};
+};*/
 
 template<class T>
 class BinaryTree {
     private:
-        /* You fill in private member data. */
-
+        class BSTNode{
+	    private:
+		int data;
+	        BSTNode* left;
+	        BSTNode* right;
+            public:
+	        BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
+		    data = mData;
+		    left = mLeft;
+	            right = mRight;
+		}
+		int getData() { return data; }
+	        BSTNode* getLeft() { return left; }
+         	BSTNode* getRight() { return right; }
+		void setLeft(BSTNode* mLeft) { left = mLeft; }
+		void setRight(BSTNode* mRight) { right = mRight; }
+	};
+	
+	BSTNode* root;
         /* Recommended, but not necessary helper function. */
-        void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
+        //void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
-        std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+        //std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
     public:
 
         /* Creates an empty binary tree. */
