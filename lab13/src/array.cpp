@@ -215,7 +215,7 @@ template <class T>
 void Array<T>::msort(){
     int curr;
     int left;
-    int size = sizeof(ptrArr)/sizeof(ptrArr[0]);
+    int size = sizeof(ptrArr);
     for(curr = 1; curr <= size - 1; curr = 2 * curr){
 	for(left = 0; left < size - 1; left += 2 * curr){
 	     int mid = left + curr - 1;
