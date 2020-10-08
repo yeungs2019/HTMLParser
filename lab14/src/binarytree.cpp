@@ -24,7 +24,7 @@ template <class T>
 void BinaryTree<T>::put(const T &val){
     
 }
-template <class T>
+/*template <class T>
 int BinaryTree<T>::max(int x, int y) {
     if(x >= y){
 	return x;
@@ -32,7 +32,7 @@ int BinaryTree<T>::max(int x, int y) {
     else{
 	return y;
     }
-}
+}*/
 
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode* node){
@@ -40,7 +40,14 @@ int BinaryTree<T>::maxDepth(BSTNode* node){
 	return 0;
     }
     else{
-	return 1 + max(maxDepth(node->getLeft(), maxDepth(node->getRight())));
+	int lefty = maxDepth(node->getLeft());
+	int righty = maxDepth(node->getRight());
+	if(lefty > right){
+	    return lefty + 1;
+	}
+	else{
+	    return right + 1;
+	}
     }
 }   
 template <class T>

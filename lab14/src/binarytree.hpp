@@ -3,35 +3,30 @@
 
 #include <string>
 
-/*template<class T>
-class BinaryTreeNode {
+template<class T>
+class BSTNode{
+    private:
+       int data;
+       BSTNode* left;
+       BSTNode* right;
     public:
-        BinaryTreeNode<T> () {
-        }
-};*/
+       BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
+           data = mData;
+           left = mLeft;
+           right = mRight;
+       }
+       int getData() { return data; }
+       BSTNode* getLeft() { return left; }
+       BSTNode* getRight() { return right; }
+       void setLeft(BSTNode* mLeft) { left = mLeft; }
+       void setRight(BSTNode* mRight) { right = mRight; }
+};
+
 
 template<class T>
 class BinaryTree {
     private:
-        class BSTNode{
-	    private:
-		int data;
-	        BSTNode* left;
-	        BSTNode* right;
-            public:
-	        BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
-		    data = mData;
-		    left = mLeft;
-	            right = mRight;
-		}
-		int getData() { return data; }
-	        BSTNode* getLeft() { return left; }
-         	BSTNode* getRight() { return right; }
-		void setLeft(BSTNode* mLeft) { left = mLeft; }
-		void setRight(BSTNode* mRight) { right = mRight; }
-	};
-	
-	BSTNode* root;
+	BSTNode<T>* root;
         /* Recommended, but not necessary helper function. */
         //void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
