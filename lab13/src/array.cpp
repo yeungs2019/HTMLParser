@@ -216,7 +216,7 @@ template <class T>
 void Array<T>::msort(){
     int curr;
     int left;
-    int size = this->getLength();
+    int size;
     for(curr = 1; curr <= size - 1; curr = 2 * curr){
 	for(left = 0; left < size - 1; left += 2 * curr){
 	     int mid = min(left + curr -1, size - 1);
