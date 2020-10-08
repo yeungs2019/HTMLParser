@@ -8,7 +8,7 @@
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
-    root = NULL;
+    //root = NULL;
 }
 
 template <class T>
@@ -43,10 +43,10 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 	int lefty = maxDepth(node->getLeft());
 	int righty = maxDepth(node->getRight());
 	if(lefty > righty){
-	    return lefty + 1;
+	    return (lefty + 1);
 	}
 	else{
-	    return righty + 1;
+	    return (righty + 1);
 	}
     }
 }   
