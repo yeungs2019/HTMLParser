@@ -8,7 +8,7 @@ Total grade so far: 0
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = src/array.cpp:133:25: error: 'i' was not declared in this scope
-src/array.cpp:141:14: error: no matching function for call to 'swap(int*&, int, int)'
+src/array.cpp:141:9: error: no matching function for call to 'swap(int*&, int, int)'
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Sort PART *********************
@@ -23,5 +23,3 @@ Failures =
 MAKE_ERROR = 
 + 30.000 pts of 30.000
 Total grade so far: 40.000
-Auto-grader grade: 40.000
-*****************Finished lab13****************
