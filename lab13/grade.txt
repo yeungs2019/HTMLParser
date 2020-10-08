@@ -1,15 +1,12 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/array.cpp:96:31: error: expected ')' before ';' token
+Failures = 3
+MAKE_ERROR = 
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/array.cpp:96:31: error: expected ')' before ';' token
-+ 0 pts of 30.000
-Total grade so far: 0
+Seg fault detected, please test and fix.
 ******************* Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
