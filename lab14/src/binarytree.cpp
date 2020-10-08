@@ -8,7 +8,18 @@
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
+    root = NULL;
 }
+
+template <class T>
+BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
+    //BSTNode* rover = tree.root;
+    //root = NULL;
+    if(tree.root == NULL){
+	root = NULL;
+    }
+}
+
 template <class T>
 void BinaryTree<T>::put(const T &val){
     
