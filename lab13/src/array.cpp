@@ -93,7 +93,7 @@ int Array<T>::partition(int *a, int start, int end){
    int pIndex = start;
    for(int i = start; i < end; i++){
 	if(a[i] < pivot){
-	    std::swap(a[i], a[pIndex];
+	    std::swap(a[i], a[pIndex]);
 	    pIndex++;
 	}
    }
