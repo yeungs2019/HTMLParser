@@ -170,63 +170,63 @@ void Array<T>::merge(int *ptrArr, int low, int high, int middle) {
 	ptrArr[i] = temp[i - low];
     }
 }*/
-/*template <class T>
-void Array<T>::merge(int *a, int size, int low, int high, int mid){
+template <class T>
+int Array<T>::min(int x, int y){ return (x<y)? x :y; }
+
+template <class T>
+void Array<T>::merge(int *a, int l, int m, int r){
     int i, j, k;
-    int *c = new int[size];
-    i = low;
-    k = low;
-    j = mid + 1;
-    while(i <= mid && j <= high){
-	if(a[i] < a[j]){
-	    c[k] = a[i];
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    int L[n1];
+    int R[n2];
+    for (i = 0; i < n1; i++){
+	L[i] = a[l + i];
+    }
+    for(j = 0; j < n2; j++){
+	R[j] = a[m + 1 + j];
+    }
+    i = 0;
+    j = 0;
+    k = 1
+    while(i < n1 && j < n2){
+	if(L[i] < R[j]){
+	    a[k] = L[i];
 	    k++;
 	    i++;
 	}
 	else{
-	    c[k] = a[j];
-	    k++;
+	    a[k] = R[j];
 	    j++;
 	}
+	k++;
     }
-    while(i <= mid){
-	c[k] = a[i];
+    while(i < n1){
+	a[k] = L[i];
 	k++;
 	i++;
     }
-    while(j <= high){
-        c[k] = a[j];
+    while(j < n2){
+        a[k] = R[j];
 	k++;
 	j++;
-    }
-    for(i = low; i < k; i++){
-	a[i] = c[i];
     }
 }
 template <class T>
 void Array<T>::msort(){
-    int mid;
+    int curr;
+    int left;
     int size = this->getLength();
-    int low;
-    int high;
-    for(int i = 2; i <= size; i *= 2){
-	for(int x = 0; x < size; x += i){
-	    int newHigh;
-	    if(x + i - 1 < size - 1){
-		newHigh = x + i - 1;
-	    }
-	    else{
-		newHigh = size - 1;
-	    }
-	    mid = (newHigh - low) / 2;
-	    merge(ptrArr, size, x, newHigh, mid);
+    for(curr = 1; curr <= size - 1; curr = 2 * curr){
+	for(left = 0; left < size - 1; left += 2 * curr){
+	     int mid = min(left + curr -1, n - 1);
+	     int right = min(left + 2*curr - 1, n -1);
+	     merge(ptrArr, left, mid, right);
 	}
-    }	
-    return;
-}*/
-template <class T>
-int Array<T>::min(int x, int y){ return (x<y)? x :y; }
+    }
+}
 
+/*
 template <class T>
 void Array<T>::merge(int *a, int *t, int from, int mid, int to){
     int k = from;
@@ -259,7 +259,7 @@ void Array<T>::msort(){
 	     merge(ptrArr, temp, from, mid, to);
 	}
     }
-}
+}*/
 
 template <class T>
 void Array<T>::sort() {
