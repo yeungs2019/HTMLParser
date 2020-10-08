@@ -130,9 +130,9 @@ void Array<T>::qsort(){
     int right = size;
     int pivot = ptrArr[(left + right) / 2];
     int temp;
-    if(size <= 0){
+    /*if(size <= 0){
 	return;
-    }
+    }*/
     while(left <= right){
 	while(ptrArr[left] < pivot){
 	    left++;
