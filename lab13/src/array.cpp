@@ -130,6 +130,7 @@ void Array<T>::qsorts(T* array, const int size){
     if(size < 2) {
 	return;
     }
+    std::swap(array, (size / 2) -1, 0);
     for (int index = 1; index < size; index++){
 	if(pivot > array[index]){
 	    int temp = array[index];
@@ -148,7 +149,7 @@ void Array<T>::qsorts(T* array, const int size){
 template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
-    qsorts(ptrArr, fitSize);
+    qsorts(ptrArr, size);
 }
 /*template <class T>
 void Array<T>::qsort(){
