@@ -4,6 +4,7 @@
 #include <iostream>
 #include <list>
 #include <algorithm>
+#include <bits/stdc++.h>
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
