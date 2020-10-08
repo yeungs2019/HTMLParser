@@ -219,8 +219,8 @@ void Array<T>::msort(){
     int size = this->getLength();
     for(curr = 1; curr <= size - 1; curr = 2 * curr){
 	for(left = 0; left < size - 1; left += 2 * curr){
-	     int mid = min(left + curr -1, n - 1);
-	     int right = min(left + 2*curr - 1, n -1);
+	     int mid = min(left + curr -1, size - 1);
+	     int right = min(left + 2*curr - 1, size -1);
 	     merge(ptrArr, left, mid, right);
 	}
     }
