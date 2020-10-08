@@ -1,32 +1,30 @@
-I am run number 001488.
+I am run number 001492.
 Pulling source code...
 ------------------------------------------------
-Changes found in lab13
+Changes found in create
+Changes found in lab14
 ------------------------------------------------
-*****************Examining lab13****************
-******************* Merge Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab14****************
+******************* Put Test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 35.000
+Total grade so far: 0
+******************* get Height PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:27:11: error: invalid conversion from 'BinaryTree<int>::BSTNode*' to 'int' [-fpermissive]
+src/binarytree.cpp:27:11: error: invalid conversion from 'BinaryTree<std::__cxx11::basic_string<char> >::BSTNode*' to 'int' [-fpermissive]
 + 0 pts of 30.000
 Total grade so far: 0
-******************* Quick Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-+ 19.980 pts of 30.000
-Total grade so far: 19.980
-******************* Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+******************* lca test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = 
-+ 10.000 pts of 10.000
-Total grade so far: 29.980
-******************* SLList Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 30.000 pts of 30.000
-Total grade so far: 59.980
-Auto-grader grade: 59.980
-*****************Finished lab13****************
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 35.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab14****************
