@@ -174,7 +174,7 @@ template <class T>
 int Array<T>::min(int x, int y){ return (x<y)? x :y; }
 
 template <class T>
-void Array<T>::merge(int *a, int l, int m, int r){
+void Array<T>::merge(int a[], int l, int m, int r){
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
