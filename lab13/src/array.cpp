@@ -138,7 +138,7 @@ void Array<T>::qsort(){
 	    left++;
 	}
 	else{
-	    std::(ptrArr[left], ptrArr[right--]);
+	    std::swap(ptrArr[left], ptrArr[right--]);
 	}
 	/*while(ptrArr[right] > pivot){
 	    right--;
