@@ -1,4 +1,4 @@
-I am run number 001344.
+I am run number 001346.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab13
@@ -7,15 +7,13 @@ Changes found in lab13
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:192:5: error: expected ';' before 'while'
-tests/test-runner.cpp:49:66: error: expected '}' at end of input
+MAKE_ERROR = src/array.cpp:222:37: error: 'n' was not declared in this scope
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:192:5: error: expected ';' before 'while'
-tests/test-runner.cpp:49:66: error: expected '}' at end of input
+MAKE_ERROR = src/array.cpp:222:37: error: 'n' was not declared in this scope
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Sort PART *********************
