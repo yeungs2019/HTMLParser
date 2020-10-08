@@ -3,6 +3,7 @@
 #include "binarytree.hpp"
 #include <iostream>
 #include <list>
+#include <algorithm>
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
@@ -14,7 +15,7 @@ int BinaryTree<T>::maxDepth(BSTNode* node){
 	return 0;
     }
     else{
-	return 1 + std::max(maxDepth(node->getLeft(), maxDepth(node->getRight())));
+	return 1 + max(maxDepth(node->getLeft(), maxDepth(node->getRight())));
     }
 }   
 template <class T>
