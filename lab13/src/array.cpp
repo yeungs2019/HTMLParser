@@ -122,7 +122,7 @@ void Array<T>::qsort(){
 	}
     }
 }*/
-template <class T>
+/*template <class T>
 void Array<T>::qsorts(T* array, const int size){
     T pivot = array[(size / 2) - 1];
     int end;
@@ -145,18 +145,18 @@ void Array<T>::qsorts(T* array, const int size){
 
     qsorts(array, smallIndex -1);
     qsorts(array + smallIndex, size - smallIndex);
-}
-template <class T>
+}*/
+/*template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
     qsorts(ptrArr, size);
-}
-/*template <class T>
+}*/
+template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
     int left = 0;
     int right = size;
-    int pivot = ptrArr[(left + right) / 2];
+    int pivot = ptrArr[(size / 2) - 1];
     int temp;
     if(size <= 0){
 	return;
@@ -177,7 +177,7 @@ void Array<T>::qsort(){
 	   right--;
 	}
     }
-}*/
+}
 
 	
 
