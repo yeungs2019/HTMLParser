@@ -222,6 +222,7 @@ void Array<T>::msort(){
 	     int mid = min(left + curr - 1, size -1);
 	     int right = min(left + 2*curr - 1, size -1);
 	     merge(ptrArr, left, mid, right);
+	     msort();
 	}
     }
 }
