@@ -23,7 +23,7 @@ int BinaryTree<T>::getHeight(){
     if(root == NULL){
 	return 0;
     }
-    std::list queue;
+    std::list<T> queue;
     queue.push_back(root);
     BSTNode* front = NULL;
     int height = 0;
