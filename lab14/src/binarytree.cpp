@@ -9,9 +9,19 @@
 template<class T>
 BinaryTree<T>::BinaryTree() {
 }
-
 template <class T>
-int BinaryTree<T>::max(int x, int y) {return (x > y ) ? x:y;}
+void BinaryTree<T>::put(const T &val){
+    
+}
+template <class T>
+int BinaryTree<T>::max(int x, int y) {
+    if(x >= y){
+	return x;
+    }
+    else{
+	return y;
+    }
+}
 
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode* node){
