@@ -44,8 +44,8 @@ class BinaryTree {
          * Do NOT do ANY balancing!
          */
         void put(const T &val);
-	int maxDepth(BSTNode* node);
-	int max(int x, int y); 
+	int maxDepth(BSTNode<T>* node);
+	//int max(int x, int y); 
         /* Returns the height for the binary tree. */
         int getHeight();
 

@@ -35,18 +35,18 @@ int BinaryTree<T>::max(int x, int y) {
 }*/
 
 template <class T>
-int BinaryTree<T>::maxDepth(BSTNode* node){
+int BinaryTree<T>::maxDepth(BSTNode<T>* node){
     if(node == NULL){
 	return 0;
     }
     else{
 	int lefty = maxDepth(node->getLeft());
 	int righty = maxDepth(node->getRight());
-	if(lefty > right){
+	if(lefty > righty){
 	    return lefty + 1;
 	}
 	else{
-	    return right + 1;
+	    return righty + 1;
 	}
     }
 }   
