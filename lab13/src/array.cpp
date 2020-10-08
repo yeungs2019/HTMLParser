@@ -102,16 +102,17 @@ void Array<T>::qsort(){
 	}
 	while(ptrArr[right] > pivot){
 	    right--;
-	    if(left <= right){
-	        temp = ptrArr[left];
-	        ptrArr[left] = ptrArr[right];
-	        ptrArr[right] = temp;
-	        left++;
-	        right--;
-	     }
-         }
-     }
+	}
+	if(left <= right){
+	    temp = ptrArr[left];
+	    ptrArr[left] = ptrArr[right];
+	    ptrArr[right] = temp;
+	    left++;
+	    right--;
+	 }
+      }
 }
+
 	
 
     /*int temp = ptrArr[(start + end) / 2];
