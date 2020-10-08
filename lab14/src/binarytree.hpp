@@ -49,7 +49,7 @@ class BinaryTree {
          * Do NOT do ANY balancing!
          */
         void put(const T &val);
-
+	int maxDepth(BSTNode* node);
         /* Returns the height for the binary tree. */
         int getHeight();
 
