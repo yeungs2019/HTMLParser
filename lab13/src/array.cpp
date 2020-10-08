@@ -217,10 +217,10 @@ void Array<T>::msort(){
     int curr;
     int left;
     int size;
-    for(curr = 1; curr <= size.getLength() - 1; curr = 2 * curr){
-	for(left = 0; left < size.getLength() - 1; left += 2 * curr){
-	     int mid = min(left + curr -1, size.getLength() - 1);
-	     int right = min(left + 2*curr - 1, size.getLength() -1);
+    for(curr = 1; curr <= fitSize - 1; curr = 2 * curr){
+	for(left = 0; left < fitSize - 1; left += 2 * curr){
+	     int mid = min(left + curr -1, fitSize - 1);
+	     int right = min(left + 2*curr - 1, fitSize -1);
 	     merge(ptrArr, left, mid, right);
 	}
     }
