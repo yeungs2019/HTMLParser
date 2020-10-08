@@ -87,7 +87,7 @@ bool Array<T>::operator==(Array<T> &list) const{
 /*template <class T>
 void Array<T>::merge(T* list, const int) {
 }*/
-template <class T>
+/*template <class T>
 int Array<T>::partition(int *a, int start, int end){
    int pivot = a[end];
    int pIndex = start;
@@ -121,9 +121,9 @@ void Array<T>::qsort(){
 	    stack[++top] = end;
 	}
     }
-}
+}*/
 
-/*template <class T>
+template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
     int left = 0;
@@ -134,10 +134,10 @@ void Array<T>::qsort(){
 	return;
     }
     while(left <= right){
-	while(ptrArr[left] < pivot){
+	if(ptrArr[left] < pivot){
 	    left++;
 	}
-	while(ptrArr[right] > pivot){
+	if(ptrArr[right] > pivot){
 	    right--;
 	}
 	if(left <= right){
@@ -148,7 +148,7 @@ void Array<T>::qsort(){
 	    right--;
 	 }
       }
-}*/
+}
 
 	
 
