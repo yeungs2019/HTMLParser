@@ -2,7 +2,7 @@
 #define BINARY_TREE_H
 #include "binarytree.hpp"
 #include <iostream>
-#include <algorithm>
+#include <list>
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
@@ -19,13 +19,29 @@ int BinaryTree<T>::maxDepth(BSTNode* node){
 }*/    
 template <class T>
 int BinaryTree<T>::getHeight(){
-    BSTNode* temp;
-    if(temp == NULL){
+    BSTNode* root;
+    if(root == NULL){
 	return 0;
     }
-    else{
-	return 1 + std::max(temp->getLeft(), temp->getRight());
+    std::list queue;
+    queue.push_back(root);
+    BSTNode* front = NULL;
+    int height = 0;
+    while(!queue.empty()){
+	int size = queue.size();
+	while(size--){
+	    front = queue.front();
+	    queue.pop_front();
+	    if(front->getLeft()){
+		queue.push_back(front->getLeft());
+	    }
+	    if(front->getRight()){
+		queue.push_back(front->getRight());
+	    }
+	}
+	height++;
     }
+    return height;
 }
 template<class T>
 BinaryTree<T>::~BinaryTree() {
