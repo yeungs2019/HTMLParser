@@ -169,9 +169,9 @@ void Array<T>::qsort(){
 	    right--;
 	}
 	if(left <= right){
-	    temp = ptrArr[left];
+	   /* temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
-	    ptrArr[right] = temp;
+	    ptrArr[right] = temp;*/
 	   std::swap(ptrArr[left], ptrArr[right]);
 	   left++;
 	   right--;
