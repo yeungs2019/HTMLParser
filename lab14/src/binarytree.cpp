@@ -8,7 +8,7 @@ template<class T>
 BinaryTree<T>::BinaryTree() {
 }
 
-/*template <class T>
+template <class T>
 int BinaryTree<T>::maxDepth(BSTNode* node){
     if(node == NULL){
 	return 0;
@@ -16,32 +16,10 @@ int BinaryTree<T>::maxDepth(BSTNode* node){
     else{
 	return 1 + std::max(maxDepth(node->getLeft(), maxDepth(node->getRight())));
     }
-}*/    
+}   
 template <class T>
 int BinaryTree<T>::getHeight(){
-    BSTNode* root;
-    if(root == NULL){
-	return 0;
-    }
-    std::list<T> queue;
-    queue.push_back(root);
-    BSTNode* front = NULL;
-    int height = 0;
-    while(!queue.empty()){
-	int size = queue.size();
-	while(size--){
-	    front = queue.front();
-	    queue.pop_front();
-	    if(front->getLeft()){
-		queue.push_back(front->getLeft());
-	    }
-	    if(front->getRight()){
-		queue.push_back(front->getRight());
-	    }
-	}
-	height++;
-    }
-    return height;
+    return maxDepth(root);   
 }
 template<class T>
 BinaryTree<T>::~BinaryTree() {
