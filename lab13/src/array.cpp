@@ -140,10 +140,11 @@ void Array<T>::qsort(){
 	while(ptrArr[right] > pivot){
 	    right--;
 	}
-	while(left <= right){
-	    temp = ptrArr[left];
+	if(left <= right){
+	    /*temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
-	    ptrArr[right] = temp;
+	    ptrArr[right] = temp;*/
+	    std::swap(ptrArr[left], ptrArr[right]);
 	    left++;
 	    right--;
 	 }
