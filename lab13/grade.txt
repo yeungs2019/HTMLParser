@@ -1,6 +1,6 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile aborted due to runtime error.
+Seg fault detected, please test and fix.
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 1
