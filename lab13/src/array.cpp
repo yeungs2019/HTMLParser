@@ -122,17 +122,41 @@ void Array<T>::qsort(){
 	}
     }
 }*/
-
 template <class T>
+void Array<T>::qsorts(T* array, const int size){
+    T pivot = array[(size / 2) - 1];
+    int end;
+    int smallIndex = 1;
+    if(size < 2) {
+	return;
+    }
+    for (int index = 1; i < size; index++){
+	if(pivot > array[index]){
+	    int temp = array[index];
+	    array[index] = array[smallIndex];
+	    array[smallIndex] = temp;
+	    smallIndex++;
+	}
+    }
+    std::swap(array, smallIndex - 1, 0);
+    qsorts(array, smallIndex -1);
+    qsorts(array + smallIndex, size - smallIndex);
+}
+template <class T>
+void Array<T>::qsort(){
+    int size = this->getLength();
+    qsorts(ptrArr, fitSize);
+}
+/*template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
     int left = 0;
     int right = size;
     int pivot = ptrArr[(left + right) / 2];
     int temp;
-    /*if(size <= 0){
+    if(size <= 0){
 	return;
-    }*/
+    }
     while(left <= right){
 	while(ptrArr[left] < pivot){
 	    left++;
@@ -141,15 +165,15 @@ void Array<T>::qsort(){
 	    right--;
 	}
 	if(left <= right){
-	    /*temp = ptrArr[left];
+	    temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
-	    ptrArr[right] = temp;*/
+	    ptrArr[right] = temp;
 	   std::swap(ptrArr[left], ptrArr[right]);
 	   left++;
 	   right--;
 	}
     }
-}
+}*/
 
 	
 
