@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-using namespace std;
+//using namespace std;
 
 /* Do a deep copy of the array into the list.
  * Note: This one uses a pointer!
