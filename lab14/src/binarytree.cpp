@@ -8,7 +8,7 @@
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
-    //root = NULL;
+    root = NULL;
 }
 
 template <class T>
