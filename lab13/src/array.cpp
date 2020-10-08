@@ -134,13 +134,13 @@ void Array<T>::qsort(){
 	return;
     }
     while(left <= right){
-	if(ptrArr[left] < pivot){
+	while(ptrArr[left] < pivot){
 	    left++;
 	}
-	if(ptrArr[right] > pivot){
+	while(ptrArr[right] > pivot){
 	    right--;
 	}
-	if(left <= right){
+	while(left <= right){
 	    temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
 	    ptrArr[right] = temp;
