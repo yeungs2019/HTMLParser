@@ -4,6 +4,7 @@
 #ifdef ARRAY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 
@@ -87,6 +88,42 @@ bool Array<T>::operator==(Array<T> &list) const{
 void Array<T>::merge(T* list, const int) {
 }*/
 template <class T>
+int Array<T>::partition(int *a, int start, int end){
+   int pivot = a[end];
+   int pIndex = start;
+   for(int i = start; i < end; i++){
+	if(a[i] < pivot){
+	    std::swap(a[i], a[pIndex];
+	    pIndex++;
+	}
+   }
+   std::swap(a[pIndex], a[end]);
+   return pIndex;
+}
+template <class T>
+void Array<T>::qsort(){
+    int start;
+    int end;
+    int stack[end - start + 1];
+    int top = -1;
+    stack[++top] = start;
+    stack[++top] = end;
+    while(top >= 0){
+    	end = stack[top--];
+	start = stack[top--];
+	int pivotIndex = partition(ptrArr, start, end);
+	if (pivotIndex - 1 > start){
+	    stack[++top] = start;
+	    stack[++top] = pivotIndex - 1;
+	}
+	if(pivotIndex + 1 < end){
+	    stack[++top] = pivotIndex + 1;
+	    stack[++top] = end;
+	}
+    }
+}
+
+/*template <class T>
 void Array<T>::qsort(){
     int size = this->getLength();
     int left = 0;
@@ -111,7 +148,7 @@ void Array<T>::qsort(){
 	    right--;
 	 }
       }
-}
+}*/
 
 	
 
