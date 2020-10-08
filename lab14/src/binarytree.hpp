@@ -50,6 +50,7 @@ class BinaryTree {
          */
         void put(const T &val);
 	int maxDepth(BSTNode* node);
+	int max(int x, int y); 
         /* Returns the height for the binary tree. */
         int getHeight();
 

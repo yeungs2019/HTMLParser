@@ -11,6 +11,9 @@ BinaryTree<T>::BinaryTree() {
 }
 
 template <class T>
+int BinaryTree<T>::max(int x, int y) {return (x > y ) ? x:y;}
+
+template <class T>
 int BinaryTree<T>::maxDepth(BSTNode* node){
     if(node == NULL){
 	return 0;
