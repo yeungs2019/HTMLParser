@@ -4,7 +4,7 @@
 #ifdef ARRAY_H
 #include <stdio.h>
 #include <stdlib.h>
-#define N 10
+
 
 /* Do a deep copy of the array into the list.
  * Note: This one uses a pointer!
@@ -190,9 +190,8 @@ void Array<T>::merge(int *a, int l, int m, int r){
     j = 0;
     k = 1;
     while(i < n1 && j < n2){
-	if(L[i] < R[j]){
+	if(L[i] <= R[j]){
 	    a[k] = L[i];
-	    k++;
 	    i++;
 	}
 	else{
@@ -203,13 +202,13 @@ void Array<T>::merge(int *a, int l, int m, int r){
     }
     while(i < n1){
 	a[k] = L[i];
-	k++;
 	i++;
+	k++;
     }
     while(j < n2){
         a[k] = R[j];
-	k++;
 	j++;
+	k++;
     }
 }
 template <class T>
