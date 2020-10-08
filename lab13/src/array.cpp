@@ -138,7 +138,7 @@ void Array<T>::qsorts(T* array, const int size){
 	    smallIndex++;
 	}
     }
-    std::swap(array, smallIndex - 1, 0);
+    swap(array, smallIndex - 1, 0);
     qsorts(array, smallIndex -1);
     qsorts(array + smallIndex, size - smallIndex);
 }
