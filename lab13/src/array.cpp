@@ -130,7 +130,7 @@ void Array<T>::qsorts(T* array, const int size){
     if(size < 2) {
 	return;
     }
-    for (int index = 1; i < size; index++){
+    for (int index = 1; index < size; index++){
 	if(pivot > array[index]){
 	    int temp = array[index];
 	    array[index] = array[smallIndex];
@@ -138,7 +138,7 @@ void Array<T>::qsorts(T* array, const int size){
 	    smallIndex++;
 	}
     }
-    swap(array, smallIndex - 1, 0);
+    std::swap(array, smallIndex - 1, 0);
     qsorts(array, smallIndex -1);
     qsorts(array + smallIndex, size - smallIndex);
 }
