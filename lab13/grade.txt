@@ -6,7 +6,6 @@ MAKE_ERROR =
 Total grade so far: 0
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile aborted due to runtime error.
 ******************* Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
