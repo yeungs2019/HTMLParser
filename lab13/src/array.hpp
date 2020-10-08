@@ -38,7 +38,7 @@ class Array {
     bool operator==(Array<T> &list) const;
 
     void qsort();
-    int partition(int *a, int start, int end);
+    //int partition(int *a, int start, int end);
     //void msort(int *ptrArr, int low, int high)
     int min(int x, int y);
     void msort();
