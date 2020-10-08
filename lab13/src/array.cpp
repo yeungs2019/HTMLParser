@@ -128,26 +128,29 @@ void Array<T>::qsort(){
     int size = this->getLength();
     int left = 0;
     int right = size;
-    int pivot = ptrArr[(left + right) / 2];
+    int pivot = ptrArr[left + ((right - left) / 2)];
     int temp;
     /*if(size <= 0){
 	return;
     }*/
-    while(left <= right){
-	while(ptrArr[left] < pivot){
+    while(left != right){
+	if(ptrArr[left] < pivot){
 	    left++;
 	}
-	while(ptrArr[right] > pivot){
-	    right--;
+	else{
+	    std::(ptrArr[left], ptrArr[right--]);
 	}
-	if(left <= right){
+	/*while(ptrArr[right] > pivot){
+	    right--;
+	}*/
+	//if(left <= right){
 	    /*temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
 	    ptrArr[right] = temp;*/
-	    std::swap(ptrArr[left], ptrArr[right]);
-	    left++;
-	    right--;
-	 }
+	  //  std::swap(ptrArr[left], ptrArr[right]);
+	   // left++;
+	   // right--;
+	// }
       }
 }
 
