@@ -134,24 +134,21 @@ void Array<T>::qsort(){
 	return;
     }*/
     while(left != right){
-	if(ptrArr[left] < pivot){
+	while(ptrArr[left] < pivot){
 	    left++;
 	}
-	else{
-	    std::swap(ptrArr[left], ptrArr[right--]);
-	}
-	/*while(ptrArr[right] > pivot){
+	while(ptrArr[right] > pivot){
 	    right--;
-	}*/
-	//if(left <= right){
+	}
+	if(left <= right){
 	    /*temp = ptrArr[left];
 	    ptrArr[left] = ptrArr[right];
 	    ptrArr[right] = temp;*/
-	  //  std::swap(ptrArr[left], ptrArr[right]);
-	   // left++;
-	   // right--;
-	// }
-      }
+	   std::swap(ptrArr[left], ptrArr[right]);
+	   left++;
+	   right--;
+	}
+    }
 }
 
 	
