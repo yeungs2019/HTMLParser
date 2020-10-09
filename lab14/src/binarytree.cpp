@@ -59,10 +59,10 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 	int lefty = maxDepth(node->getLeft());
 	int righty = maxDepth(node->getRight());
 	if(lefty > righty){
-	    return (lefty + 1);
+	    return 1 + lefty;
 	}
 	else{
-	    return (righty + 1);
+	    return 1 + righty;
 	}
     }
 }   
