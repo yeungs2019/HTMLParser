@@ -36,7 +36,7 @@ void BinaryTree<T>::put(BSTNode<T> *rover, BSTNode<T> *newNode){
 }
 template <class T>
 void BinaryTree<T>::put(const T &val){
-    BSTNode<T>* toadd = new BSTNode<T>(val, NULL, NULL);
+    BSTNode<T>* toadd = new BSTNode<T>;
     BSTNode<T>* rover = root;
     if(root = NULL){
 	root = toadd;
