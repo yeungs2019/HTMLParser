@@ -56,8 +56,8 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 	return 0;
     }
     else{
-	int lefty = maxDepth(root->getLeft());
-	int righty = maxDepth(root->getRight());
+	int lefty = maxDepth(node->getLeft());
+	int righty = maxDepth(node->getRight());
 	if(lefty > righty){
 	    return 1 + lefty;
 	}
@@ -68,7 +68,7 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 }   
 template <class T>
 int BinaryTree<T>::getHeight(){
-    return maxDepth(root);   
+    return maxDepth(&root);   
 }
 template<class T>
 BinaryTree<T>::~BinaryTree() {
