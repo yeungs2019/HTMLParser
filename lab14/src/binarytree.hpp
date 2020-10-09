@@ -6,11 +6,11 @@
 template<class T>
 class BSTNode{
     private:
-       int data;
+       T data;
        BSTNode* left;
        BSTNode* right;
     public:
-       BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
+       BSTNode(const T mData, BSTNode* mLeft, BSTNode* mRight){
            data = mData;
            left = mLeft;
            right = mRight;
