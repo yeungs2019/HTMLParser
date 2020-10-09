@@ -33,8 +33,8 @@ void test_single(void){
 }
 void test_put(void){
     BinaryTree<int> bst;
-    //bst.put(3);
-    TEST_ASSERT(bst.put(3) == 3);
+    bst.add(3);
+    TEST_ASSERT(bst.put(3));
 }
 int main(void) {
     UNITY_BEGIN();
