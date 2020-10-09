@@ -141,21 +141,21 @@ int Map::howMany(const char *prefix) {
 	return 0;
     }
     while(left < right){
-	if(sName[middle].substr(middle, stringLength.length() == prefix){
+	if(sName[middle].substr(stringLength.length() == prefix){
 	    temp++;
 	}
-	if(sName[middle].substr(middle, stringLength.length() < prefix)){
+	if(sName[middle].substr(stringLength.length() < prefix)){
 	    left = middle + 1;
 	    middle = (left + right) / 2;
     	    temp++;
 	}
-	if(sName[middle].substr(middle, stringLength.lenght() > prefix)){
+	if(sName[middle].substr(stringLength.lenght() > prefix)){
 	    right = middle;
 	    middle = (left + right) / 2;
 	    temp++;
 	}
     }
-    return 0;*/
+    return temp;*/
 }
 
 Map::~Map() {
