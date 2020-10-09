@@ -112,7 +112,7 @@ void BinaryTree<T>::add(const int val){
     }
 }
 template <class T>
-T& BinaryTree<T>::lca2(BSTNode<T>* node, T& n1, T& n2){
+T& BinaryTree<T>::lca2(BSTNode<T>* node, T n1, T n2){
     if(node == NULL){
 	return NULL;
     }
