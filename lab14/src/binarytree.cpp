@@ -28,6 +28,7 @@ BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
 	root = NULL;
 	copyTree(tree.root);
 }
+//why break
 template <class T>
 void BinaryTree<T>::put(BSTNode<T> *rover, BSTNode<T> *newNode){
      if(rover == NULL || newNode == NULL){
