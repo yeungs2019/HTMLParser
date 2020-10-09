@@ -28,7 +28,7 @@ class BinaryTree {
     private:
 	BSTNode<T>* root;
         /* Recommended, but not necessary helper function. */
-        //void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
+        void put(BSTNode<T> *rover, BSTNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         //std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
     public:
@@ -37,6 +37,7 @@ class BinaryTree {
         BinaryTree();
 
         /* Does a deep copy of the tree. */
+	void copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot);
         BinaryTree(const BinaryTree<T> &tree);
 
         /* Add a given value to the Binary Tree. 
