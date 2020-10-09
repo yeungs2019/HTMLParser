@@ -17,3 +17,5 @@ MAKE_ERROR = src/binarytree.cpp:116:12: error: invalid conversion from 'BSTNode<
 src/binarytree.cpp:116:12: error: cannot bind rvalue '(int)((BinaryTree<int>*)this)->BinaryTree<int>::root' to 'int&'
 + 0 pts of 35.000
 Total grade so far: 30.000
+Auto-grader grade: 30.000
+*****************Finished lab14****************
