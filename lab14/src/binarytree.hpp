@@ -54,7 +54,7 @@ class BinaryTree {
         int getHeight();
 	void add(const int val);
         /* Returns a string representation of the binary Tree in order. */
-        std::string inorderString();
+        //std::string inorderString();
 
         /* Return the lowest common ancestor (LCA) of two values.
          * The LCA is the most immediate parent of both values.  For example:
@@ -67,6 +67,7 @@ class BinaryTree {
          * LCA(1, 2) = 2
          * LCA(1, 6) = 4
          */
+	int lca2(BSTNode<T>* node, int n1, int n2);
         T& lca(T& a, T& b);
 	
 	void destroy(BSTNode<T>* p);
