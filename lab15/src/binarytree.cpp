@@ -4,7 +4,7 @@
 template<class T>
 BinaryTree<T>::BinaryTree() {
 }
-
+// destroy the tree
 template<class T>
 BinaryTree<T>::~BinaryTree() {
 }
