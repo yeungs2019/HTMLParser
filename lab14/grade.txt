@@ -20,3 +20,5 @@ Failures =
 MAKE_ERROR = src/binarytree.cpp:39:25: error: no matching function for call to 'BSTNode<int>::BSTNode()'
 + 0 pts of 35.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab14****************
