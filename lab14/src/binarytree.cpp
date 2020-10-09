@@ -3,6 +3,7 @@
 #include "binarytree.hpp"
 #include <iostream>
 
+using namespace std;
 template <class T>
 BinaryTree<T>::BinaryTree(){ 
     root = NULL;
@@ -45,8 +46,10 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 	return 0;
     }
     else{
-	int lefty = maxDepth(node->getLeft());
-	int righty = maxDepth(node->getRight());
+	int lefty;
+        lefty = maxDepth(node->getLeft());
+	int righty;
+	righty = maxDepth(node->getRight());
 	if(lefty > righty){
 	    return lefty + 1;
 	}
@@ -58,8 +61,33 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 
 template <class T>
 int BinaryTree<T>::getHeight(){
+    //BSTNode<T>* rover = root;
+    return maxDepth(root);
+}
+template <class T>
+void BinaryTree<T>::add(const int val){
+    BSTNode<T>* toadd = new BSTNode<T>(val, NULL, NULL);
     BSTNode<T>* rover = root;
-    return maxDepth(rover);
+    if(root = NULL){
+	root = toadd;
+	return;
+    }
+    while(rover != NULL){
+	if(rover->getData() > val){
+	    if(rover->getLeft() == NULL){
+		rover->setLeft(toadd);
+		return;
+	    }
+	    rover = rover->getLeft();
+	}
+	else{
+	    if(rover->getRight() == NULL){
+		rover->setRight(toadd);
+		return;
+	    }
+	    rover = rover->getRight();
+	}
+    }
 }
 
 template <class T>
