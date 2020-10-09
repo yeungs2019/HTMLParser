@@ -61,6 +61,30 @@ void BinaryTree<T>::put(const T &val){
      put(root, toadd);
 
 }
+template <class T>
+void BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
+    if(node == NULL){
+	return;
+    }
+    ret.push_back(node->getData() + '0');
+    if(!node->getLeft() && !node->getRight()){
+	return;
+    }
+    ret.push_back('(');
+    inorderString(node->getLeft(), ret);
+    ret.push_back(')');
+    if(node->getRight()){
+	ret.push_back('(');
+	inorderString(node->getRight(), ret);
+	ret.push_back(')');
+    }
+}
+template <class T>
+std::string BinaryTree<T>::inorderString(){
+    std::string result = "";
+    result = inorderString(root, result);
+    return result;
+}
 
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
