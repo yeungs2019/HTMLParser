@@ -67,7 +67,7 @@ class BinaryTree {
          * LCA(1, 2) = 2
          * LCA(1, 6) = 4
          */
-	T& lca2(BSTNode<T>* node, T& n1, T& n2);
+	T& lca2(BSTNode<T>* node, const T& n1, const T& n2);
         T& lca(T& a, T& b);
 	
 	void destroy(BSTNode<T>* p);
