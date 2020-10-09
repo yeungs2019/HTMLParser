@@ -2,16 +2,13 @@
 #define BINARY_TREE_H
 #include "binarytree.hpp"
 #include <iostream>
-#include <list>
-#include <algorithm>
-#include <bits/stdc++.h>
 
-template<class T>
-BinaryTree<T>::BinaryTree() {
+template <class T>
+BinaryTree<T>::BinaryTree(){ 
     root = NULL;
 }
 
-template<class T>
+template <class T>
 void BinaryTree<T>::copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot){
     if(otRoot == NULL){
 	ctRoot = NULL;
@@ -26,8 +23,6 @@ void BinaryTree<T>::copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot){
 
 template <class T>
 BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
-    //BSTNode* rover = tree.root;
-    //root = NULL;
     if(tree.root == NULL){
 	root = NULL;
     }
@@ -38,17 +33,7 @@ BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
 
 template <class T>
 void BinaryTree<T>::put(const T &val){
-    
 }
-/*template <class T>
-int BinaryTree<T>::max(int x, int y) const {
-    if(x >= y){
-	return x;
-    }
-    else{
-	return y;
-    }
-}*/
 
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
@@ -59,18 +44,21 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 	int lefty = maxDepth(node->getLeft());
 	int righty = maxDepth(node->getRight());
 	if(lefty > righty){
-	    return 1 + lefty;
+	    return lefty + 1;
 	}
 	else{
-	    return 1 + righty;
+	    return righty + 1;
 	}
     }
-}   
+}
+
 template <class T>
 int BinaryTree<T>::getHeight(){
-    return maxDepth(&root);   
+    return maxDepth(root);
 }
+
 template<class T>
-BinaryTree<T>::~BinaryTree() {
+BinaryTree<T>::~BinaryTree(){
+
 }
 #endif
