@@ -31,17 +31,17 @@ void test_single(void){
     bst.add(1);
     TEST_ASSERT(bst.getHeight() == 1);
 }
-void test_put(void){
+/*void test_put(void){
     BinaryTree<int> bst;
     bst.add(3);
     TEST_ASSERT(bst.put(3));
-}
+}*/
 int main(void) {
     UNITY_BEGIN();
    // RUN_TEST(test_simple);
    RUN_TEST(test_height);
    RUN_TEST(test_height2);
    RUN_TEST(test_single);
-   RUN_TEST(test_put);
+   //RUN_TEST(test_put);
     return UNITY_END();
 }

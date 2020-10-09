@@ -18,7 +18,7 @@ class BSTNode{
 	   this->left = mLeft;
 	   this->right = mRight;*/
        }
-       T getData() { return data; }
+       T& getData() { return data; }
        BSTNode* getLeft() { return left; }
        BSTNode* getRight() { return right; }
        void setLeft(BSTNode* mLeft) { left = mLeft; }
