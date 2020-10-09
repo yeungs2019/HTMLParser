@@ -21,8 +21,8 @@ class BSTNode{
        int& getData() { return data; }
        BSTNode* getLeft() { return left; }
        BSTNode* getRight() { return right; }
-       void setLeft(BSTNode* mLeft) { this->left = mLeft; }
-       void setRight(BSTNode* mRight) { this->right = mRight; }
+       void setLeft(BSTNode* mLeft) { left = mLeft; }
+       void setRight(BSTNode* mRight) { right = mRight; }
 };
 
 
@@ -40,7 +40,7 @@ class BinaryTree {
         BinaryTree();
 
         /* Does a deep copy of the tree. */
-	void copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot);
+	void copyTree(BSTNode<T>* otRoot);
         BinaryTree(const BinaryTree<T> &tree);
 
         /* Add a given value to the Binary Tree. 

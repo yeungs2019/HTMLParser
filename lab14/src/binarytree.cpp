@@ -10,39 +10,60 @@ BinaryTree<T>::BinaryTree(){
 }
 
 template <class T>
-void BinaryTree<T>::copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot){
+void BinaryTree<T>::copyTree(BSTNode<T>* otRoot){
     if(otRoot == NULL){
-	ctRoot = NULL;
+	return;
     }
     else{
-	ctRoot = new BSTNode<T>;
-	ctRoot->getData() = otRoot->getData();
-	copyTree(ctRoot->getLeft(), otRoot->getLeft());
-	copyTree(ctRoot->getRight(), otRoot->getRight());
+    	put(otRoot->getData());
+	//ctRoot = new BSTNode<T>;
+	//ctRoot->getData() = otRoot->getData();
+	copyTree(otRoot->getLeft());
+	copyTree(otRoot->getRight());
     }
 }
 
 template <class T>
 BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
-    if(tree.root == NULL){
 	root = NULL;
-    }
-    else{
-	copyTree(root, tree.root);
-    }
+	copyTree(tree.root);
 }
 template <class T>
 void BinaryTree<T>::put(BSTNode<T> *rover, BSTNode<T> *newNode){
- 
+     if(rover == NULL || newNode == NULL){
+	 return;
+     }
+     if(rover->getData() < newNode->getData()){
+	 if(rover->getRight() == NULL){
+	     rover->setRight(newNode);
+	     return;
+	 }
+	 put(rover->getRight(), newNode);
+     }
+     else if(rover->getData() > newNode->getData()){
+	 if(rover->getLeft() == NULL){
+	     rover->setLeft(newNode);
+	     return;
+	 }
+	 put(rover->getLeft(), newNode);
+     }
+
 }
 template <class T>
 void BinaryTree<T>::put(const T &val){
- 
+     BSTNode<T>* toadd = new BSTNode<T>(val, NULL, NULL);
+     BSTNode<T>* rover = root;
+     if(rover == NULL){
+         root = toadd;
+	 return;
+     }
+     put(root, toadd);
+
 }
 
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
-    if(!node){
+    if(node == NULL){
 	return 0;
     }
     else{
