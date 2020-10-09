@@ -30,7 +30,9 @@ BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
 	copyTree(root, tree.root);
     }
 }
-
+template <class T>
+void BinaryTree<T>::put(BSTNode<T> *rover, BSTNode<T> *newNode){
+}
 template <class T>
 void BinaryTree<T>::put(const T &val){
 }
@@ -57,8 +59,17 @@ int BinaryTree<T>::getHeight(){
     return maxDepth(root);
 }
 
+template <class T>
+void BinaryTree<T>::destroy(BSTNode<T>* p){
+    if(p != NULL){
+	destroy(p->getLeft());
+	destroy(p->getRight());
+	delete p;
+	p = NULL;
+    }
+}
 template<class T>
 BinaryTree<T>::~BinaryTree(){
-
+    destroy(root);
 }
 #endif

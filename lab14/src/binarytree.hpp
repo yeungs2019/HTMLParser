@@ -11,9 +11,9 @@ class BSTNode{
        BSTNode* right;
     public:
        BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
-           /*data = mData;
+           data = mData;
            left = mLeft;
-           right = mRight;*/
+           right = mRight;
 	   this->data = mData;
 	   this->left = mLeft;
 	   this->right = mRight;
@@ -68,7 +68,8 @@ class BinaryTree {
          * LCA(1, 6) = 4
          */
         T& lca(T& a, T& b);
-
+	
+	void destroy(BSTNode<T>* p);
         /* Always free memory. */
         ~BinaryTree();
 };
