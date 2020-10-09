@@ -36,28 +36,7 @@ void BinaryTree<T>::put(BSTNode<T> *rover, BSTNode<T> *newNode){
 }
 template <class T>
 void BinaryTree<T>::put(const T &val){
-    BSTNode<T>* toadd = new BSTNode<T>;
-    BSTNode<T>* rover = root;
-    if(root = NULL){
-	root = toadd;
-	return;
-    }
-    while(rover != NULL){
-	if(rover->getData() > val){
-	    if(rover->getLeft() == NULL){
-		rover->setLeft(toadd);
-		return;
-	    }
-	    rover = rover->getLeft();
-	}
-	else{
-	    if(rover->getRight() == NULL){
-		rover->setRight(toadd);
-		return;
-	    }
-	    rover = rover->getRight();
-	}
-    }
+ 
 }
 
 template <class T>
