@@ -17,10 +17,10 @@ void test_height(void){
     BinaryTree<int> bst;
     bst.add(7);
     bst.add(9);
-    bst.add(4);
     bst.add(1);
-    bst.add(5);
-    TEST_ASSERT(bst.getHeight() == 3);
+    bst.add(2);
+    bst.add(6);
+    TEST_ASSERT(bst.getHeight() == 4);
 }
 void test_height2(void){
     BinaryTree<int> bst;
@@ -31,11 +31,17 @@ void test_single(void){
     bst.add(1);
     TEST_ASSERT(bst.getHeight() == 1);
 }
+void test_put(void){
+    BinaryTree<int> bst;
+    //bst.put(3);
+    TEST_ASSERT(bst.put(3) == 3);
+}
 int main(void) {
     UNITY_BEGIN();
    // RUN_TEST(test_simple);
    RUN_TEST(test_height);
    RUN_TEST(test_height2);
    RUN_TEST(test_single);
+   RUN_TEST(test_put);
     return UNITY_END();
 }
