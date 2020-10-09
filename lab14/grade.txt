@@ -7,10 +7,10 @@ Total grade so far: 0
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:67:43: error: invalid use of member function 'int BinaryTree<T>::maxDepth(BSTNode<T>*) [with T = int]' (did you forget the '()' ?)
-src/binarytree.cpp:67:43: error: base operand of '->' is not a pointer
-src/binarytree.cpp:67:43: error: invalid use of member function 'int BinaryTree<T>::maxDepth(BSTNode<T>*) [with T = std::__cxx11::basic_string<char>]' (did you forget the '()' ?)
-src/binarytree.cpp:67:43: error: base operand of '->' is not a pointer
+MAKE_ERROR = src/binarytree.cpp:59:29: error: 'BSTNode<int>* BSTNode<int>::left' is private within this context
+src/binarytree.cpp:60:30: error: 'BSTNode<int>* BSTNode<int>::right' is private within this context
+src/binarytree.cpp:59:29: error: 'BSTNode<std::__cxx11::basic_string<char> >* BSTNode<std::__cxx11::basic_string<char> >::left' is private within this context
+src/binarytree.cpp:60:30: error: 'BSTNode<std::__cxx11::basic_string<char> >* BSTNode<std::__cxx11::basic_string<char> >::right' is private within this context
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* lca test PART *********************
