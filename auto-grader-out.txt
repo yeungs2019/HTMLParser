@@ -1,2 +1,57 @@
 I am run number 001607.
 Pulling source code...
+------------------------------------------------
+Changes found in lab14
+Changes found in lab15
+------------------------------------------------
+*****************Examining lab14****************
+******************* Put Test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:85:12: error: no match for 'operator=' (operand types are 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' and 'void')
+src/binarytree.cpp:85:12: error: no match for 'operator=' (operand types are 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' and 'void')
+src/binarytree.cpp:69:5: error: no matching function for call to 'std::__cxx11::basic_string<char>::push_back(std::__cxx11::basic_string<char>)'
++ 0 pts of 35.000
+Total grade so far: 0
+******************* get Height PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 30.000
+******************* lca test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:153:16: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+src/binarytree.cpp:149:12: error: invalid conversion from 'BSTNode<int>*' to 'int' [-fpermissive]
++ 0 pts of 35.000
+Total grade so far: 30.000
+Auto-grader grade: 30.000
+*****************Finished lab14****************
+*****************Examining lab15****************
+******************* inRange Test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+******************* contains test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+******************* count in range test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+******************* traversal test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab15****************
