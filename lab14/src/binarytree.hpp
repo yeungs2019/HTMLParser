@@ -11,15 +11,18 @@ class BSTNode{
        BSTNode* right;
     public:
        BSTNode(const int mData, BSTNode* mLeft, BSTNode* mRight){
-           data = mData;
+           /*data = mData;
            left = mLeft;
-           right = mRight;
+           right = mRight;*/
+	   this->data = mData;
+	   this->left = mLeft;
+	   this->right = mRight;
        }
-       int getData() { return data; }
+       int& getData() { return data; }
        BSTNode* getLeft() { return left; }
        BSTNode* getRight() { return right; }
-       void setLeft(BSTNode* mLeft) { left = mLeft; }
-       void setRight(BSTNode* mRight) { right = mRight; }
+       void setLeft(BSTNode* mLeft) { this->left = mLeft; }
+       void setRight(BSTNode* mRight) { this->right = mRight; }
 };
 
 
