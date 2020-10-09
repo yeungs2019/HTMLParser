@@ -111,9 +111,22 @@ void BinaryTree<T>::add(const int val){
 	}
     }
 }
+template <class T>
+int BinaryTree<T>::lca2(BSTNode<T>* node, int n1, int n2){
+    if(node == NULL){
+	return NULL;
+    }
+    if(node->getData() > n1 && node->getData() > n2){
+	return lca2(node->getLeft(), n1, n2);
+    }
+    if(node->getData() < n1 && node->getData() < n2){
+	return lca2(node->getRight(), n1, n2);
+    }
+    return node;
+}
 template<class T>
 T& BinaryTree<T>::lca(T& a, T& b){
-    return root;
+    return lca2(root, a, b);
 }
 
 template <class T>
