@@ -58,7 +58,7 @@ int BinaryTree<T>::maxDepth(BSTNode<T>* node){
 
 template <class T>
 int BinaryTree<T>::getHeight(){
-    return maxDepth(root);
+    return maxDepth(node);
 }
 
 template <class T>
