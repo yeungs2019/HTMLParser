@@ -111,6 +111,9 @@ void BinaryTree<T>::add(const int val){
 	}
     }
 }
+T& BinaryTree<T>::lca(T& a, T& b){
+    return root;
+}
 
 template <class T>
 void BinaryTree<T>::destroy(BSTNode<T>* p){
@@ -118,7 +121,7 @@ void BinaryTree<T>::destroy(BSTNode<T>* p){
 	destroy(p->getLeft());
 	destroy(p->getRight());
 	delete p;
-	p = NULL;
+	//p = NULL;
     }
 }
 template<class T>
