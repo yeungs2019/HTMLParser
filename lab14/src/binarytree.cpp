@@ -11,12 +11,28 @@ BinaryTree<T>::BinaryTree() {
     root = NULL;
 }
 
+template<class T>
+void BinaryTree<T>::copyTree(BSTNode<T>* &ctRoot, BSTNode<T>* otRoot){
+    if(otRoot == NULL){
+	ctRoot = NULL;
+    }
+    else{
+	ctRoot = new BSTNode<T>;
+	ctRoot->getData() = otRoot->getData();
+	copyTree(ctRoot->getLeft(), otRoot->getLeft());
+	copyTree(ctRoot->getRight(), otRoot->getRight());
+    }
+}
+
 template <class T>
 BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
     //BSTNode* rover = tree.root;
     //root = NULL;
     if(tree.root == NULL){
 	root = NULL;
+    }
+    else{
+	copyTree(root, tree.root);
     }
 }
 
