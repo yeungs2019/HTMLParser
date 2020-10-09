@@ -100,13 +100,16 @@ void Queue<T>::addWithPriority(const T& val) {
         push(val);
 	return;
     }
+    if(rover != NULL){
+	
     /*else{
 	while(rover->getNext() != NULL && rover->getNext()->getPriorty() < val){
-	     rover = rover->getNext();
+	`     rover = rover->getNext();
 	}
 	rover2->getNext() = rover->getNext();
 	rover2 = rover->getNext();
     }*/
+
 }
 
     /*for(int i = 0; i < this->getLength() - 1; i++){
