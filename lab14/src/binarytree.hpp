@@ -2,7 +2,9 @@
 #define BINARY_TREE_H
 
 #include <string>
-
+#include <bits/stdc++.h>
+#include <list>
+using namespace std;
 template<class T>
 class BSTNode{
     private:
@@ -33,7 +35,7 @@ class BinaryTree {
         /* Recommended, but not necessary helper function. */
         void put(BSTNode<T> *rover, BSTNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
-        //std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+        void inorderString(BSTNode<T> *node, std::string &ret);
     public:
 
         /* Creates an empty binary tree. */
@@ -54,7 +56,7 @@ class BinaryTree {
         int getHeight();
 	void add(const int val);
         /* Returns a string representation of the binary Tree in order. */
-        //std::string inorderString();
+        std::string inorderString();
 
         /* Return the lowest common ancestor (LCA) of two values.
          * The LCA is the most immediate parent of both values.  For example:
