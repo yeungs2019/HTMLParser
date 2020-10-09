@@ -111,6 +111,7 @@ void BinaryTree<T>::add(const int val){
 	}
     }
 }
+template<class T>
 T& BinaryTree<T>::lca(T& a, T& b){
     return root;
 }
