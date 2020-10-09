@@ -6,11 +6,8 @@ MAKE_ERROR = collect2: error: ld returned 1 exit status
 Total grade so far: 0
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/binarytree.cpp:59:22: error: invalid use of void expression
-src/binarytree.cpp:60:23: error: invalid use of void expression
-src/binarytree.cpp:59:22: error: invalid use of void expression
-src/binarytree.cpp:60:23: error: invalid use of void expression
+Failures = 3
+MAKE_ERROR = 
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* lca test PART *********************
@@ -19,5 +16,3 @@ Failures =
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 35.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab14****************
