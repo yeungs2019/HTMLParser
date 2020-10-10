@@ -85,7 +85,7 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
     }
     else{
 	//ret2 = ret + node->getData();
-	ret = ret + node->getData();
+	//ret = ret + node->getData();
 	if(node->getLeft() != NULL || node->getRight() != NULL){
 	     ret = "(" + ret + "," + inorderString(node->getLeft(), ret);
 	     ret = ret + "," + inorderString(node->getRight(), ret) + ")";
