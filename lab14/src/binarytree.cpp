@@ -2,6 +2,7 @@
 #define BINARY_TREE_H
 #include "binarytree.hpp"
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 template <class T>
