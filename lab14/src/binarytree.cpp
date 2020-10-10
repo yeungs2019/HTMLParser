@@ -63,22 +63,24 @@ void BinaryTree<T>::put(const T &val){
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
-    /*if(node == NULL){
-	return;
+    if(node == NULL){
+	ret = "empty";
+	return ret;
     }
     ret.push_back(node->getData() + '0');
     if(!node->getLeft() && !node->getRight()){
-	return;
+	ret = "empty";
+	return ret;
     }
-    ret.push_back('(');
+    ret.push_back(',');
     inorderString(node->getLeft(), ret);
-    ret.push_back(')');
+    ret.push_back(',');
     if(node->getRight()){
-	ret.push_back('(');
+	ret.push_back(',');
 	inorderString(node->getRight(), ret);
-	ret.push_back(')');
-    }*/
-    ret = "";
+	ret.push_back(',');
+    }
+    /*ret = "";
     //std::string ret2;
     if(node == NULL){
 	ret = "empty";
@@ -91,13 +93,13 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
 	     ret = ret + "," + inorderString(node->getRight(), ret);
 	}
     }
-    return ret;
+    return ret;*/
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
     std::string result = "";
-    result = inorderString(root, result);
-    return result;
+    //result = inorderString(root, result);
+    return inorderString(root, result);
 }
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
