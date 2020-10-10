@@ -95,9 +95,9 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
-    //std::string result = "";
-    //result = inorderString(root, result);
-    return inorderString(root);
+    std::string result = "";
+    result = inorderString(root, result);
+    return result;
 }
 template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
