@@ -83,13 +83,14 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
 	ret = "empty";
     }
     else{
-	//ret = ret + node->getData();
+	std::string ret2;
+	ret2 = ret + node->getData();
 	if(node->getLeft() != NULL || node->getRight() != NULL){
-	     ret = "(" + ret + "," + inorderString(node->getLeft());
-	     ret = ret + "," + inorderString(node->getRight()) + ")";
+	     ret2 = "(" + ret2 + "," + inorderString(node->getLeft());
+	     ret2 = ret2 + "," + inorderString(node->getRight()) + ")";
 	}
     }
-    return ret;
+    return ret2;
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
