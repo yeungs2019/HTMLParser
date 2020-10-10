@@ -1,4 +1,4 @@
-I am run number 001628.
+I am run number 001630.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab14
@@ -8,10 +8,6 @@ Changes found in lab14
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = src/binarytree.cpp:88:12: error: no match for 'operator+' (operand types are 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' and 'int')
-src/binarytree.cpp:90:44: error: no matching function for call to 'BinaryTree<int>::inorderString(BSTNode<int>*)'
-src/binarytree.cpp:91:38: error: no matching function for call to 'BinaryTree<int>::inorderString(BSTNode<int>*)'
-src/binarytree.cpp:90:44: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::inorderString(BSTNode<std::__cxx11::basic_string<char> >*)'
-src/binarytree.cpp:91:38: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::inorderString(BSTNode<std::__cxx11::basic_string<char> >*)'
 + 0 pts of 35.000
 Total grade so far: 0
 ******************* get Height PART *********************
