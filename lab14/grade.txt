@@ -1,7 +1,7 @@
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/binarytree.cpp:88:12: error: no match for 'operator+' (operand types are 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' and 'int')
+Failures = 4
+MAKE_ERROR = 
 + 0 pts of 35.000
 Total grade so far: 0
 ******************* get Height PART *********************
@@ -18,5 +18,3 @@ src/binarytree.cpp:162:12: error: invalid conversion from 'BSTNode<int>*' to 'in
 src/binarytree.cpp:162:12: error: cannot bind rvalue '(int)node' to 'int&'
 + 0 pts of 35.000
 Total grade so far: 30.000
-Auto-grader grade: 30.000
-*****************Finished lab14****************
