@@ -79,18 +79,18 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
 	ret.push_back(')');
     }*/
     std::string ret = "";
-    std::string ret2;
+    //std::string ret2;
     if(node == NULL){
 	ret = "empty";
     }
     else{
-	ret2 = ret + node->getData();
+	//ret2 = ret + node->getData();
 	if(node->getLeft() != NULL || node->getRight() != NULL){
-	     ret2 = "(" + ret2 + "," + inorderString(node->getLeft());
-	     ret2 = ret2 + "," + inorderString(node->getRight()) + ")";
+	     ret = "(" + ret + "," + inorderString(node->getLeft());
+	     ret = ret + "," + inorderString(node->getRight()) + ")";
 	}
     }
-    return ret2;
+    return ret;
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
@@ -148,7 +148,7 @@ void BinaryTree<T>::add(const int val){
     }
 }
 template <class T>
-int BinaryTree<T>::lca2(BSTNode<T>* node, int n1, int n2){
+T& BinaryTree<T>::lca2(BSTNode<T>* node, const int n1, const int n2){
     if(node == NULL){
 	return NULL;
     }
