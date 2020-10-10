@@ -79,11 +79,11 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
 	ret.push_back(')');
     }*/
     std::string ret = "";
+    std::string ret2;
     if(node == NULL){
 	ret = "empty";
     }
     else{
-	std::string ret2;
 	ret2 = ret + node->getData();
 	if(node->getLeft() != NULL || node->getRight() != NULL){
 	     ret2 = "(" + ret2 + "," + inorderString(node->getLeft());
