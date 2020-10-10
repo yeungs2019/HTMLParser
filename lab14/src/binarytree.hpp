@@ -33,9 +33,10 @@ class BinaryTree {
     private:
 	BSTNode<T>* root;
         /* Recommended, but not necessary helper function. */
-        void put(BSTNode<T> *rover, BSTNode<T> *newNode);
+	void put(BSTNode<T> *rover, BSTNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
-        void inorderString(BSTNode<T> *node, std::string &ret);
+	
+	std::string inorderString(BSTNode<T> *node);
     public:
 
         /* Creates an empty binary tree. */
