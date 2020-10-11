@@ -87,17 +87,23 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
     }*/
     std::string ret = "";
     if(node == NULL){
-	ret = "empty";
+	return ret;
     }
-    else{
-	ret = ret + inorderString(node->getData());
+    /*else{
+	//ret = ret + inorderString(node->getData());
 	if(node->getLeft() != NULL || node->getRight() != NULL){
 	    ret = ret + "," + inorderString(node->getLeft());
 	    ret = ret + "," + inorderString(node->getRight());
 	}
     }
-    return ret;
-    
+    return ret;*/
+    else{
+	ret += inorderString(node->getLeft());
+	ret += " ";
+	ret += " ";
+	ret += inorderString(node->getRight());
+	return ret;
+    }
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
