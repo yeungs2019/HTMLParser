@@ -1,4 +1,4 @@
-I am run number 001644.
+I am run number 001646.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab14
@@ -6,7 +6,10 @@ Changes found in lab14
 *****************Examining lab14****************
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:71:5: error: no matching function for call to 'std::__cxx11::basic_string<char>::push_back(std::__cxx11::basic_string<char>&)'
++ 0 pts of 35.000
+Total grade so far: 0
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
