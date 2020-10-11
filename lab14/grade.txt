@@ -1,6 +1,9 @@
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:71:5: error: no matching function for call to 'std::__cxx11::basic_string<char>::push_back(std::__cxx11::basic_string<char>&)'
++ 0 pts of 35.000
+Total grade so far: 0
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
@@ -15,5 +18,3 @@ src/binarytree.cpp:165:12: error: invalid conversion from 'BSTNode<int>*' to 'in
 src/binarytree.cpp:165:12: error: cannot bind rvalue '(int)node' to 'int&'
 + 0 pts of 35.000
 Total grade so far: 30.000
-Auto-grader grade: 30.000
-*****************Finished lab14****************
