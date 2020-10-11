@@ -1,28 +1,50 @@
-I am run number 001660.
+I am run number 001662.
 Pulling source code...
 ------------------------------------------------
-Changes found in lab14
+Changes found in create
+Changes found in lab15
 ------------------------------------------------
-*****************Examining lab14****************
-******************* Put Test PART *********************
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab15****************
+******************* inRange Test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 4
-MAKE_ERROR = 
-+ 0 pts of 35.000
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
 Total grade so far: 0
-******************* get Height PART *********************
+******************* contains test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = 
-+ 30.000 pts of 30.000
-Total grade so far: 30.000
-******************* lca test PART *********************
+MAKE_ERROR = src/binarytree.cpp:101:24: error: passing 'const BinaryTree<int>' as 'this' argument discards qualifiers [-fpermissive]
+src/binarytree.cpp:101:24: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::contains_rec(BSTNode<std::__cxx11::basic_string<char> >* const&, const std::__cxx11::basic_string<char>&) const'
+src/binarytree.cpp:89:24: error: no match for 'operator==' (operand types are 'std::__cxx11::basic_string<char>' and 'const int')
+/usr/include/c++/6/system_error:303:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_condition&)
+/usr/include/c++/6/system_error:303:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_condition&'
+/usr/include/c++/6/system_error:296:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_code&)
+/usr/include/c++/6/system_error:296:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_condition&'
+/usr/include/c++/6/system_error:289:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_condition&)
+/usr/include/c++/6/system_error:289:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_code&'
+/usr/include/c++/6/system_error:284:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_code&)
+/usr/include/c++/6/system_error:284:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_code&'
+src/binarytree.cpp:92:24: error: no match for 'operator<' (operand types are 'std::__cxx11::basic_string<char>' and 'const int')
+/usr/include/c++/6/system_error:274:3: note: candidate: bool std::operator<(const std::error_condition&, const std::error_condition&)
+/usr/include/c++/6/system_error:274:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_condition&'
+/usr/include/c++/6/system_error:200:3: note: candidate: bool std::operator<(const std::error_code&, const std::error_code&)
+/usr/include/c++/6/system_error:200:3: note:   no known conversion for argument 1 from 'std::__cxx11::basic_string<char>' to 'const std::error_code&'
++ 0 pts of 25.000
+Total grade so far: 0
+******************* count in range test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:160:9: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-src/binarytree.cpp:168:12: error: invalid conversion from 'BSTNode<int>*' to 'int' [-fpermissive]
-src/binarytree.cpp:168:12: error: cannot bind rvalue '(int)node' to 'int&'
-+ 0 pts of 35.000
-Total grade so far: 30.000
-Auto-grader grade: 30.000
-*****************Finished lab14****************
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+******************* traversal test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 25.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab15****************
