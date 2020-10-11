@@ -18,3 +18,5 @@ src/binarytree.cpp:168:12: error: invalid conversion from 'BSTNode<int>*' to 'in
 src/binarytree.cpp:168:12: error: cannot bind rvalue '(int)node' to 'int&'
 + 0 pts of 35.000
 Total grade so far: 30.000
+Auto-grader grade: 30.000
+*****************Finished lab14****************
