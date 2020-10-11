@@ -160,12 +160,12 @@ T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
 	return NULL;
     }
     if(node->getData() > n1 && node->getData() > n2){
-	return lca2(node->getLeft(), n1, n2);
+	return lca(node->getLeft(), n1, n2);
     }
     if(node->getData() < n1 && node->getData() < n2){
-	return lca2(node->getRight(), n1, n2);
+	return lca(node->getRight(), n1, n2);
     }
-    return node;
+    return node->getData();
 }
 template<class T>
 T& BinaryTree<T>::lca(T& a, T& b){
