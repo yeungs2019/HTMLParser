@@ -90,7 +90,7 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
     }
     ret += inorderString(node->getLeft());
     ret += inorderString(node->getRight());
-    ret += node->getData().inorderString();
+    ret += inorderString(node->getData());
     return ret;
     
 }
