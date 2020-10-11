@@ -90,7 +90,7 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
 	ret = "empty";
     }
     else{
-	//ret = ret + node->getData();
+	ret = ret + inorderString(node->getData());
 	if(node->getLeft() != NULL || node->getRight() != NULL){
 	    ret = ret + "," + inorderString(node->getLeft());
 	    ret = ret + "," + inorderString(node->getRight());
