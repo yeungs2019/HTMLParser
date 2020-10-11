@@ -156,8 +156,8 @@ void BinaryTree<T>::add(const int val){
 }
 template <class T>
 T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
-    if(node == NULL){
-	return 0;
+    if(node->getData() == NULL){
+	return NULL;
     }
     if(node->getData() > n1 && node->getData() > n2){
 	return lca(node->getLeft(), n1, n2);
