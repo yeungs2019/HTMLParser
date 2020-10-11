@@ -4,21 +4,37 @@
 #include <string>
 
 template<class T>
-class BinaryTreeNode {
+class BSTNode{
+    private:
+       T data;
+       BSTNode* left;
+       BSTNode* right;
     public:
-        BinaryTreeNode<T> () {
-        }
+       BSTNode(const T mData, BSTNode* mLeft, BSTNode* mRight){
+           data = mData;
+           left = mLeft;
+           right = mRight;
+           /*this->data = mData;
+           this->left = mLeft;
+           this->right = mRight;*/
+       }
+       T& getData() { return data; }
+       BSTNode* getLeft() { return left; }
+       BSTNode* getRight() { return right; }
+       void setLeft(BSTNode* mLeft) { left = mLeft; }
+       void setRight(BSTNode* mRight) { right = mRight; }
 };
 
 template<class T>
 class BinaryTree {
     private:
+	BSTNode<T>* root;
         /* You fill in private member data. */
 
         /* Recommended, but not necessary helper function. */
-        void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
+        void put(BSTNode<T> *rover, BSTNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
-        std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+        //std::string inorderString(BSTNode<T> *node, std::string &ret);
     public:
 
         /* Creates an empty binary tree. */
@@ -26,6 +42,7 @@ class BinaryTree {
 
         /* Does a deep copy of the tree. */
         BinaryTree(const BinaryTree<T> &tree);
+	void copyTree(BSTNode<T>* otRoot);
 
         /* Add a given value to the Binary Tree. 
          * Must maintain ordering!
@@ -34,8 +51,10 @@ class BinaryTree {
 
         /* Returns the height of the binary tree. */
         int getHeight();
+	int maxDepth(BSTNode<T>* node);
 
         /* Returns true if an item exists in the Binary Tree */
+	bool contains_rec(BSTNode<T>* node, const int val);
         bool contains(const T &val) const;
 
         /* Removes a specific val from the Binary Tree.
@@ -68,6 +87,7 @@ class BinaryTree {
         void inorderTraversal(void (*visit) (T &item)) const;
 
         /* Always free memory. */
+	void destroy(BSTNode<T>* p);
         ~BinaryTree();
 };
 
