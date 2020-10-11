@@ -68,7 +68,7 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
 	ret = "empty";
 	return ret;
     }
-    ret.push_back(node->getData() + '0');
+    //ret.push_back(node->getData() + '0');
     if(!node->getLeft() && !node->getRight()){
 	ret = "empty";
 	return ret;
