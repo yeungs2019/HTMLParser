@@ -6,6 +6,8 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sstream>
+
 using namespace std;
 template <class T>
 BinaryTree<T>::BinaryTree(){ 
@@ -86,17 +88,20 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
     std::string ret = "";
     if(node == NULL){
 	ret = "empty";
-	return ret;
     }
-    ret += inorderString(node->getLeft());
-    ret += inorderString(node->getRight());
-    ret += inorderString(node->getData());
+    else{
+	ret = ret + node->getData();
+	if(node->getLeft() != NULL || node->getRight() != NULL){
+	    ret = ret + "," + inorderString(node->getLeft());
+	    ret = ret + "," + inorderString(node->getRight());
+	}
+    }
     return ret;
     
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
-    std::string result = "";
+    //std::string result = "";
     //result = inorderString(root, result);
     return inorderString(root);
 }
