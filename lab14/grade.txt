@@ -1,12 +1,8 @@
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:91:25: error: no matching function for call to 'BinaryTree<int>::inorderString(BSTNode<int>*)'
-src/binarytree.cpp:92:25: error: no matching function for call to 'BinaryTree<int>::inorderString(BSTNode<int>*)'
-src/binarytree.cpp:93:28: error: request for member 'inorderString' in 'node->BSTNode<T>::getData<int>()', which is of non-class type 'int'
-src/binarytree.cpp:91:25: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::inorderString(BSTNode<std::__cxx11::basic_string<char> >*)'
-src/binarytree.cpp:92:25: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::inorderString(BSTNode<std::__cxx11::basic_string<char> >*)'
-src/binarytree.cpp:93:28: error: 'class std::__cxx11::basic_string<char>' has no member named 'inorderString'
+MAKE_ERROR = src/binarytree.cpp:101:25: error: no matching function for call to 'BinaryTree<int>::inorderString(BSTNode<int>*&, std::__cxx11::string&)'
+src/binarytree.cpp:101:25: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::inorderString(BSTNode<std::__cxx11::basic_string<char> >*&, std::__cxx11::string&)'
 + 0 pts of 35.000
 Total grade so far: 0
 ******************* get Height PART *********************
@@ -23,5 +19,3 @@ src/binarytree.cpp:163:12: error: invalid conversion from 'BSTNode<int>*' to 'in
 src/binarytree.cpp:163:12: error: cannot bind rvalue '(int)node' to 'int&'
 + 0 pts of 35.000
 Total grade so far: 30.000
-Auto-grader grade: 30.000
-*****************Finished lab14****************
