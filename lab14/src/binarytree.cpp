@@ -3,7 +3,9 @@
 #include "binarytree.hpp"
 #include <iostream>
 #include <bits/stdc++.h>
-
+#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 template <class T>
 BinaryTree<T>::BinaryTree(){ 
