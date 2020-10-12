@@ -55,7 +55,6 @@ class BinaryTree {
 	//int max(int x, int y) const; 
         /* Returns the height for the binary tree. */
         int getHeight();
-	void add(const int val);
         /* Returns a string representation of the binary Tree in order. */
         std::string inorderString();
 
