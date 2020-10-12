@@ -1,4 +1,4 @@
-I am run number 001710.
+I am run number 001713.
 Pulling source code...
 ------------------------------------------------
 Changes found in lab14
@@ -6,8 +6,8 @@ Changes found in lab14
 *****************Examining lab14****************
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 4
-MAKE_ERROR = 
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 35.000
 Total grade so far: 0
 ******************* get Height PART *********************
