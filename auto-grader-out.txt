@@ -1,11 +1,8 @@
-I am run number 001729.
+I am run number 001731.
 Pulling source code...
 ------------------------------------------------
-Changes found in create
 Changes found in lab14
 ------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
 *****************Examining lab14****************
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
