@@ -100,6 +100,7 @@ std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
     else{
 	ret += inorderString(node->getLeft());
 	ret += " ";
+        ret += node->getData();
 	ret += " ";
 	ret += inorderString(node->getRight());
 	return ret;
