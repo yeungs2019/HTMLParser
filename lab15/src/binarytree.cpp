@@ -119,14 +119,16 @@ bool BinaryTree<T>::contains(const T &val) const{
 	if(rover->getData() == val){
 	    return true;
 	}
-	if(rover->getData() > val){
-	    rover = rover->getLeft();
-	    return true;
-	}
 	else{
-	    rover = rover->getRight();
-	    return true;
-	}
+	     if(rover->getData() < val){
+	         rover = rover->getRight();
+	        // return true;
+	     }
+	     else{
+	    	 rover = rover->getLeft();
+	    	// return true;
+	     }
+   	}
     }
     return false;
 }
