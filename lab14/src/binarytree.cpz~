@@ -67,24 +67,34 @@ void BinaryTree<T>::put(const T &val){
 
 }
 template <class T>
-std::string BinaryTree<T>::inorderString(BSTNode<T> *node, std::string &ret){
-    std::ostringstream oss;
+std::string BinaryTree<T>::inorderString(BSTNode<T> *node){
+    
+    std::string ret = "";
     if(node == NULL){
 	return ret;
     }
+   /* else{
+	//ret = ret + inorderString(node->getData());
+	if(node->getLeft() != NULL || node->getRight() != NULL){
+	    ret = ret + "," + inorderString(node->getLeft());
+	    ret = ret + "," + inorderString(node->getRight());
+	}
+    }
+    return ret;*/
     else{
-	inorderString(node->getLeft(), ret);
-	oss << node->getData() << " ";
-	ret += oss.str();
-	inorderString(node->getRight(), ret);
+	ret += inorderString(node->getLeft());
+	ret += " ";
+        ret += node->getData();
+	ret += " ";
+	ret += inorderString(node->getRight());
 	return ret;
     }
 }
 template <class T>
 std::string BinaryTree<T>::inorderString(){
-    std::string result = "";
-    result = inorderString(root, result);
-    return result;
+    //std::string result = "";
+    //result = inorderString(root, result);
+    return inorderString(root);
 }
 
 template <class T>
