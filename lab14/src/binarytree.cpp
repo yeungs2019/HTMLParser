@@ -111,31 +111,7 @@ int BinaryTree<T>::getHeight(){
     //BSTNode<T>* rover = root;
     return maxDepth(root);
 }
-template <class T>
-void BinaryTree<T>::add(const int val){
-    BSTNode<T>* toadd = new BSTNode<T>(val, NULL, NULL);
-    BSTNode<T>* rover = root;
-    if(root = NULL){
-	root = toadd;
-	return;
-    }
-    while(rover != NULL){
-	if(rover->getData() > val){
-	    if(rover->getLeft() == NULL){
-		rover->setLeft(toadd);
-		return;
-	    }
-	    rover = rover->getLeft();
-	}
-	else{
-	    if(rover->getRight() == NULL){
-		rover->setRight(toadd);
-		return;
-	    }
-	    rover = rover->getRight();
-	}
-    }
-}
+
 template <class T>
 T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
     /*if(node->getData() == NULL){
