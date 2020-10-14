@@ -62,6 +62,7 @@ class BinaryTree {
          * Otherwise, returns false.
          */
         bool remove(const T &val);
+	bool remove(BSTNode<T>* rover, const T &val);
 
         /* This method returns true iff there is a value in the tree 
          * >= min and <= max.  In other words, it returns true if there
