@@ -241,12 +241,12 @@ template <class T>
 bool BinaryTree<T>::existsInRange(BSTNode<T>* node, T min, T max) const{
     BSTNode<T>* left = node->getLeft();
     BSTNode<T>* right = node->getRight();
-    if(left != NULL && node->getData() > min){
+    if(left != NULL && node->getData() > max){
 	node = left;
 	existsInRange(node, min, max);
 	return true;
     }
-    if(right != NULL && node->getData() < max){
+    if(right != NULL && node->getData() < min){
 	node = right;
 	existsInRange(node, min, max);
 	return true;
@@ -258,6 +258,9 @@ bool BinaryTree<T>::existsInRange(T min, T max) const{
     if(root != NULL){
 	existsInRange(root, min, max);
 	return true;
+    }
+    else{
+	return false;
     }
 }
 
