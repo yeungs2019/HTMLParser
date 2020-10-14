@@ -71,7 +71,7 @@ class BinaryTree {
         bool existsInRange(T min, T max) const;
 
         /* This is similar but it returns the number of items in the range. */
-	int countInRange(BSTNode<T>* node, T min, T max);
+	int countInRange(BSTNode<T>* node, T min, T max) const;
         int countInRange(T min, T max) const;
 
         /* Returns a string representation of the binary Tree in order. */
