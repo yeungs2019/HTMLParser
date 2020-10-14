@@ -281,7 +281,7 @@ void Array<T>::merge(int a[], int l, int m, int r){
 }
 template <class T>
 void Array<T>::msort(){
-    int curr;
+    /*int curr;
     int left;
     int size = (sizeof(ptrArr) / sizeof(ptrArr[0]) - 1);
     for(curr = 1; curr <= size - 1; curr = 2 * curr){
@@ -291,7 +291,8 @@ void Array<T>::msort(){
 	     int right = min(left + 2*curr - 1, size+ 1);
 	     merge(ptrArr, left, mid, right);
 	}
-    }
+    }*/
+    qsort();
 }
 
 /*
