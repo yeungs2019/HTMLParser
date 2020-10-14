@@ -238,34 +238,20 @@ int BinaryTree<T>::countInRange(T min, T max) const{
 }
 
 template <class T>
-bool BinaryTree<T>::existsInRange(BSTNode<T>* node, T min, T max) const{
-    BSTNode<T>* left = node->getLeft();
-    BSTNode<T>* right = node->getRight();
-    if(left != NULL && node->getData() > max){
-	node = left;
-	existsInRange(node, min, max);
-    }
-    if(right != NULL && node->getData() < min){
-	node = right;
-	existsInRange(node, min, max);
-    }
-    if(node == NULL){
-	return false;
-    }
-    if(node->getData() >= min && node->getData() <= max){
-	return true;
+bool BinaryTree<T>::existsInRange(T min, T max) const{
+    BSTNode<T>* rover = root;
+    while(rover != NULL){
+	if(rover->getData() < min){
+	    rover = rover->getRight();
+	}
+	else if(rover->getData() > max){
+   	    rover = rover->getLeft();
+	}
+	else if(rover->getData() >= min && rover->getData() <= max){
+	     return true;
+	}
     }
     return false;
-}
-template <class T>
-bool BinaryTree<T>::existsInRange(T min, T max) const{
-    if(root != NULL){
-	existsInRange(root, min, max);
-	return true;
-    }
-    else{
-	return false;
-    }
 }
 
 template <class T>
