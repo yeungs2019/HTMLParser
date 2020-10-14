@@ -182,7 +182,7 @@ int BinaryTree<T>::countInRange(BSTNode<T>* node, T min, T max) const{
 	return 1 + countInRange(node->getLeft(), min, max) +
 		countInRange(node->getRight(), min, max);
     }
-    else if(node->getData < max){
+    else if(node->getData() < max){
 	return countInRange(node->getRight(), min, max);
     }
     else{
