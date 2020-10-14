@@ -171,6 +171,30 @@ bool BinaryTree<T>::remove(const T &val){
     return remove(root, val);
 }
 template <class T>
+int BinaryTree<T>::countInRange(BSTNode<T>* node, T min, T max){
+    if(node == NULL){
+	return 0;
+    }
+    if(node->getData() == max && node->getData() == min){
+	return 1;
+    }
+    if(node->getData() <= max && node->getData() >= min){
+	return 1 + countInRange(node->getLeft(), min, max) +
+		countInRange(node->getRight(), min, max);
+    }
+    else if(node->getData < max){
+	return countInRange(node->getRight(), min, max);
+    }
+    else{
+	return countInRange(node->getLeft(), min, max);
+    }
+}
+template <class T>
+int BinaryTree<T>::countInRange(T min, T max) const{
+    return countInRange(root, min, max);
+}
+
+template <class T>
 T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
     /*if(node->getData() == NULL){
 	return NULL;
