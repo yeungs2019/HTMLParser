@@ -132,6 +132,44 @@ bool BinaryTree<T>::contains(const T &val) const{
     }
     return false;
 }
+
+template <class T>
+bool BinaryTree<T>::remove(BSTNode<T>* rover, const T &val){
+    BSTNode<T>* toDelete = NULL;
+    if(rover == NULL){
+	return false;
+    }
+    if(rover->getRight() != NULL && val == rover->getRight()->getData()){
+	toDelete = rover->getRight();
+	if(toDelete->getRight() == NULL && toDelete->getLeft() == NULL){
+	    delete toDelete;
+	    rover->setRight(NULL);
+	    return true;
+	}
+	if(toDelete->getLEft() == NULL){
+	    rover->setRight(toDelete->getLeft());
+	}
+	else{
+	    BSTNode<T>* temp = toDelete->getLeft();
+	    while(temp->getRight() != NULL){
+		temp = temp->getRight();
+	    }
+	    int tval = temp->getData();
+	    toDelete->setData(tval);
+	}
+    }
+    if(val > rover->getData()){
+	rover = rover->getRight();
+    }
+    else{
+	rover = rover->getLeft();
+    }
+    return remove(rover, val);
+}
+template <class T>
+bool BinaryTree<T>::remove(const T &val){
+    return remove(root, val);
+}
 template <class T>
 T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
     /*if(node->getData() == NULL){
