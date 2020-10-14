@@ -70,6 +70,7 @@ class BinaryTree {
          * >= min and <= max.  In other words, it returns true if there
          * is an item in the tree in the range [min, max]
          */
+	bool existsInRange(BSTNode<T>* node, T min, T max) const;
         bool existsInRange(T min, T max) const;
 
         /* This is similar but it returns the number of items in the range. */
