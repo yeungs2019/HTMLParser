@@ -25,3 +25,5 @@ Failures =
 MAKE_ERROR = 
 + 25.000 pts of 25.000
 Total grade so far: 75.000
+Auto-grader grade: 75.000
+*****************Finished lab15****************
