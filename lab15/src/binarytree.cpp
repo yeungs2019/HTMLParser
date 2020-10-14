@@ -189,7 +189,7 @@ bool BinaryTree<T>::remove(BSTNode<T>* rover, const T &val){
 	    rover->setRight(NULL);
 	    return true;
 	}
-	if(toDelete->getLEft() == NULL){
+	if(toDelete->getLeft() == NULL){
 	    rover->setRight(toDelete->getLeft());
 	}
 	else{
@@ -235,6 +235,30 @@ int BinaryTree<T>::countInRange(BSTNode<T>* node, T min, T max) const{
 template <class T>
 int BinaryTree<T>::countInRange(T min, T max) const{
     return countInRange(root, min, max);
+}
+
+template <class T>
+bool BinaryTree<T>::existsInRange(BSTNode<T>* node, T min, T max) const{
+    BSTNode<T>* left = node->getLeft();
+    BSTNode<T>* right = node->getRight();
+    if(left != NULL && node->getData() > min){
+	node = min;
+	existsInRange(node, min, max);
+	return true;
+    }
+    if(right != NULL && node->getData() < max){
+	node = max;
+	existsInRange(node, min, max);
+	return true;
+    }
+}
+
+template <class T>
+bool BinaryTree<T>::existsInRange(T min, T max) const{
+    if(root != NULL){
+	existsInRange(root, min, max);
+	return true;
+    }
 }
 
 template <class T>
