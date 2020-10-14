@@ -88,6 +88,49 @@ std::string BinaryTree<T>::inorderString(){
 }
 
 template <class T>
+std::string BinaryTree<T>::preorderString(BSTNode<T> *node, std::string &ret){
+    std::ostringstream oss;
+    if(node == NULL){
+	return ret;
+    }
+    else{
+	oss << node->getData() << " ";
+	ret += oss.str();
+	preorderString(node->getLeft(), ret);
+	preorderString(node->getRight(), ret);
+	return ret;
+    }
+}
+
+template <class T>
+std::string BinaryTree<T>::preorderString(){
+    std::string result = "";
+    result = preorderString(root, result);
+    return result;
+}
+
+template <class T>
+std::string BinaryTree<T>::postorderString(BSTNode<T> *node, std::string &ret){
+    std::ostringstream oss;
+    if(node == NULL){
+	return ret;
+    }
+    else{
+	postorderString(node->getLeft(), ret);
+	postorderString(node->getRight(), ret);
+	oss << node->getData() << " ";
+	ret += oss.str();
+	return ret;
+    }
+}
+
+template <class T>
+std::string BinaryTree<T>::postorderString(){
+    std::string result = "";
+    result = postorderString(root, result);
+    return result;
+}
+template <class T>
 int BinaryTree<T>::maxDepth(BSTNode<T>* node){
     if(node == NULL){
 	return 0;
@@ -194,6 +237,19 @@ int BinaryTree<T>::countInRange(T min, T max) const{
     return countInRange(root, min, max);
 }
 
+template <class T>
+void BinaryTree<T>::inorderTraversal(BSTNode<T>* node, void (*visit) (T &item)) const{
+    if(node != NULL){
+	inorderTraversal(node->getLeft(), *visit);
+	(*visit)(node->getData());
+	inorderTraversal(node->getRight(), *visit);
+    }
+}
+
+template <class T>
+void BinaryTree<T>::inorderTraversal(void (*visit) (T &item)) const{
+    inorderTraversal(root, *visit);   
+}
 template <class T>
 T& BinaryTree<T>::lca(BSTNode<T>* node, const T& n1, const T& n2){
     /*if(node->getData() == NULL){

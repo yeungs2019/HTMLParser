@@ -35,6 +35,8 @@ class BinaryTree {
         void put(BSTNode<T> *rover, BSTNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         std::string inorderString(BSTNode<T> *node, std::string &ret);
+	std::string preorderString(BSTNode<T> *node, std::string &ret);
+	std::string postorderString(BSTNode<T> *node, std::string &ret);
     public:
 
         /* Creates an empty binary tree. */
@@ -90,6 +92,7 @@ class BinaryTree {
         /* Does an inorder traversal of the Binary Search Tree calling
          * visit on each node.
          */
+	void inorderTraversal(BSTNode<T>* node, void (*visit) (T &item)) const;
         void inorderTraversal(void (*visit) (T &item)) const;
 
         /* Always free memory. */
