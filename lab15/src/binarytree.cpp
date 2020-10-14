@@ -171,7 +171,7 @@ bool BinaryTree<T>::remove(const T &val){
     return remove(root, val);
 }
 template <class T>
-int BinaryTree<T>::countInRange(BSTNode<T>* node, T min, T max){
+int BinaryTree<T>::countInRange(BSTNode<T>* node, T min, T max) const{
     if(node == NULL){
 	return 0;
     }
