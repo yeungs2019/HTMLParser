@@ -14,3 +14,5 @@ Total grade so far: 57.000
 ******************* heap sort test *********************
 g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
 Seg fault detected, please test and fix.
+Auto-grader grade: 57.000
+*****************Finished lab16****************
