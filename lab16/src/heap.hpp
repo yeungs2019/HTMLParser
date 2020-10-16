@@ -22,6 +22,7 @@ class Heap {
         void insert(const T &val);
 
         /* Returns the height of the heap. */
+	int getHeight(int x);
         int getHeight();
 
         /* Returns the size of the heap. */

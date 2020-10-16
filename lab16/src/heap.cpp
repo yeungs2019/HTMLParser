@@ -1,4 +1,6 @@
 #ifdef HEAP_H
+#include "heap.hpp"
+#include <cmath>
 
 template<class T>
 Heap<T>::Heap(const int len) {
@@ -62,6 +64,16 @@ T& Heap<T>::removeFirst() {
 
 template<class T>
 T& Heap<T>::operator[](const int pos) {
+    return mArray[pos];
+}
+
+template <class T>
+int Heap<T>::getHeight(int x){
+    return ceil(log2(x + 1)) - 1;
+}
+template <class T>
+int Heap<T>::getHeight(){
+    return getHeight(mLen);
 }
 
 template<class T>
@@ -74,6 +86,7 @@ T* Heap<T>::heapSort() {
 
 template<class T>
 Heap<T>::~Heap() {
+    delete mArray;
 }
 
 template<class T>
