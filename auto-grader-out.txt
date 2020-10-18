@@ -1,32 +1,33 @@
-I am run number 001865.
+I am run number 001966.
 Pulling source code...
 ------------------------------------------------
-Changes found in lab13
+Changes found in course-materials
+Changes found in create
+Changes found in lab16
+Changes found in lab17
 ------------------------------------------------
-*****************Examining lab13****************
-******************* Merge Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-+ 19.980 pts of 30.000
-Total grade so far: 19.980
-******************* Quick Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-+ 19.980 pts of 30.000
-Total grade so far: 39.960
-******************* Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+*****************Examining course-materials****************
+Auto-grader grade: *****************Finished course-materials****************
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab16****************
+******************* insert Test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-+ 10.000 pts of 10.000
-Total grade so far: 49.960
-******************* SLList Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Memory errors found: ==16011==    definitely lost: 32,008 bytes in 1 blocks
++ 27.000 pts of 30.000
+Total grade so far: 27.000
+******************* remove test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 30.000 pts of 30.000
-Total grade so far: 79.960
-Auto-grader grade: 79.960
-*****************Finished lab13****************
+Total grade so far: 57.000
+******************* heap sort test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Seg fault detected, please test and fix.
+Auto-grader grade: 57.000
+*****************Finished lab16****************
+*****************Examining lab17****************
+Auto-grader grade: *****************Finished lab17****************
