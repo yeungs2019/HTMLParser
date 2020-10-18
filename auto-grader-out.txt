@@ -1,2 +1,24 @@
 I am run number 001974.
 Pulling source code...
+------------------------------------------------
+Changes found in lab16
+------------------------------------------------
+*****************Examining lab16****************
+******************* insert Test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
+Memory errors found: ==23951==    definitely lost: 32,008 bytes in 1 blocks
++ 27.000 pts of 30.000
+Total grade so far: 27.000
+******************* remove test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 57.000
+******************* heap sort test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Seg fault detected, please test and fix.
+Auto-grader grade: 57.000
+*****************Finished lab16****************
