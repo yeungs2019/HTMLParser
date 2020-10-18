@@ -45,6 +45,8 @@ class Heap {
          * elements.
          * Note: the heap is empy after the sort!
          */
+	T* heapify(T* arr, int n, int i);
+	T* heapSort(T *arr, int n);
         T* heapSort();
 
         ~Heap();

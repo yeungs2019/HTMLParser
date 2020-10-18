@@ -1,6 +1,8 @@
 #ifdef HEAP_H
 #include "heap.hpp"
 #include <cmath>
+#include<iostream>
+#include <algorithm>
 
 template<class T>
 Heap<T>::Heap(const int len) {
@@ -80,8 +82,35 @@ template<class T>
 int Heap<T>::getSize() {
 }
 
+template <class T>
+T* Heap<T>::heapify(T* arr, int n, int i){
+    int largest = i;
+    int l = (2 * i) + 1;
+    int r = (2 * i) + 2;
+    if(l < n && arr[l] > arr[largest]){
+	largest = l;
+    }
+    if(r < n && arr[l] > arr[largest]){
+	largest  = r;
+    }
+    if(largest != i){
+	std::swap(arr[i], arr[largest]);
+	heapify(arr, n, largest);
+    }
+}
+template <class T>
+T* Heap<T>::heapSort(T *arr, int n){
+    for(int i = (n / 2) - 1; i >= 0; i--){
+	heapify(arr, n, i);
+    }
+    for(int i = n - 1; i > 0; i--){
+	std::swap(arr[0], arr[i]);
+	heapify(arr, i , 0);
+    }
+}
 template<class T>
 T* Heap<T>::heapSort() {
+    heapSort(mArray, mLen);
 }
 
 template<class T>
