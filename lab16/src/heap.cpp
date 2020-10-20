@@ -82,40 +82,37 @@ template<class T>
 int Heap<T>::getSize() {
 }
 
-template <class T>
-T* Heap<T>::heapify(T* arr, int n, int i){
-    int largest = i;
-    int l = (2 * i) + 1;
-    int r = (2 * i) + 2;
-    if(l < n && arr[l] > arr[largest]){
-	largest = l;
-    }
-    if(r < n && arr[l] > arr[largest]){
-	largest  = r;
-    }
-    if(largest != i){
-	std::swap(arr[i], arr[largest]);
-	heapify(arr, n, largest);
-    }
-}
-template <class T>
-T* Heap<T>::heapSort(T *arr, int n){
-    for(int i = (n / 2) - 1; i >= 0; i--){
-	heapify(arr, n, i);
-    }
-    for(int i = n - 1; i > 0; i--){
-	std::swap(arr[0], arr[i]);
-	heapify(arr, i , 0);
-    }
-}
 template<class T>
 T* Heap<T>::heapSort() {
-    heapSort(mArray, mLen);
+    T* newArray = new T[mLen]; 
+    T x = 0;
+    int size = mLen; 
+    for(int i = 0; i < size; i++){
+	x = this->removeFirst();
+        newArray[i] = x;
+    }
+    
+    T temp;
+    T min;
+    for(int k = 0; k < size; k++){
+	min = k;
+	for(int j = k; j < size; j++){
+	   if(newArray[j] < newArray[min]){
+		min = j;
+	   }
+	}
+	temp = newArray[k];
+	newArray[k] = newArray[min];
+	newArray[min] = temp;
+    }    
+    return newArray;
 }
 
 template<class T>
 Heap<T>::~Heap() {
-    delete mArray;
+    delete[] mArray;
+    mLen = 0;
+    mPos = 0;
 }
 
 template<class T>
