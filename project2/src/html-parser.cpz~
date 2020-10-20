@@ -1,0 +1,132 @@
+#include "html-parser.hpp"
+#include <fstream>
+#include <string>
+#include <stack>
+#include <iostream>
+#include <istream>
+#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+// constructor (initialize)
+HTMLParser::HTMLParser() {
+    mSize = 0;
+}
+
+// free memory (deallocate)
+HTMLParser::~HTMLParser() {
+}
+
+// read in a file by character of any unecessary characters
+void HTMLParser::parse(std::string filename) {
+}
+
+// checks if the stuff is balanced
+bool HTMLParser::isBalanced(std::string filename) {
+    // read text from file
+    std::ifstream input(filename);
+    //generic holder for characters;
+    char ch;
+    // creates a text string, tis inside the angle brackets
+    std::string myText;
+    
+    // we push things onto the stack
+    while(input.get(ch)){
+	if(ch == '<'){
+	    // check for the slash and get ready to pop	    
+	    if(input.peek() == '/'){
+		getline(input, myText); // do i need to include >?
+		eTag.push(myText);
+            }
+	    // anchor tag check
+	    else if(input.peek() == 'a'){
+		getline(input, myText);
+		aTag.push(myText);
+	    }
+	    // all other text after <
+	    else{
+		getline(input, myText);
+		bTag.push(myText);
+	    }
+	}
+    }
+    input.close();
+    // we now start popping things off of the stack and compare recent push
+    if(eTag.empty() || aTag.empty() || bTag.empty()){
+	return false;
+    }
+    while(input.get(ch)){
+	if(input.peek() == '>'){
+	    aTag.pop();
+	}
+	if(input.peek() == '/'){
+	    eTag.pop();
+	}
+    }
+    input.close();
+
+}    
+    /*std::string str = "<html>";
+    std::string str2 = "<body>";
+    std::string str3 = "<b>";
+    std::string str4 = "<a>";
+  
+    char* h = const_cast<char*>(str.c_str());
+    char* b = const_cast<char*>(str2.c_str());
+    char* p = const_cast<char*>(str3.c_str());
+    char* a = const_cast<char*>(str4.c_str());
+    
+    while(input.get(ch)){*/
+
+    //iterate the file
+    /*for(int i = 0; i < filename.length(); i++){
+	if(filename[i] == 'c' || filename[i] == 'b' || filename[i] == 'p'
+	     || filename[i] == 'a'){
+		tags.push(filename[i]);
+	}
+	if(tags.empty()){
+	    return false;
+	}
+	switch(filename[i]){
+	    case 'h':
+		ch = tags.top();
+		tags.pop();
+		if(ch == 'a' || ch == 'p' || ch == 'b'){
+		    return false;
+		    break;
+		}
+	    case 'b':
+		ch = tags.top();
+		tags.pop();
+		if(ch == 'a' || ch == 'p' || ch == 'h'){
+		    return false;
+		    break;
+		}
+	    case 'p':
+		ch = tags.top();
+		tags.pop();
+		if(ch == 'a' || ch == 'b' || ch == 'h'){
+		    return false;
+		    break;
+		}
+	    case 'a':
+		ch = tags.top();
+		tags.pop();
+		if(ch == 'b' || ch == 'h' || ch == 'p'){
+		    return false;
+		    break;
+		}
+
+	}
+
+    }
+   
+    return (tags.empty());*/
+
+
+// recursion
+int HTMLParser::pageVisitAmount(std::string filename) {
+    return 0;
+}
