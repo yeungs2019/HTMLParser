@@ -105,7 +105,7 @@ void  HTMLParser::parse(std::string filename) {
     // open the file
     while(input.get(ch)){
 	// declaration of string
-	std::string istring;
+	std::string tempString;
 	// starts with the beginning
 	if(ch == '<'){
 	    // seeks out the anchor tag
@@ -116,11 +116,11 @@ void  HTMLParser::parse(std::string filename) {
 		input.get(ch);
 		// HERE, we get to the end of the HTML Tag
 		while(ch != '>'){
-		    istring += ch;
+		    tempString += ch;
 		    input.get(ch);
 		}
-		link.push_back(istring);
-		std::string linkStr;
+		link.push_back(tempString);
+		std::string lStr;
 		// if not <, not a HTML tag
 		while(ch != '<'){
 		    input.get(ch);
@@ -130,18 +130,18 @@ void  HTMLParser::parse(std::string filename) {
 		    input.get(ch);
 		    if(input.peek() == 'a'){
 			while(ch != '>'){
-			    linkStr += ch;
+			    lStr += ch;
 			    input.get(ch);
 			}
-			endLink.push_back(linkStr);
+			endLink.push_back(lStr);
 			linkEnd++;
 		    }
 		    else{
 			while(ch != '>'){
 			    input.get(ch);
-			    linkStr += ch;
+			    lStr += ch;
 			}
-			end.push_back(linkStr);
+			end.push_back(lStr);
 			mEnd++;
 		    }
 		}
@@ -158,9 +158,9 @@ void  HTMLParser::parse(std::string filename) {
 		else{
 		    while(ch != '>'){
 			input.get(ch);
-			istring += ch;
+			tempString += ch;
 		    }
-		    end.push_back(istring);
+		    end.push_back(tempString);
 		    mEnd++;
 		}
 	    }
@@ -168,9 +168,9 @@ void  HTMLParser::parse(std::string filename) {
 	    else{
 		while(ch != '>'){
 		    input.get(ch);
-		    istring += ch;
+		    tempString += ch;
 		}
-		start.push_back(istring);
+		start.push_back(tempString);
 		mStart++;
 	    }
 	}
