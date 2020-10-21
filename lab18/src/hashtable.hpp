@@ -8,13 +8,22 @@
 template<class K, class V>
 class HashNode {
     private:
+        K key;
+        V data;
     public:
+        HashNode(const K _key, const V _data) {
+            key = _key;
+            data = _data;
+        }
+        K& getKey() { return key; }
+        V& getData() { return data; }
 };
 
 /* HashTable via chaining */
 template<class K, class V>
 class HashTable {
     private:
+        std::vector<std::list<HashNode<K, V> > > table;
         V def;
     public:
         /* Initialize the Hash Table with size size. */
@@ -30,7 +39,7 @@ class HashTable {
         bool insert(const K &key, const V &val);
 
         /* Print out the HashTable */
-        void print() const;
+        void print();
 
         /* Remove the val associated with key.
          * Return true if found and removed.

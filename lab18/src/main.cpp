@@ -2,7 +2,7 @@
 #include "hashtable.hpp"
 
 int main(int argc, char *argv[]) {
-    HashTable<int, int> table(100);
+    HashTable<int, int> table(10);
 
     table.insert(58, 85);
     table.insert(38, 83);
