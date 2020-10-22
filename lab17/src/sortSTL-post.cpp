@@ -19,6 +19,17 @@ class Student {
         string getName() const { return mName; }
 };  
 
+bool predicateFunction(Student j, Student k){
+    return j.id() < k.id();
+}
+
+bool secondFunction(Student *j, Student *k){
+    return j->id() < k->id();
+}
+bool thirdFunction(Student *j, Student *k){
+    return j->getName() > k->getName();
+}
+
 int main (int argc, char *argv[]) {
     const int backup[10] =
         {2,5,0,9,7,4,3,1,8,6};//constant array with data to sort
@@ -31,14 +42,14 @@ int main (int argc, char *argv[]) {
      * backup copied into vec should be done in 1 specific insert call, but 
      * make a loop if you have to.
      */
-
+    vec.insert(vec.begin(), backup, backup + n);
     cout << "\tunsorted vec print: ";
     for (int i = 0; i < 10; i++) {
         cout << vec[i] << ", ";
     }
  
     /* TODO: sort the vector using STL's sort */
-
+    std::sort(vec.begin(), vec.end());
     cout << "\n\tsorted vec print: ";
     for (int i = 0; i < 10; i++) {
         cout << vec[i] << ", ";
@@ -57,7 +68,7 @@ int main (int argc, char *argv[]) {
     }
 
     /* TODO: sort sarray using STL's sort, hint: you will need a predicate function */
-
+    std::sort(sarray, sarray + n, predicateFunction);
     cout << "\nSort Studs ";
     for (int i = 0; i < 10; i++) {
         sarray[i].print();
@@ -77,11 +88,15 @@ int main (int argc, char *argv[]) {
     /* TODO: Declare an array of pointers to Students, name it psarray.
      * initialize the elements so that they point to the contents of sarray
      */
-
+     Student* psarray[n];
+     for(int i = 0; i < n; i++){
+	 psarray[i] = &sarray[i];
+     }
 
     /* TODO: use STL to sort the students pointed at by psarray, hint: you need
      * a new predicate
      */
+     std::sort(psarray, psarray + n, secondFunction);
 
     /*//This will print the students from psarray after you have correctly set it up.
         cout <<"sort pointer: ";
@@ -95,6 +110,13 @@ int main (int argc, char *argv[]) {
      * psarray notice this is printing sarray, so after sorting psarray, you 
      * need to use that info to sort sarray in O(N) time
      */
+    Student temp[n];
+    for(int i = 0; i < n; i++){
+	temp[i] = *psarray[i];
+    }
+    for(int j = 0; j < n; j++){
+	sarray[j] = temp[j];
+    }
 
     cout << "sort Studs: ";
     for (int i = 0; i < 10; i++) {
@@ -106,13 +128,18 @@ int main (int argc, char *argv[]) {
      * the students in sarray name the array psarrayN.  Then sort just the
      * pointers in DESCENDING (z to a) alphabetical order of Student's names.
      */
+    Student* xMan[n];
+    for(int i = 0; i < n; i++){
+	xMan[i] = &sarray[i];
+    }
+    std::sort(xMan, xMan + n, thirdFunction);
 
-    /*  //This will print the students from psarrayN after you have correctly set it up.
+      //This will print the students from psarrayN after you have correctly set it up.
     cout <<"sort pointer: ";
     for (int i = 0; i < 10; i++) {
-        psarrayN[i]->print();
+        xMan[i]->print();
     }
     cout << "\n\n";
-    */
+    
     return 0;
 }
