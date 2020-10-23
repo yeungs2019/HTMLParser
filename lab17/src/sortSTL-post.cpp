@@ -98,13 +98,13 @@ int main (int argc, char *argv[]) {
      */
      std::sort(psarray, psarray + n, secondFunction);
 
-    /*//This will print the students from psarray after you have correctly set it up.
+    //This will print the students from psarray after you have correctly set it up.
         cout <<"sort pointer: ";
         for (int i = 0; i < 10; i++) {
             psarray[i]->print();
         }
         cout << "\n\n";
-     */
+     
 
     /* TODO: Now figure out how to sort sarray based on the results of sorting
      * psarray notice this is printing sarray, so after sorting psarray, you 
