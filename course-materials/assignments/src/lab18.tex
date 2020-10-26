@@ -33,7 +33,7 @@ tabsize=2
 \begin{document}
 
 \begin{center}
-{\bf lab 13 Fundamental sorting: Quick and Merge Sort}
+{\bf lab 18 Hash Tables with Chaining}
 
 \end{center}
 
@@ -48,47 +48,49 @@ tabsize=2
 \renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
 
 \vskip.15in
-\noindent\textbf{Instructions:} Implement Quick and Merge sort for your Array List class.  Then implement one of the fundamental $O(nlog_2n)$ sorting algorithm (Quick or Merge) for a (singly or doubly) Linked List.
+\noindent\textbf{Instructions:} This lab is a practice in constructing a Hash Table with chaining.  Implement a Hash Table whose constructor take an integer (the initial size of the hash table), insert, remove, and get.  Hints: if the value is not found in the Hash Table return a value using the default constructor.  Also, use your previous code!
 
 \begin{lstlisting}[language=C++]{Name=test2}
+#ifndef HASH_TABLE_H
+#define HASH_TABLE_H
 
-template <class T>
-class Array {
+/* HashTable via chaining */
+template<class K, class V>
+class HashTable {
     private:
-    /* You fill out the private contents. */
-
+        /* Class to begin filling out...*/
     public:
-    ...
+        /* Initialize the Hash Table with size size. */
+        HashTable(const int size);
 
-    /* Runs a quick sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
-    void qsort();
+        /* Deconstructor shall free up memory */
+        ~HashTable();
 
-    /* Runs a merge sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
-    void msort();
-
-    /* Runs the sort routing you believe is the best. */
-    void sort();
-    ...
-};
-
-
-/* SLL = Singly Linked List */
-template<class T>
-class SLList {
-...
-    public:
-...
-        /* Sort the linked list.  You may use any O(nlogn) sort algorithm you 
-         * wish.
+        /* Map key -> val.
+         * Return true if sucessful (it is unique.)
+         * Otheriwise return false.
          */
-        void sort();
-...
+        bool insert(const K &key, const V &val);
+
+        /* Print out the HashTable */
+        void print() const;
+
+        /* Remove the val associated with key.
+         * Return true if found and removed.
+         * Otherwise return false.
+         */
+        bool remove(const K &key);
+
+        /* Retrieves the V val that key maps to. */
+        V& operator[](const K &key);
 };
 
+int hashcode(int key);
+int hashcode(std::string &key);
+
+#include "hashtable.cpp"
+
+#endif
 \end{lstlisting}
 
 \vskip.15in
@@ -96,13 +98,13 @@ class SLList {
 Create some test cases, using Unity, that you believe would cover all aspects of your code.
 
 \vskip.15in
-\noindent\textbf{Part 2: Performance} \\
-Generate a graph to compare the performance of \{bubble sort, selection sort, insertion sort\} vs quick sort for an array.  Then \{bubble sort, selection sort, insertion sort\} vs the sort you chose for a Singly Linked List.  Your graph should have data size on the x axis and time on the y axis.  Make sure to label each graph line!  Please turn in as a .pdf!
-
-\vskip.15in
 \noindent\textbf{Memory Management:} \\
 Now that are using new, we must ensure that there is a corresponding delete to free the memory.  Ensure there are no memory leaks in your code!  Please run Valgrind on your tests to ensure no memory leaks!
 \vskip.15in
+
+\vskip.15in
+\noindent\textbf{STL:} \\
+You may use vector, queue/deque, and list from the STL.  Do not use any other data structure (especially map!)  Failure to follow these instructions is an automatic 0 for this lab.
 
 \vskip.15in
 \noindent\textbf{How to turn in:} \\
@@ -115,7 +117,7 @@ Turn in via GitHub.  Ensure the file(s) are in your directory and then:
 
 \vskip.15in
 \noindent\textbf{Due Date:}
-October 06, 2020 2359
+October 28, 2020 2359
 
 \vskip.15in
 \noindent\textbf{Teamwork:} No teamwork, your work must be your own.

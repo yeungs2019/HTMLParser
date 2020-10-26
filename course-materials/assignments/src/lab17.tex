@@ -33,7 +33,7 @@ tabsize=2
 \begin{document}
 
 \begin{center}
-{\bf lab 13 Fundamental sorting: Quick and Merge Sort}
+{\bf lab 17 STL and Sorting}
 
 \end{center}
 
@@ -48,56 +48,11 @@ tabsize=2
 \renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
 
 \vskip.15in
-\noindent\textbf{Instructions:} Implement Quick and Merge sort for your Array List class.  Then implement one of the fundamental $O(nlog_2n)$ sorting algorithm (Quick or Merge) for a (singly or doubly) Linked List.
-
-\begin{lstlisting}[language=C++]{Name=test2}
-
-template <class T>
-class Array {
-    private:
-    /* You fill out the private contents. */
-
-    public:
-    ...
-
-    /* Runs a quick sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
-    void qsort();
-
-    /* Runs a merge sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
-    void msort();
-
-    /* Runs the sort routing you believe is the best. */
-    void sort();
-    ...
-};
-
-
-/* SLL = Singly Linked List */
-template<class T>
-class SLList {
-...
-    public:
-...
-        /* Sort the linked list.  You may use any O(nlogn) sort algorithm you 
-         * wish.
-         */
-        void sort();
-...
-};
-
-\end{lstlisting}
+\noindent\textbf{Instructions:} Please complete the program in the code file sortSTL-post.cpp.  Instructions are given in the .cpp file.
 
 \vskip.15in
 \noindent\textbf{Write some test cases:} \\
-Create some test cases, using Unity, that you believe would cover all aspects of your code.
-
-\vskip.15in
-\noindent\textbf{Part 2: Performance} \\
-Generate a graph to compare the performance of \{bubble sort, selection sort, insertion sort\} vs quick sort for an array.  Then \{bubble sort, selection sort, insertion sort\} vs the sort you chose for a Singly Linked List.  Your graph should have data size on the x axis and time on the y axis.  Make sure to label each graph line!  Please turn in as a .pdf!
+You will not need test cases for this lab.  Please ensure the output is correct before turning in.
 
 \vskip.15in
 \noindent\textbf{Memory Management:} \\
@@ -115,7 +70,7 @@ Turn in via GitHub.  Ensure the file(s) are in your directory and then:
 
 \vskip.15in
 \noindent\textbf{Due Date:}
-October 06, 2020 2359
+October 21, 2020 2359
 
 \vskip.15in
 \noindent\textbf{Teamwork:} No teamwork, your work must be your own.

@@ -33,7 +33,7 @@ tabsize=2
 \begin{document}
 
 \begin{center}
-{\bf lab 10: Stacks and Queues}
+{\bf lab 11: Queues}
 \end{center}
 
 \setlength{\unitlength}{1in}
@@ -47,50 +47,7 @@ tabsize=2
 \renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
 
 \vskip.15in
-\noindent\textbf{Instructions:} Implement a Stack and a Queue with whatever data structure you desire.  Remember you may use code from a previous lab or STL vector/list (*hint* *hint*).
-
-In class we will implement a stack:
-
-\begin{lstlisting}[language=C++]{Name=test2}
-
-#ifndef STACK_H
-#define STACK_H
-
-template<class T>
-class Stack {
-    private:
-        /* Class to implement.*/
-    public:
-        /* Empty constructor shall create an empty Stack! */
-        Stack();
-        /* Do a deep copy of stack into the this.
-         * Note: This one uses a reference to a Stack!
-         */
-        Stack(const Stack<T> &stack);
-        /* Deconstructor shall free up memory */
-        ~Stack();
-        /* Return the current length (number of items) in the stack */
-        int getLength() const;
-        /* Returns true if the stack is empty. */
-        bool isEmpty() const;
-        /* Print out the Stack */
-        void print() const;
-        /* Pushes the val to the top of the stack. */
-        bool push(const T &val);
-        /* Returns the top element from the stack. */
-        T& top();
-        /* Removes the top element from the stack. */
-        void pop();
-        /* Returns if the two stacks contain the same elements in the
-         * same order.
-         */
-        bool operator==(const Stack<T> &stack) const;
-};
-
-#include "stack.cpp"
-
-#endif
-\end{lstlisting}
+\noindent\textbf{Instructions:} Implement a Queue with whatever data structure you desire.  Remember you may use code from a previous lab (*hint* *hint*).
 
 In your lab finish the implementation of a Queue:
 
@@ -128,6 +85,26 @@ class Queue {
          * same order.
          */
         bool operator==(const Queue<T> &queue) const;
+	/* Add a value to the queue with respect to priority.
+	 * For this function a lower number is a higher priority.
+	 * EX: If the Queue is of integers and is { 5, 10, 15} and I add 7, 
+	 * the new queue is { 5, 7, 10, 15}.
+	 */
+	void addWithPriority(const T& val);
+	/* Return the length of the shortest path, but with warps.  The map is
+	 * a 2D array with each cell having the following property
+	 *   0: Cell is open (passable)
+	 *  -1: Cell is a wall (impassable)
+	 * > 0: Cell is a warp.
+	 * A warp is a value > 999 and warps to the position 
+	 *    (<first three digits, second three digits).
+	 * Hence 1000 warps to (1, 0), and 203109 warps to (203, 109)
+	 * To get the x value: <cell>/1000
+	 * To get the y value: <cell>%1000
+	 * Note: Taking a warp costs 1.
+	 */
+	int getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, 
+                int ex, int ey);
 };
 
 #include "queue.cpp"
@@ -159,7 +136,7 @@ Turn in via GitHub.  Ensure the file(s) are in your directory and then:
 
 \vskip.15in
 \noindent\textbf{Due Date:}
-September 23, 2020 2359
+September 28, 2020 2359
 
 \vskip.15in
 \noindent\textbf{Teamwork:} No teamwork, your work must be your own.
