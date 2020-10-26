@@ -4,10 +4,32 @@
 #include <string>
 #include <vector>
 
+template<class K, class V>
+class HashNode {
+    private:
+        K key;
+        V data;
+        bool isInUse;
+    public:
+        HashNode() { isInUse = false; }
+        HashNode(const K _key, const V _data) {
+            key = _key;
+            data = _data;
+        }
+        void setKey(K _key) { key = _key; }
+        void setData(V _data) { data = _data; }
+        void setInUse(bool _isInUse) { isInUse = _isInUse; }
+        K& getKey() { return key; }
+        V& getData() { return data; }
+        bool getInUse() { return isInUse; }
+};
+
 /* HashTable via open addressing */
 template<class K, class V>
 class HashTable {
     private:
+        //std::vector<std::list<HashNode<K, V> > > table;
+        std::vector<HashNode<K, V> > table; // instantiate the vector of hashnodes
         V def;
     public:
         /* Initialize the Hash Table with size size. */
