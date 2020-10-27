@@ -1,2 +1,23 @@
 I am run number 002132.
 Pulling source code...
+------------------------------------------------
+Changes found in lab18
+------------------------------------------------
+*****************Examining lab18****************
+******************* insert Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 50.000 pts of 50.000
+Total grade so far: 50.000
+******************* remove test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/hashtable.cpp:59:32: error: no matching function for call to 'HashNode<int, int>::HashNode(const int&)'
+src/hashtable.cpp:60:5: error: no matching function for call to 'std::__cxx11::list<HashNode<int, int>, std::allocator<HashNode<int, int> > >::pop_back(HashNode<int, int>&)'
+src/hashtable.cpp:59:32: error: no matching function for call to 'HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >::HashNode(const std::__cxx11::basic_string<char>&)'
+src/hashtable.cpp:60:5: error: no matching function for call to 'std::__cxx11::list<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >, std::allocator<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > > >::pop_back(HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&)'
++ 0 pts of 50.000
+Total grade so far: 50.000
+Auto-grader grade: 50.000
+*****************Finished lab18****************
