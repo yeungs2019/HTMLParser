@@ -11,3 +11,5 @@ MAKE_ERROR = src/hashtable.cpp:51:5: error: 'it' is not a member of 'std::vector
 src/hashtable.cpp:51:5: error: 'it' is not a member of 'std::vector<std::__cxx11::list<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >, std::allocator<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > > >, std::allocator<std::__cxx11::list<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >, std::allocator<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > > > > >'
 + 0 pts of 50.000
 Total grade so far: 50.000
+Auto-grader grade: 50.000
+*****************Finished lab18****************
