@@ -13,3 +13,5 @@ src/hashtable.cpp:59:32: error: no matching function for call to 'HashNode<std::
 src/hashtable.cpp:60:5: error: no matching function for call to 'std::__cxx11::list<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >, std::allocator<HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > > >::pop_back(HashNode<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&)'
 + 0 pts of 50.000
 Total grade so far: 50.000
+Auto-grader grade: 50.000
+*****************Finished lab18****************
