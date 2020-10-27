@@ -48,14 +48,17 @@ void HashTable<K, V>::print() {
 }
 template<class K, class V>
 bool HashTable<K, V>::remove(const K &key){
-    std::vector<std::list<HashNode<K, V> > >::it;
+    /*std::vector<std::list<HashNode<K, V> > >::iterator it;
     for(auto it = table.begin(); it != table.end(); it++){
 	if(find((*it).begin(), (*it).end(), key) != (*it).end()){
 	    (*it).pop_back();
 	}
 	return true;
-    }
-    return false;
+    }*/
+    int index = hashcode(key) % table.capacity();
+    HashNode<K, V> toDelete(key);
+    table[index].pop_back(toDelete);
+    return true;
 }
 int hashcode(int key) {
     return key;
