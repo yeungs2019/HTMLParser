@@ -1,5 +1,5 @@
 #ifdef HASH_TABLE_H
-
+#include <stdio.h>
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size, const float loadFactor) {
     table.resize(size);
