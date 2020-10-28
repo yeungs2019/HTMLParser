@@ -55,10 +55,14 @@ bool HashTable<K, V>::remove(const K &key){
 	}
 	return true;
     }*/
-    int index = hashcode(key) % table.capacity();
-    HashNode<K, V> toDelete(key);
-    table[index].pop_back(toDelete);
-    return true;
+    int index = hashcode(key) % table.size();
+    for(auto i = table[index].begin(); i != table[index].end(); i++){
+	if(i->getKey() == key){
+	    table[index].erase(i);
+	    return true;
+	}
+    }
+    return false;
 }
 int hashcode(int key) {
     return key;
