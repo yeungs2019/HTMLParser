@@ -39,6 +39,16 @@ bool PriorityQueue<T>::push(const T &val){
      return true;
 }
 
+template<class T>
+T PriorityQueue<T>::pop(){
+    std::make_heap(mVector.begin(), mVector.end());
+    std::pop_heap(mVector.begin(), mVector.end());
+    mVector.pop_back();
+}
+
+template<class T>
+bool PriorityQueue<T>::operator==(const PriorityQueue<T> &pq) const{
+}
 
 
 
