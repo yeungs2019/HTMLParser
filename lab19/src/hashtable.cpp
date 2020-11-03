@@ -13,7 +13,7 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
     int index = hashcode(key);
     int hashIndex = key % table.size();
 
-    while (!table[hashIndex].empty()) {
+    while (!table[hashIndex].getInUse()) {
         hashIndex++;
         hashIndex = hashIndex % table.size();
     }
@@ -27,7 +27,7 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
 	table.resize(table.size() * 2);
 	int n = hashcode(key);
 	int cryFace = n % hashcode(key);
-	while(!table[cryFace].empty()){
+	while(!table[cryFace].getInUse()){
 	    cryFace++;
 	    cryFace = cryFace % table.size();
 	}
@@ -43,18 +43,16 @@ V& HashTable<K,V>::operator[](const K &key) {
     int hashIndex = hashcode(key) % table.size();
 
     // Lets first get a valid hashIndex!
-    while (table[hashIconst float loadFactorndex].getKey() != key && table[hashIndex].getInUse()) {
-        hashIndex++;
-        if (hashIndex == table.size()){
-            hashIndex = 0;
+    while (!table[hashIndex].getInUse()) {
+        //hashIndex++;
+        if (table[hashIndex].getKey() == key){
+           return table[hashIndex].getData(); 
         }
+	hashIndex++;
+	hashIndex = hashIndex % table.size();
     }
-    if (!table[hashIndex].getInUse()) {
-        return def;
-    }
-
-    return table[hashIndex].getData();
-    //return def;
+    //return table[hashIndex].getData();
+    return def;
 }
 
 template<class K, class V>
