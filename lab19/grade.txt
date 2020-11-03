@@ -1,16 +1,14 @@
 ******************* lf Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
 ******************* insert Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
+Failures = 
+MAKE_ERROR = src/hashtable.cpp:14:25: error: no match for 'operator%' (operand types are 'const std::__cxx11::basic_string<char>' and 'std::vector<HashNode<std::__cxx11::basic_string<char>, int>, std::allocator<HashNode<std::__cxx11::basic_string<char>, int> > >::size_type {aka long unsigned int}')
++ 0 pts of 35.000
+Total grade so far: 0
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab19****************
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 40.000
+Total grade so far: 0
