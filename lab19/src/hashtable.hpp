@@ -31,6 +31,8 @@ class HashTable {
         //std::vector<std::list<HashNode<K, V> > > table;
         std::vector<HashNode<K, V> > table; // instantiate the vector of hashnodes
         V def;
+	int mSize;
+	float load;
     public:
         /* Initialize the Hash Table with size size. */
         HashTable(const int size, const float loadFactor);
