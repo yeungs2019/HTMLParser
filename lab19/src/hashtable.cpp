@@ -1,26 +1,40 @@
 #ifdef HASH_TABLE_H
 #include <stdio.h>
+
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size, const float loadFactor) {
     table.resize(size);
+    load = loadFactor;
+    mSize = 0;    
 }
 
 template<class K, class V>
 bool HashTable<K, V>::insert(const K &key, const V &val) {
+    int index = hashcode(key);
     int hashIndex = key % table.size();
 
-    while (table[hashIndex].getInUse()) {
+    while (!table[hashIndex].empty()) {
         hashIndex++;
-        if (hashIndex == table.size()){
-            hashIndex = 0;
-        }
+        hashIndex = hashIndex % table.size();
     }
 
     // hashIndex should be the value to set!
     table[hashIndex].setKey(key);
     table[hashIndex].setData(val);
-    table[hashIndex].setInUse(true);
-
+    mSize++;
+    table[hashIndex].setInUse(false);
+    if(percentFull() > load){
+	table.resize(table.size() * 2);
+	int n = hashcode(key);
+	int cryFace = n % hashcode(key);
+	while(!table[cryFace].empty()){
+	    cryFace++;
+	    cryFace = cryFace % table.size();
+	}
+	table[cryFace].setKey(key);
+	table[cryFace].setData(val);
+	table[cryFace].setInUse(false);
+    }
     return true;
 }
 
@@ -29,13 +43,12 @@ V& HashTable<K,V>::operator[](const K &key) {
     int hashIndex = hashcode(key) % table.size();
 
     // Lets first get a valid hashIndex!
-    while (table[hashIndex].getKey() != key && table[hashIndex].getInUse()) {
+    while (table[hashIconst float loadFactorndex].getKey() != key && table[hashIndex].getInUse()) {
         hashIndex++;
         if (hashIndex == table.size()){
             hashIndex = 0;
         }
     }
-
     if (!table[hashIndex].getInUse()) {
         return def;
     }
