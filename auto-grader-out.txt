@@ -1,2 +1,22 @@
 I am run number 002327.
 Pulling source code...
+------------------------------------------------
+Changes found in lab19
+------------------------------------------------
+*****************Examining lab19****************
+******************* lf Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* insert Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* remove test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab19****************
