@@ -1,7 +1,2 @@
-I am run number 002398.
+I am run number 002399.
 Pulling source code...
-------------------------------------------------
-Changes found in lab21
-------------------------------------------------
-*****************Examining lab21****************
-Auto-grader grade: *****************Finished lab21****************
