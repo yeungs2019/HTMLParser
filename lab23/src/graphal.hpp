@@ -7,10 +7,16 @@
  * We will not weight the vertices.
  */
 
+#include <vector>
+#include <list>
+#include <set>
+
 template<class W>
 class GraphAL {
     private:
         /* Class to begin filling out...*/
+        std::vector<std::list<std::pair<int, W> > > graph;
+        void depthFirstTraversal(void (*visit)(const int node), const int node, std::set<int> &visited);
     public:
         /* Initialize an empty graph. */
         GraphAL();
