@@ -10,6 +10,7 @@ GraphAM<W>::GraphAM() {
 
 template<class W>
 GraphAM<W>::GraphAM(const int vertices) {
+    graph.resize(vertices);
 }
 
 template<class W>
@@ -22,10 +23,20 @@ bool GraphAM<W>::removeVertex(int idx) {
 
 template<class W>
 bool GraphAM<W>::addEdge(const int start, const int end, const W &weight) {
+    std::pair<int, W> toAdd(end, weight);
+    graph[start].push_back(toAdd);
+    return true;
 }
 
 template<class W>
 bool GraphAM<W>::removeEdge(const int start, const int end) {
+    for(auto i = graph[start].begin(); i != graph[start].end(); i++){
+	if(i->first == end){
+	    graph[start].erase(i);
+	    return true;
+	}
+    }
+    return false;
 }
 
 template<class W>

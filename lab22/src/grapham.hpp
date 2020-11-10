@@ -7,9 +7,14 @@
  * We will not weight the vertices.
  */
 
+#include <vector>
+#include <list>
+#include<set>
+
 template<class W>
 class GraphAM {
     private:
+	std::vector<std::list<std::pair<int, W> > > graph;
     public:
         /* Initialize an empty graph. */
         GraphAM();
