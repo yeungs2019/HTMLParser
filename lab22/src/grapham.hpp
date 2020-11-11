@@ -10,11 +10,13 @@
 #include <vector>
 #include <list>
 #include<set>
+#include <limits.h>
 
 template<class W>
 class GraphAM {
     private:
-	std::vector<std::list<std::pair<int, W> > > graph;
+	std::vector<std::vector<W> > graph;
+	void depthFirstTraversal(void (*visit)(const int node), std::vector<std::vector<int>> &graph, std::set<int> &visited, int vertex);
     public:
         /* Initialize an empty graph. */
         GraphAM();
