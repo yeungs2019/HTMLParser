@@ -62,7 +62,7 @@ bool GraphAM<W>::removeVertex(int idx) {
 	graph[i][i] = graph[i + 1][i + 1];
     }
     graph.resize(graph.size() - 1);
-    for (int i = 0; i < graph.size(); i++){
+    for (unsigned int i = 0; i < graph.size(); i++){
 	graph[i].resize(graph[i].size() - 1);
     }
     return true;
