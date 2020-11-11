@@ -80,7 +80,7 @@ bool GraphAM<W>::addEdge(const int start, const int end, const W &weight) {
     if(start == end){
 	return false;
     }
-    if(start >= 0 && start < graph.size() && end >= 0 && end < graph[start].size()){
+    if((start >= 0 && start < graph.size()) && (end >= 0 && end < graph[start].size())){
 	if(graph[start][end] != INT_MAX){
  	    return false;
 	}
@@ -109,7 +109,7 @@ bool GraphAM<W>::removeEdge(const int start, const int end) {
     if(graph[start][end] == INT_MAX){
 	return false;
     }
-    if(start >= 0 && start < graph.size() && end >= 0 && end < graph[start].size()){
+    if((start >= 0 && start < graph.size()) && (end >= 0 && end < graph[start].size())){
        graph[start][end] = INT_MAX;
        return true;
     }
@@ -119,7 +119,7 @@ bool GraphAM<W>::removeEdge(const int start, const int end) {
 
 template<class W>
 W GraphAM<W>::adjacent(const int start, const int end) {
-    if(start >= 0 && start < graph.size() && end >= 0 && end < graph[start].size()){
+    if((start >= 0 && start < graph.size() && end >= 0) && (end < graph[start].size())){
         if(graph[start][end] != INT_MAX){
             return graph[start][end];
 	}
