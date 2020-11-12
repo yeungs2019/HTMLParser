@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <vector>
 #include <set>
-
+#define INT_MAX (-1)
 template<class W>
 GraphAM<W>::GraphAM() {
     graph.resize(0);
