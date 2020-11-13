@@ -119,12 +119,13 @@ bool GraphAM<W>::removeEdge(const int start, const int end) {
 
 template<class W>
 W GraphAM<W>::adjacent(const int start, const int end) {
-    if((start >= 0 && start < graph.size() && end >= 0) && (end < graph[start].size())){
+    /*if((start >= 0 && start < graph.size() && end >= 0) && (end < graph[start].size())){
         if(graph[start][end] != INT_MAX){
             return graph[start][end];
 	}
     }
-    return -1;
+    return -1;*/
+    return this->graph[start][end];
 }
 
 template<class W>
