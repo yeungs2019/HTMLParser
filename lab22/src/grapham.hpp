@@ -17,6 +17,7 @@ class GraphAM {
     private:
 	std::vector<std::vector<W> > graph;
 	void depthFirstTraversal(void (*visit)(const int node), std::vector<std::vector<int>> &graph, std::set<int> &visited, int vertex);
+	int x = 0;
     public:
         /* Initialize an empty graph. */
         GraphAM();
