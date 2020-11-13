@@ -1,5 +1,8 @@
 #ifdef GRAPHAL_H
 #include <iostream>
+#include <queue>
+#include <algorithm>
+#include <set>
 
 template<class W>
 GraphAL<W>::GraphAL() {
@@ -82,6 +85,23 @@ void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node)) {
 
 template <class W>
 void GraphAL<W>::breadthFirstTraversal(void (*visit)(const int node)) {
+    std::queue<int> toVisit;
+    std::set<int> visited;
+    for(int i = 0; i < graph.size(); i++){
+	toVisit.push(i);
+	while(!toVisit.empty()){
+	    int vertex = toVisit.front();
+	    toVisit.pop();
+	    if(visited.find(vertex) != visited.end()){
+		continue;
+	    }
+	    visit(vertex);
+	    visited.insert(vertex);
+	    for(auto i = graph[vertex].begin(); i != graph[vertex].end(); i++){
+		toVisit.push(i->second);
+	    }
+	}
+    }
 }
 
 template <class W>
