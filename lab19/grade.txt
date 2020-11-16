@@ -12,5 +12,10 @@ MAKE_ERROR =
 Total grade so far: 23.310
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Auto-grader grade: 23.310
-*****************Finished lab19****************
+Failures = 
+MAKE_ERROR = src/hashtable.cpp:36:29: error: no match for 'operator!=' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<HashNode<int, int> > >::value_type {aka HashNode<int, int>}' and 'long int')
+src/hashtable.cpp:37:23: error: no match for 'operator!=' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<HashNode<int, int> > >::value_type {aka HashNode<int, int>}' and 'long int')
+src/hashtable.cpp:38:45: error: cannot convert '__gnu_cxx::__alloc_traits<std::allocator<HashNode<int, int> > >::value_type {aka HashNode<int, int>}' to 'HashNode<int, int>*' in initialization
+src/hashtable.cpp:39:24: error: no match for 'operator=' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<HashNode<int, int> > >::value_type {aka HashNode<int, int>}' and 'HashNode<int, int>*')
++ 0 pts of 40.000
+Total grade so far: 23.310
