@@ -16,3 +16,5 @@ Failures =
 MAKE_ERROR = src/hashtable.cpp:47:15: error: invalid use of member function 'K& HashNode<K, V>::getKey() [with K = int; V = int]' (did you forget the '()' ?)
 + 0 pts of 40.000
 Total grade so far: 23.310
+Auto-grader grade: 23.310
+*****************Finished lab19****************
