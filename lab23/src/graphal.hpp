@@ -14,8 +14,13 @@
 template<class W>
 class GraphAL {
     private:
+	struct node_x {
+	     int mEndVertex;
+	     W mWeight;
+	};
         /* Class to begin filling out...*/
-        std::vector<std::list<std::pair<int, W> > > graph;
+        std::vector<std::list<node_x> > mAList;
+
         void depthFirstTraversal(void (*visit)(const int node), const int node, std::set<int> &visited);
     public:
         /* Initialize an empty graph. */
