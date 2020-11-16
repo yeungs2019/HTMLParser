@@ -10,32 +10,20 @@ HashTable<K, V>::HashTable(const int size, const float loadFactor) {
 
 template<class K, class V>
 bool HashTable<K, V>::insert(const K &key, const V &val) {
-    int index = hashcode(key);
+    //int index = hashcode(key);
     int hashIndex = key % table.size();
-
-    while (!table[hashIndex].getInUse()) {
-        hashIndex++;
-        hashIndex = hashIndex % table.size();
+    while(table[hashIndex].getInUse()){
+	hashIndex++;
+	if(hashIndex == table.size()){
+	     hashIndex = 0;
+	}
     }
-
-    // hashIndex should be the value to set!
     table[hashIndex].setKey(key);
     table[hashIndex].setData(val);
-    mSize++;
-    table[hashIndex].setInUse(false);
-    if(percentFull() > load){
-	table.resize(table.size() * 2);
-	int n = hashcode(key);
-	int cryFace = n % hashcode(key);
-	while(!table[cryFace].getInUse()){
-	    cryFace++;
-	    cryFace = cryFace % table.size();
-	}
-	table[cryFace].setKey(key);
-	table[cryFace].setData(val);
-	table[cryFace].setInUse(false);
-    }
+    table[hashIndex].setInUse(true);
+
     return true;
+
 }
 
 template<class K, class V>
@@ -60,7 +48,7 @@ V& HashTable<K,V>::operator[](const K &key) {
 
 template<class K, class V>
 float HashTable<K, V>::percentFull() {
-    return 0.0;
+    return load;
 }
 
 template<class K, class V>
