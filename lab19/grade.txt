@@ -19,3 +19,5 @@ src/hashtable.cpp:38:45: error: cannot convert '__gnu_cxx::__alloc_traits<std::a
 src/hashtable.cpp:39:24: error: no match for 'operator=' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<HashNode<int, int> > >::value_type {aka HashNode<int, int>}' and 'HashNode<int, int>*')
 + 0 pts of 40.000
 Total grade so far: 23.310
+Auto-grader grade: 23.310
+*****************Finished lab19****************
