@@ -1,22 +1,2 @@
-I am run number 002622.
+I am run number 002623.
 Pulling source code...
-------------------------------------------------
-Changes found in lab19
-------------------------------------------------
-*****************Examining lab19****************
-******************* lf Test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
-+ 0 pts of 25.000
-Total grade so far: 0
-******************* insert Test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 1
-MAKE_ERROR = 
-+ 23.310 pts of 35.000
-Total grade so far: 23.310
-******************* remove test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Auto-grader grade: 23.310
-*****************Finished lab19****************
