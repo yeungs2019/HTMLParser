@@ -123,26 +123,30 @@ bool GraphAL<W>::removeVertex(int idx) {
 }
 
 template <class W>
-void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node), const int node, std::set<int> &visited) {
-    if(visited.find(node) != visited.end()) {
-        return;
-    }
+void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node), const int node, bool *visited, const int cVertex) {
+    if(!visited[cVertex]){
+	visited[cVertex] = true;
+	visit(cVertex);
 
-    visit(node);
-    visited.insert(node);
-
-    for (auto i = mAList[node].begin(); i != mAList[node].end(); i++) {
-        depthFirstTraversal(visit, i->first, visited);
+	for(typename std::list<node_x>::iterator it = mAList[cVertex].begin(); it != mAList[cVertex].end(); it++){
+	    depthFirstTraversal(visit, visited, it->mEndVertex);
+	}
     }
+    return;
 }
 
 template <class W>
 void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node)) {
-    std::set<int> visited;
-
-    for (int i = 0; i < mAList.size(); i++) {
-        depthFirstTraversal(visit, i, visited);
+    if(mAList.size() <= 0){
+	return;
     }
+    bool *visited = new bool[mAList.size()];
+    for(int i = 0; i < mAList.size(); i++){
+	visited[i] = false;
+    }
+    depthFirstTraversal(visit, visited, 0);
+    delete[] visited;
+    return;
 }
 
 template <class W>
