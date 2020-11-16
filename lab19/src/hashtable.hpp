@@ -59,10 +59,10 @@ class HashTable {
         V& operator[](const K &key);
 
         float percentFull();
-};
+	int hashcode(int key);
+	int hashcode(const std::string &key);
 
-int hashcode(int key);
-int hashcode(const std::string &key);
+};
 
 #include "hashtable.cpp"
 
