@@ -21,7 +21,7 @@ class GraphAL {
         /* Class to begin filling out...*/
         std::vector<std::list<node_x> > mAList;
 
-        void depthFirstTraversal(void (*visit)(const int node), const int node, bool *visited, const int cVertex);
+        void depthFirstTraversal(void (*visit)(const int node),  bool *visited, const int cVertex);
     public:
         /* Initialize an empty graph. */
         GraphAL();
