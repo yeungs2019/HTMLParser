@@ -1,35 +1,48 @@
 ******************* add-edge Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 
+MAKE_ERROR = 
++ 10.000 pts of 10.000
+Total grade so far: 10.000
 ******************* adjacent Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 1
+MAKE_ERROR = 
++ 7.500 pts of 10.000
+Total grade so far: 17.500
 ******************* add vertices Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 1
+MAKE_ERROR = 
++ 7.500 pts of 10.000
+Total grade so far: 25.000
 ******************* remove edge Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 
+MAKE_ERROR = 
++ 10.000 pts of 10.000
+Total grade so far: 35.000
 ******************* remove vertices Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Failures = 3
+Failures = 2
 MAKE_ERROR = 
-+ 0 pts of 10.000
-Total grade so far: 0
++ 3.330 pts of 10.000
+Total grade so far: 38.330
 ******************* depth first Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = 
-+ 15.000 pts of 15.000
-Total grade so far: 15.000
+MAKE_ERROR = src/graphal.cpp:135:39: error: 'struct GraphAL<int>::node_x' has no member named 'first'
++ 0 pts of 15.000
+Total grade so far: 38.330
 ******************* breadth first Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
-Seg fault detected, please test and fix.
+Failures = 1
+MAKE_ERROR = 
++ 0 pts of 15.000
+Total grade so far: 38.330
 ******************* Prim Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 20.000
-Total grade so far: 15.000
-Auto-grader grade: 15.000
-*****************Finished lab23****************
+MAKE_ERROR = 
++ 20.000 pts of 20.000
+Total grade so far: 58.330
