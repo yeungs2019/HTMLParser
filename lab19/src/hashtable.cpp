@@ -5,13 +5,14 @@ template<class K, class V>
 HashTable<K, V>::HashTable(const int size, const float loadFactor) {
     table.resize(size);
     load = loadFactor;
-    mSize = 0;    
+    //mSize = 0;    
 }
 
 template<class K, class V>
 bool HashTable<K, V>::insert(const K &key, const V &val) {
     //int index = hashcode(key);
-    int hashIndex = key % table.size();
+    int hashIndex = hashcode(key);
+    
     while(table[hashIndex].getInUse()){
 	hashIndex++;
 	if(hashIndex == table.size()){
@@ -21,9 +22,15 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
     table[hashIndex].setKey(key);
     table[hashIndex].setData(val);
     table[hashIndex].setInUse(true);
+    //print out the load
+    load = (load + 1) / (table.size());
 
     return true;
 
+}
+
+template<class K, class V>
+bool HashTable<K, V>::remove(const K &key){
 }
 
 template<class K, class V>
@@ -53,14 +60,19 @@ float HashTable<K, V>::percentFull() {
 
 template<class K, class V>
 HashTable<K, V>::~HashTable() {
+   table.clear();
 }
 
-int hashcode(int key) {
-    return key;
+template<class K, class V>
+int HashTable<K, V>::hashcode(int key) {
+    return key % table.size();
 }
 
-int hashcode(const std::string &key) {
+template<class K, class V>
+int HashTable<K, V>::hashcode(const std::string &key) {
     // You need to do something else.
+    int index = 0;
+    
     return 0;
 }
 
