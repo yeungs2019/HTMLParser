@@ -12,7 +12,8 @@ template<class K, class V>
 bool HashTable<K, V>::insert(const K &key, const V &val) {
     //int index = hashcode(key);
     int hashIndex = hashcode(key);
-    
+    //if(percentFull() > load){
+
     while(table[hashIndex].getInUse()){
 	hashIndex++;
 	if(hashIndex == table.size()){
@@ -31,10 +32,27 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
 
 template<class K, class V>
 bool HashTable<K, V>::remove(const K &key){
+     int hashIndex = hashcode(key);
+     while(table[hashIndex] != NULL){
+	 if(table[hashIndex] != NULL){
+	     HashNode<K, V> *temp = table[hashIndex];	     
+	     table[hashIndex] = dump;
+             mSize--;
+	 }
+     }
 }
 
 template<class K, class V>
-V& HashTable<K,V>::operator[](const K &key) {
+void HashTable<K, V>::hashing(){
+    table.resize(table.size() * 2);
+    for (auto i = table.begin(); i != table.end(); i++){
+	if(i->getData() != 0){
+	     insert(i->getKey(), i->getData());
+	}
+    }
+}
+template<class K, class V>
+V& HashTable<K, V>::operator[](const K &key) {
     int hashIndex = hashcode(key) % table.size();
 
     // Lets first get a valid hashIndex!
@@ -71,8 +89,7 @@ int HashTable<K, V>::hashcode(int key) {
 template<class K, class V>
 int HashTable<K, V>::hashcode(const std::string &key) {
     // You need to do something else.
-    int index = 0;
-    
+    int index = 0; 
     return 0;
 }
 

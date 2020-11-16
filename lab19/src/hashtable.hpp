@@ -33,6 +33,8 @@ class HashTable {
         V def;
 	int mSize;
 	float load;
+	float cLoad;
+	HashNode<K, V> *dump;
     public:
         /* Initialize the Hash Table with size size. */
         HashTable(const int size, const float loadFactor);
@@ -61,6 +63,7 @@ class HashTable {
         float percentFull();
 	int hashcode(int key);
 	int hashcode(const std::string &key);
+	void hashing();
 
 };
 
