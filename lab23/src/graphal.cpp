@@ -123,7 +123,7 @@ bool GraphAL<W>::removeVertex(int idx) {
 }
 
 template <class W>
-void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node), const int node, bool *visited, const int cVertex) {
+void GraphAL<W>::depthFirstTraversal(void (*visit)(const int node),  bool *visited, const int cVertex) {
     if(!visited[cVertex]){
 	visited[cVertex] = true;
 	visit(cVertex);
