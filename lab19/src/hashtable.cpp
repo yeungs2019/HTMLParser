@@ -52,7 +52,10 @@ V& HashTable<K,V>::operator[](const K &key) {
 	hashIndex = hashIndex % table.size();
     }
     //return table[hashIndex].getData();
-    return def;
+    if(!table[hashIndex].getInUse()){
+        return def;
+    }
+    return table[hashIndex].getData();
 }
 
 template<class K, class V>
