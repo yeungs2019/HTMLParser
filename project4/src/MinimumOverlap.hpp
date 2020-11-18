@@ -6,6 +6,8 @@
 
 class MinimumOverlap {
     public:
+	int count;
+	std::vector<std::vector<int> > group;
 
         // Passes in a string pointing to the set/group file.
         // Make sure you store all the sets/groups!
