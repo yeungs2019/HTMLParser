@@ -1,1 +1,2 @@
-# csci-315-fall-2020
+# CSCI315 HTML Parser
+This project used Linux and its terminal in C++ language to complete
