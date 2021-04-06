@@ -1,3 +1,12 @@
+/* Student Name:  Steven Yeung
+* Program Name:  HTML Parser
+* Creation Date:  October 18, 2020
+* Last Modified Date:  October 19, 2020
+* CSCI Course:  CSCI 315
+* Grade Received:  100
+* Design Comments: Coded in C++ using Vim as text editor.  Used makefile to run/compile program
+*/
+
 #include "html-parser.hpp"
 #include <fstream>
 #include <string>
@@ -189,12 +198,14 @@ int HTMLParser::pageVisitAmount(std::string filename) {
     visited.clear();
     return pageHelp(filename);
 }
+// helper function for pageVisitAmount
 int HTMLParser::pageHelp(std::string filename){
     bool lExists = false;
     bool cExists = false;
     int begPos;
     int size = 0;
-
+  
+    // traverses through the HTML page
     for(int i = 0; i < knowName.size(); i++){
 	if(knowName.at(i) == filename){
 	    mLinkPos = i;
